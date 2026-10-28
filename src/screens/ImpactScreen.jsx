@@ -1,24 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from '../router/RouterContext';
 
 export default function ImpactScreen() {
   const { navigate } = useRouter();
+  const [openPillar, setOpenPillar] = useState(0);
+
+  const pillars = [
+    {
+      num: '01',
+      title: 'Digital Equity & Spatial Curriculum',
+      summary: 'Democratizing high-end 3D & software literacy for underrepresented young engineers.',
+      detail: 'Through our STARLET 5.0 partnership, we deploy lightweight browser-native WebGL engineering simulators capable of executing on low-spec hardware, ensuring geographic and socioeconomic factors never constrain technical potential.'
+    },
+    {
+      num: '02',
+      title: 'Mind & Cognitive Resilience',
+      summary: 'Tactile, non-punitive digital health tools engineered for adolescent emotional regulation.',
+      detail: 'In collaboration with Mind Empowered clinical practitioners, we build software like Dhriti that replaces punitive screen-time metrics with restorative haptic grounding techniques and zero-knowledge privacy standards.'
+    },
+    {
+      num: '03',
+      title: 'Living Generational Archives',
+      summary: 'Preserving endangered oral dialects and cultural knowledge via interactive transmedia.',
+      detail: 'Our Words of Wisdom initiative leverages spatial audio engineering and decentralized web archives to preserve oral histories from elders across indigenous communities, making ancestral wisdom immortal and accessible.'
+    }
+  ];
 
   return (
     <main style={{ width: '100%', paddingTop: '7rem', backgroundColor: 'var(--surface)' }}>
       <section className="section-padding container-max">
-        {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>
-          <div className="badge-dispatch" style={{ marginBottom: 'var(--space-md)' }}>
+        
+        {/* Top Header */}
+        <div style={{ textAlign: 'center', marginBottom: 'var(--space-2xl)' }}>
+          <div className="badge-pill-dark" style={{ display: 'inline-flex', marginBottom: 'var(--space-md)' }}>
             <span className="beacon-dot animate-ping-radar"></span>
-            <span className="font-label-caps">Social Impact // Mind Empowered Alliance</span>
+            <span className="font-label-caps" style={{ color: '#fff' }}>SOCIAL IMPACT // MIND EMPOWERED ALLIANCE</span>
           </div>
-          <h1 className="font-headline-lg">
+          <h1 className="font-headline-lg" style={{ fontSize: 'clamp(36px, 5.5vw, 64px)', maxWidth: '900px', margin: '0 auto var(--space-md)' }}>
             Engineering digital futures.<br />Anchoring human equity.
           </h1>
-          <p className="font-body-lg" style={{ maxWidth: '680px', margin: 'var(--space-md) auto 0' }}>
-            Cyber Aliens dedicates structural resources and revenue toward grassroots technological literacy, youth mental health resilience, and generational digital empowerment.
+          <p className="font-body-lg" style={{ maxWidth: '680px', margin: '0 auto', color: 'var(--text-secondary)' }}>
+            Cyber Aliens dedicates structural resources and studio revenue toward grassroots technological literacy, youth mental health resilience, and generational digital empowerment.
           </p>
+        </div>
+
+        {/* Manifesto Callout Monolith matching image copy 9.png */}
+        <div
+          className="card-monolith"
+          style={{
+            padding: 'var(--space-2xl) var(--space-xl)',
+            borderRadius: 'var(--rounded-xl)',
+            marginBottom: 'var(--space-3xl)',
+            position: 'relative',
+            overflow: 'hidden'
+          }}
+        >
+          <div style={{ position: 'relative', zIndex: 1, maxWidth: '840px', margin: '0 auto', textAlign: 'center' }}>
+            <span className="font-label-caps" style={{ color: 'var(--accent-coral)', letterSpacing: '0.15em', display: 'block', marginBottom: '12px' }}>
+              OUR MANIFESTO
+            </span>
+            <blockquote style={{ fontFamily: 'var(--font-headline)', fontSize: 'clamp(20px, 2.5vw, 28px)', lineHeight: 1.4, color: '#fff', fontWeight: 600, fontStyle: 'italic', marginBottom: 'var(--space-md)' }}>
+              "Intellectual curiosity shouldn't only serve market cap. We dedicate our creative and technical firepower to democratizing technology access, mental resilience, and generational literacy."
+            </blockquote>
+            <p className="font-label-caps" style={{ color: 'var(--tertiary-fixed)', letterSpacing: '0.1em' }}>
+              CYBER ALIENS ETHOS // JOINT CHARTER WITH MIND EMPOWERED
+            </p>
+          </div>
         </div>
 
         {/* 3 Core Impact Metrics */}
@@ -29,18 +76,73 @@ export default function ImpactScreen() {
             { metric: '18,000+', label: 'Global Community Reach', sub: 'Adolescent participants engaged across STARLET 5.0 and Dhriti mindfulness platforms worldwide.' }
           ].map((item, idx) => (
             <div key={idx} className="col-span-12" style={{ gridColumn: 'span 4' }}>
-              <div className="card-cream" style={{ textAlign: 'center', padding: 'var(--space-xl)' }}>
-                <span className="font-display-xl" style={{ fontSize: '64px', lineHeight: '68px', color: 'var(--primary)', display: 'block' }}>
+              <div className="card-cream" style={{ textAlign: 'center', padding: 'var(--space-xl)', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <span className="font-display-xl" style={{ fontSize: 'clamp(44px, 5vw, 64px)', lineHeight: '1.1', color: 'var(--primary)', display: 'block' }}>
                   {item.metric}
                 </span>
-                <h3 className="font-headline-sm" style={{ marginTop: '8px', marginBottom: '8px' }}>{item.label}</h3>
-                <p className="font-body-sm">{item.sub}</p>
+                <div>
+                  <h3 className="font-headline-sm" style={{ marginTop: '8px', marginBottom: '8px' }}>{item.label}</h3>
+                  <p className="font-body-sm" style={{ color: 'var(--text-secondary)' }}>{item.sub}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* The Mind Empowered Monolith Spotlight */}
+        {/* Interactive Accordion: Strategic Alliance Pillars */}
+        <div style={{ marginBottom: 'var(--space-3xl)' }}>
+          <div style={{ marginBottom: 'var(--space-xl)' }}>
+            <span className="font-label-caps" style={{ color: 'var(--accent-coral)', fontWeight: 'bold' }}>
+              ALLIANCE ARCHITECTURE
+            </span>
+            <h2 className="font-headline-md" style={{ marginTop: '6px' }}>
+              Three Pillars of Tangible Impact
+            </h2>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)' }}>
+            {pillars.map((pillar, idx) => (
+              <div
+                key={idx}
+                className="card-cream"
+                style={{
+                  padding: 'var(--space-lg) var(--space-xl)',
+                  cursor: 'pointer',
+                  border: openPillar === idx ? '1px solid var(--accent-coral)' : '1px solid var(--border-subtle)',
+                  transition: 'all var(--transition-fast)'
+                }}
+                onClick={() => setOpenPillar(openPillar === idx ? null : idx)}
+              >
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-md)' }}>
+                    <span className="font-label-caps" style={{ color: openPillar === idx ? 'var(--accent-coral)' : 'var(--outline)', fontWeight: 'bold' }}>
+                      {pillar.num}
+                    </span>
+                    <h3 className="font-headline-sm" style={{ fontSize: '18px', margin: 0 }}>
+                      {pillar.title}
+                    </h3>
+                  </div>
+                  <span className="material-symbols-outlined" style={{ transform: openPillar === idx ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s ease' }}>
+                    expand_more
+                  </span>
+                </div>
+
+                {openPillar === idx && (
+                  <div style={{ marginTop: 'var(--space-md)', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--border-subtle)' }}>
+                    <p className="font-body-md" style={{ color: 'var(--text-primary)', marginBottom: '8px', fontWeight: 600 }}>
+                      {pillar.summary}
+                    </p>
+                    <p className="font-body-sm" style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                      {pillar.detail}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* The Mind Empowered Spotlight Monolith */}
         <div
           className="card-monolith"
           style={{
@@ -49,11 +151,11 @@ export default function ImpactScreen() {
             marginBottom: 'var(--space-3xl)'
           }}
         >
-          <div className="grid-12" style={{ alignItems: 'center' }}>
+          <div className="grid-12" style={{ alignItems: 'center', rowGap: 'var(--space-xl)' }}>
             <div className="col-span-12" style={{ gridColumn: 'span 7' }}>
               <div className="badge-pill-dark" style={{ marginBottom: 'var(--space-md)' }}>
                 <span className="beacon-dot"></span>
-                <span className="font-label-caps">Featured Alliance</span>
+                <span className="font-label-caps">Featured Strategic Alliance</span>
               </div>
               <h2 className="font-headline-lg" style={{ color: '#fff', marginBottom: 'var(--space-md)' }}>
                 Mind Empowered
@@ -80,7 +182,7 @@ export default function ImpactScreen() {
           </div>
         </div>
 
-        {/* Impact Artifacts */}
+        {/* Co-Created Impact Artifacts */}
         <div style={{ marginBottom: 'var(--space-2xl)' }}>
           <h2 className="font-headline-md" style={{ marginBottom: 'var(--space-lg)' }}>Co-Created Impact Artifacts</h2>
           <div className="grid-12">
@@ -125,4 +227,3 @@ export default function ImpactScreen() {
     </main>
   );
 }
-
