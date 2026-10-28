@@ -46,14 +46,6 @@ export default function HomeScreen() {
           textAlign: 'center'
         }}
       >
-        {/* Pre-title Status Badge */}
-        <div className="badge-dispatch" style={{ marginBottom: 'var(--space-lg)' }}>
-          <span className="beacon-dot animate-ping-radar"></span>
-          <span className="font-label-caps" style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>
-            Studio Dispatch // Q3 Deployment Ready
-          </span>
-        </div>
-
         {/* Display Title */}
         <h1
           className="font-display-xl"
