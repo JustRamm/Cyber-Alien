@@ -57,6 +57,7 @@
 .marquee-container {
   display: flex;
   overflow: hidden;
+  -webkit-user-select: none;
   user-select: none;
   white-space: nowrap;
   width: 100%;
