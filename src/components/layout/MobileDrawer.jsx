@@ -13,6 +13,7 @@ export default function MobileDrawer() {
     { label: 'Case Study', path: '/case-study', anchor: null },
     { label: 'Impact', path: '/impact', anchor: null },
     { label: 'Process', path: '/', anchor: 'process' },
+    { label: 'About', path: '/', anchor: 'about' },
     { label: 'Insights', path: '/', anchor: 'insights' },
     { label: 'Get a Proposal', path: '/proposal', anchor: null }
   ];

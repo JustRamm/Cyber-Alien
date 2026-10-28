@@ -15,7 +15,7 @@ export function RouterProvider({ children }) {
       const parts = rawHash.split('#');
       path = parts[0] || '/';
       anchor = parts[1];
-    } else if (['services', 'work-preview', 'process', 'reviews', 'insights', 'proposal-anchor'].includes(rawHash.replace(/^\//, ''))) {
+    } else if (['services', 'work-preview', 'process', 'reviews', 'insights', 'proposal-anchor', 'about'].includes(rawHash.replace(/^\//, ''))) {
       anchor = rawHash.replace(/^\//, '');
       path = '/';
     }
