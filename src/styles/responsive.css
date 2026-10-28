@@ -123,10 +123,6 @@
   .show-mobile {
     display: block !important;
   }
-
-  .mobile-nav-toggle.show-mobile {
-    display: flex !important;
-  }
 }
 
 @media (min-width: 768px) {

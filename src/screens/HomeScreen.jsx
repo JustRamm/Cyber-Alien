@@ -493,8 +493,8 @@ export default function HomeScreen() {
         </div>
       </section>
 
-      {/* FRAME 5: DESIGN WITH PURPOSE / ABOUT STUDIO ETHOS (DARK MONOLITH) */}
-      <section id="about" className="section-padding container-max">
+      {/* FRAME 5: DESIGN WITH PURPOSE (DARK MONOLITH) */}
+      <section className="section-padding container-max">
         <div
           className="card-monolith"
           style={{

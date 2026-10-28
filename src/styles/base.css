@@ -15,41 +15,16 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--surface);
   color: var(--on-surface);
-  /* Firefox Scrollbar Styling */
-  scrollbar-width: thin;
-  scrollbar-color: rgba(10, 10, 10, 0.35) var(--surface);
+  /* Hide vertical scrollbar across all browsers (laser progress at top replaces it) */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* ==========================================================================
-   CUSTOM KINETIC VOID SCROLLBAR (Chrome, Safari, Edge)
-   ========================================================================== */
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge, Opera) */
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--surface);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(10, 10, 10, 0.28);
-  border-radius: 9999px;
-  border: 1.5px solid var(--surface);
-  transition: background 0.2s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-coral);
-  border: 1px solid var(--surface);
-}
-
-::-webkit-scrollbar-thumb:active {
-  background: #be123c;
-}
-
-::-webkit-scrollbar-corner {
-  background: transparent;
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 body {
@@ -60,6 +35,14 @@ body {
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 ::selection {
