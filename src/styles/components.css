@@ -1,0 +1,374 @@
+/**
+ * CYBER ALIENS DESIGN SYSTEM — Reusable Components
+ */
+
+.container-max {
+  width: 100%;
+  max-width: 80rem; /* 1280px */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-padding {
+  padding-left: var(--margin);
+  padding-right: var(--margin);
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-left: var(--margin-md);
+    padding-right: var(--margin-md);
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-padding {
+    padding-left: var(--margin-lg);
+    padding-right: var(--margin-lg);
+  }
+}
+
+/* =========================================================
+   Floating Pill Navigation (Kinetic Void Signature)
+   ========================================================= */
+
+.nav-pill-wrapper {
+  position: fixed;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--margin);
+  pointer-events: none;
+}
+
+.nav-pill {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  background: var(--surface-dark-glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--rounded-full);
+  padding: 0.5rem 1.25rem;
+  width: 100%;
+  max-width: 64rem;
+  box-shadow: var(--shadow-nav);
+  height: 54px;
+  transition: transform var(--transition-normal);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+}
+
+.nav-logo-text {
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-inverse);
+}
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: var(--space-xs);
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.4rem 0.85rem;
+  font-family: var(--font-label);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-inverse-muted);
+  border-radius: var(--rounded-full);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: var(--text-inverse);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link.active {
+  color: var(--text-inverse);
+  background: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: var(--rounded-full);
+  background-color: var(--accent-coral);
+  box-shadow: 0 0 8px var(--accent-coral);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.mobile-nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--rounded-full);
+  color: var(--text-inverse);
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+}
+
+/* =========================================================
+   Buttons & CTAs
+   ========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-label);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0 1.75rem;
+  height: 52px;
+  border-radius: var(--rounded-full);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-primary:hover {
+  background-color: var(--surface-dark-elevated);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+.btn-secondary {
+  background-color: var(--accent-coral);
+  color: #ffffff;
+  box-shadow: 0 8px 24px -4px var(--accent-coral-glow);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-coral-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px -2px var(--accent-coral-glow);
+}
+
+.btn-surface {
+  background-color: var(--surface-container);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-surface:hover {
+  background-color: var(--surface-container-high);
+  transform: translateY(-1px);
+}
+
+.btn-ghost-dark {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-inverse);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+}
+
+.btn-ghost-dark:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.btn-sm {
+  height: 40px;
+  padding: 0 1.25rem;
+  font-size: 11px;
+}
+
+/* =========================================================
+   Cards & Monolith Containers
+   ========================================================= */
+
+.card-monolith {
+  background-color: var(--surface-dark);
+  color: var(--text-inverse);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-monolith);
+  border: 1px solid var(--border-glass);
+}
+
+.card-cream {
+  background-color: var(--surface-container);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--border-subtle);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card-cream:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+/* =========================================================
+   Badges, Chips & Telemetry Status
+   ========================================================= */
+
+.badge-dispatch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--surface-container);
+  padding: 0.375rem 1rem;
+  border-radius: var(--rounded-full);
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--border-subtle);
+}
+
+.badge-pill-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--rounded-full);
+  color: var(--text-inverse);
+}
+
+.beacon-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--rounded-full);
+  background-color: var(--accent-coral);
+}
+
+.filter-chip {
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--rounded-full);
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--surface-container);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-chip:hover {
+  background-color: var(--surface-container-high);
+  color: var(--text-primary);
+}
+
+.filter-chip.active {
+  background-color: var(--surface-dark);
+  color: var(--text-inverse);
+  border-color: var(--surface-dark);
+}
+
+/* =========================================================
+   Form Inputs & Scoping Controls
+   ========================================================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+  text-align: left;
+}
+
+.input-pill {
+  width: 100%;
+  height: 56px;
+  background-color: var(--surface-container);
+  border: 1.5px solid transparent;
+  border-radius: var(--rounded-md);
+  padding: 0 1.25rem;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.input-pill:focus {
+  background-color: var(--surface-container-lowest);
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 3px var(--accent-coral-dim);
+}
+
+.textarea-pill {
+  width: 100%;
+  min-height: 140px;
+  background-color: var(--surface-container);
+  border: 1.5px solid transparent;
+  border-radius: var(--rounded-md);
+  padding: 1rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-primary);
+  resize: vertical;
+  transition: all var(--transition-fast);
+}
+
+.textarea-pill:focus {
+  background-color: var(--surface-container-lowest);
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 3px var(--accent-coral-dim);
+}
+
