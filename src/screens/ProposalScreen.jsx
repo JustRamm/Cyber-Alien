@@ -54,9 +54,28 @@ export default function ProposalScreen() {
   function handleSubmit(e) {
     e.preventDefault();
     setSubmitting(true);
+    
+    // Package submission telemetry for confirmation screen
+    const submissionData = {
+      name: formData.name.trim() || 'Sarah Jenkins',
+      email: formData.email.trim() || 'sarah.jenkins@studio.io',
+      company: formData.company.trim() || 'Studio IO',
+      capabilities: selectedServices.length > 0 ? selectedServices : ['Web Design & WebGL', 'Brand Identity & Systems', 'Headless Next.js'],
+      budget: selectedBudget ? `${selectedBudget} (Series A / Scaling)` : '$25,000 - $50,000 USD (Series A / Scaling)',
+      targetWindow: 'Thursday, Apr 02, 2026 • 10:00 AM - 11:30 AM PST',
+      scope: formData.scope.trim() || 'Looking to architect a modular WebGL interactive product showcase and headless CMS ahead of our Q3 product keynote.',
+      id: `CA-${Math.floor(1000 + Math.random() * 9000)}`
+    };
+
+    try {
+      sessionStorage.setItem('cyberalien_submission', JSON.stringify(submissionData));
+    } catch (err) {
+      console.warn('Could not save submission to sessionStorage', err);
+    }
+
     setTimeout(() => {
       navigate('/confirmed');
-    }, 600);
+    }, 400);
   }
 
   return (
