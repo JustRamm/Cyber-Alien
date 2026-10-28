@@ -235,6 +235,7 @@ export default function HomeScreen() {
                     right: '1rem',
                     background: 'rgba(255, 255, 255, 0.92)',
                     backdropFilter: 'blur(16px)',
+                    WebkitBackdropFilter: 'blur(16px)',
                     padding: '0.75rem 1.25rem',
                     borderRadius: 'var(--rounded-full)',
                     display: 'flex',
@@ -577,7 +578,7 @@ export default function HomeScreen() {
             </div>
 
             <div className="col-span-12" style={{ gridColumn: 'span 5', display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
-              <div style={{ background: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(20px)', padding: 'var(--space-lg)', borderRadius: 'var(--rounded-lg)', border: '1px solid var(--border-glass)' }}>
+              <div style={{ background: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', padding: 'var(--space-lg)', borderRadius: 'var(--rounded-lg)', border: '1px solid var(--border-glass)' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-sm)' }}>
                   <span className="font-label-caps" style={{ color: 'var(--accent-coral)' }}>Mind Empowered Initiative</span>
                   <span className="material-symbols-outlined" style={{ color: 'var(--accent-coral)' }}>volunteer_activism</span>
@@ -590,7 +591,7 @@ export default function HomeScreen() {
                 </p>
               </div>
 
-              <div style={{ background: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(20px)', padding: 'var(--space-md) var(--space-lg)', borderRadius: 'var(--rounded-lg)', border: '1px solid var(--border-glass)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div style={{ background: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', padding: 'var(--space-md) var(--space-lg)', borderRadius: 'var(--rounded-lg)', border: '1px solid var(--border-glass)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--accent-coral)', fontSize: '24px' }}>public</span>
                   <div>

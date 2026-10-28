@@ -214,6 +214,7 @@
 .btn-ghost-dark {
   background: rgba(255, 255, 255, 0.1);
   color: var(--text-inverse);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border-glass);
 }
