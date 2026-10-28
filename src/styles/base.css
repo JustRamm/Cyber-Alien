@@ -15,6 +15,41 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--surface);
   color: var(--on-surface);
+  /* Firefox Scrollbar Styling */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(10, 10, 10, 0.35) var(--surface);
+}
+
+/* ==========================================================================
+   CUSTOM KINETIC VOID SCROLLBAR (Chrome, Safari, Edge)
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(10, 10, 10, 0.28);
+  border-radius: 9999px;
+  border: 1.5px solid var(--surface);
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-coral);
+  border: 1px solid var(--surface);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #be123c;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 body {
