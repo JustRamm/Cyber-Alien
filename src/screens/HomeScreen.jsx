@@ -334,8 +334,20 @@ export default function HomeScreen() {
               Design that converts.<br />Code that scales.
             </h2>
 
-            <div style={{ position: 'relative', paddingLeft: '2rem', display: 'flex', flexDirection: 'column', gap: 'var(--space-xl)' }}>
-              <div style={{ position: 'absolute', left: '7px', top: '10px', bottom: '10px', width: '2px', background: 'var(--outline-variant)' }}></div>
+            <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: 'var(--space-xl)' }}>
+              {/* Vertical timeline line passing through the exact mathematical center of dots */}
+              <div
+                style={{
+                  position: 'absolute',
+                  left: '16px',
+                  top: '12px',
+                  bottom: '24px',
+                  width: '2px',
+                  background: 'var(--outline-variant)',
+                  transform: 'translateX(-50%)',
+                  zIndex: 0
+                }}
+              ></div>
 
               {timelineSteps.map((step, idx) => {
                 const isActive = activeStep === idx;
@@ -344,30 +356,47 @@ export default function HomeScreen() {
                     key={step.num}
                     onClick={() => setActiveStep(idx)}
                     style={{
-                      position: 'relative',
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: '16px',
                       cursor: 'pointer',
                       opacity: isActive ? 1 : 0.55,
-                      transition: 'opacity var(--transition-fast)'
+                      transition: 'opacity var(--transition-fast)',
+                      position: 'relative',
+                      zIndex: 1
                     }}
                   >
+                    {/* Fixed 32px column for dot to guarantee exact 16px center alignment with vertical line */}
                     <div
                       style={{
-                        position: 'absolute',
-                        left: '-28px',
-                        top: '4px',
-                        width: '12px',
-                        height: '12px',
-                        borderRadius: '50%',
-                        backgroundColor: isActive ? 'var(--accent-coral)' : 'var(--outline)',
-                        boxShadow: isActive ? '0 0 0 4px var(--accent-coral-dim)' : 'none'
+                        width: '32px',
+                        height: '24px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0
                       }}
-                    ></div>
-                    <h3 className="font-headline-sm" style={{ color: isActive ? 'var(--primary)' : 'var(--outline)' }}>
-                      {step.num}. {step.title}
-                    </h3>
-                    <p className="font-body-md" style={{ marginTop: '4px' }}>
-                      {step.desc}
-                    </p>
+                    >
+                      <div
+                        style={{
+                          width: '12px',
+                          height: '12px',
+                          borderRadius: '50%',
+                          backgroundColor: isActive ? 'var(--accent-coral)' : 'var(--outline)',
+                          boxShadow: isActive ? '0 0 0 4px var(--accent-coral-dim)' : 'none',
+                          transition: 'all var(--transition-fast)'
+                        }}
+                      ></div>
+                    </div>
+
+                    <div>
+                      <h3 className="font-headline-sm" style={{ color: isActive ? 'var(--primary)' : 'var(--outline)' }}>
+                        {step.num}. {step.title}
+                      </h3>
+                      <p className="font-body-md" style={{ marginTop: '4px' }}>
+                        {step.desc}
+                      </p>
+                    </div>
                   </div>
                 );
               })}
