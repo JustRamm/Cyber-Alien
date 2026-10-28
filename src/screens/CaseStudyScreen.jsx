@@ -250,7 +250,7 @@ export default function CaseStudyScreen() {
                 <div style={{ aspectRatio: '16/9', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', marginBottom: 'var(--space-md)' }}>
                   <img
                     alt="Dark Void HUD Shaders"
-                    src="/images/hero-monolith.jpg"
+                    src="/images/chronovault-cinematic.jpg"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </div>

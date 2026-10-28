@@ -91,7 +91,7 @@ export default function WorkScreen() {
       catLabel: 'WEB AUDIO API // RUST WASM',
       meta: '2025 // 32-BIT FLOAT',
       desc: 'Browser-native polyphonic synthesizer running low-latency WebAssembly audio DSP kernels with real-time vector graphics visualization and MIDI over WebBluetooth.',
-      img: '/images/hero-monolith.jpg',
+      img: '/images/hyperion-audio.jpg',
       cols: 'span 12',
       dark: true
     }

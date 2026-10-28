@@ -451,7 +451,7 @@ export default function HomeScreen() {
               <div style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Packaging"
-                  src="/images/aura-botanica.jpg"
+                  src="/images/services-packaging.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-dispatch" style={{ position: 'absolute', top: '10px', left: '10px', background: 'rgba(250,249,245,0.9)' }}>
@@ -469,7 +469,7 @@ export default function HomeScreen() {
               <div style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Video Suite"
-                  src="/images/chronovault-cinematic.jpg"
+                  src="/images/services-video.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-pill-dark" style={{ position: 'absolute', top: '10px', left: '10px' }}>
@@ -760,7 +760,7 @@ export default function HomeScreen() {
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Project Obsidian"
-                  src="/images/obsidian-topology.jpg"
+                  src="/images/bento-fluid-balancing.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-pill-dark" style={{ position: 'absolute', top: '12px', left: '12px' }}>
@@ -783,7 +783,7 @@ export default function HomeScreen() {
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Neo-Kinetic"
-                  src="/images/neokinetic-audio.jpg"
+                  src="/images/bento-workstation.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-pill-dark" style={{ position: 'absolute', top: '12px', left: '12px' }}>
@@ -890,21 +890,21 @@ export default function HomeScreen() {
               date: 'OCTOBER 14, 2025 • DEV LOG #42',
               title: 'Engineering Real-time 3D Experiences in the Browser',
               author: 'ALEXEI VOLKOV',
-              img: '/images/services-dev.jpg'
+              img: '/images/insight-webgl.jpg'
             },
             {
               cat: 'Design // 4 min read',
               date: 'OCTOBER 02, 2025 • CRITIQUE',
               title: 'The Death of Generic Flat Design: The Age of Tactile Hardware Interfaces',
               author: 'MIRA CHEN',
-              img: '/images/neokinetic-audio.jpg'
+              img: '/images/insight-hardware.jpg'
             },
             {
               cat: 'Impact // 5 min read',
               date: 'SEPTEMBER 21, 2025 • INITIATIVE',
               title: 'How Mind Empowered is Reshaping Tech Philanthropy',
               author: 'KAVIN REDDY',
-              img: '/images/mind-empowered.jpg'
+              img: '/images/insight-impact.jpg'
             }
           ].map((post, i) => (
             <div key={i} className="col-span-12" style={{ gridColumn: 'span 4' }}>
