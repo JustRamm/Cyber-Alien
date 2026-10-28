@@ -127,7 +127,7 @@ export default function HomeScreen() {
         >
           <img
             alt="Hero Monolith Setup"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQSZMT7wprBONKa6GfL-DIiRmRNSlJM071YYVP9EkwZUpdRhwEgpPS4HR48-c_WQiIcXNRtASHUsWUhnKV0P_qaLZXrnbTjknkepro7N5kwuXUDKPPcxQ86WszOEQcLLXqS6cmUMHcTydz80FND4xnZ4YNU8zMMdclGmxcV0_irDFICeNpb6P2n-dr72h49mfxyLcwQdOOGI9RF0z8SwY2_zW3JK8isG5q1jI3BI2O"
+            src="/images/hero-monolith.jpg"
             style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }}
           />
           <div
@@ -351,7 +351,7 @@ export default function HomeScreen() {
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Web Design Card"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZeApz9RVK7Ku2c50KIYq3vRQKzzB6ZIAEhpB1XjJlAjW4bXxp2zWG5IJe2nyMo66ZOtWjS7eXvRaBAX0Tj6fkWqk7hz6Rxe6XzJ5yFK6o_rvZMuaxKhVf7c_icURG4lWYe8hhdRMGtgv2GLFtp22hM7H-HcX7hI4XlH41CM8lEbiXkSyhL_3N1lZ8z5L38Usc-r01x1rphkxs9gsLm9kgn5VVOWvsU8RZ2M7WZh5T"
+                  src="/images/services-web.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-pill-dark" style={{ position: 'absolute', top: '1rem', left: '1rem' }}>
@@ -431,7 +431,7 @@ export default function HomeScreen() {
               <div style={{ aspectRatio: '16/9', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Brand Architecture"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOXzw0IFD6JQ7qf4lVmY3ychaxDhs811nNr0d2vT-UfWnbSzWEQIxr9DLE5-8kc-jrN10z4ZC0S1NBES_98rCLes0DY6xac7N2OUX4-GGl8N7V_yHP_G6XchFQlInxwopm7PJdp2ZX3a27h5y-uVPRHPisxa3fiSFXfEd7noVhnoC-_9e2oeF_3Lbi50feaYMY6QsChaxaDk1PysWxxKIBMBcDGumj14KhScPshVYK"
+                  src="/images/services-brand.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-pill-dark" style={{ position: 'absolute', top: '10px', left: '10px' }}>
@@ -451,7 +451,7 @@ export default function HomeScreen() {
               <div style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Packaging"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOZBRpIWZtBQJPcvrkQFlZ3LAVfL-s6TELWDuGRYMD5ICoEcFgmGh2KyUuBr-U87vEl_O7KnLoMcgoyV4cmNQDlgbm7YhWCI4l0AdgfYvLNNOL8leOrYe6CTaL3iIa9EslbC9_OdPYK30WXXM3RxKEi9R9ba3n1692i9uIpZg9jfhykDyM68fA7aRWTWrNMKta8Hp6sja7RCrqJLN6grU2i4sHOxoqj2cF7Tkh7nZi"
+                  src="/images/aura-botanica.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-dispatch" style={{ position: 'absolute', top: '10px', left: '10px', background: 'rgba(250,249,245,0.9)' }}>
@@ -469,7 +469,7 @@ export default function HomeScreen() {
               <div style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Video Suite"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN9PpB06o4qEW4Uhwohk0RNf7otbYGcmWY91HNW_QRema_F3kD0ao9RIB4ZevFXpDB2b_LQeo6cjJhHm48L4xvLQybF9RLPOaDqy24VuxxNIkN5NDJCFfh6WpOnCCOqG-GE7-kFuAIfeJaJ3a0PAnwWAfkhDyTqacMin-SkFZYr0oa8eOTgWG6Np3PhCK-ZJGrikQJZBfAywIE6gsrin66DPj7G1qRPm9s5wPnb8pN"
+                  src="/images/chronovault-cinematic.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-pill-dark" style={{ position: 'absolute', top: '10px', left: '10px' }}>
@@ -760,7 +760,7 @@ export default function HomeScreen() {
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Project Obsidian"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb1-rmIu1TWa9ZYZen4xWDh5eEnVmjNR2K0NQhvIDGkcOsT8-XZ4g81FJMPm78DJFsO6psrFsXdee7_TVANm2dbBvv8H21anMbOa4RUVwI-i4XX9X3Q3jk6_0uG7PRrz0jGsOeOfku2NP-EVin59LyPZRa1sxTyK32OaL2EBDsIdSO0_pjq7Ok824noXxyom09SAd3rHlo2toy6tnAucRJaAXNpC_n7SRNsz-kRl2W"
+                  src="/images/obsidian-topology.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-pill-dark" style={{ position: 'absolute', top: '12px', left: '12px' }}>
@@ -783,7 +783,7 @@ export default function HomeScreen() {
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Neo-Kinetic"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI1ZssrpnnHUs3u90lSbqaC-3noLyElTmc0tNKi1BFqYmt9gLnDa2ow8kIVrveQvlaUG48sD8tMIDdNtZ4CPMfxwdmxY5pzKNieriLt5NM1eez8B7Wwtx1b0uye4KlyLaZwB_i9XLAtyA25tzbTtId5fO3VmJIjIlVGNpu6HCEEkuKz1lT9qJ0AoDiMf0SywR6_sshuWEPcfJ5IItYd3wxPkBv4cXV6Wh9zycOO6eQ"
+                  src="/images/neokinetic-audio.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-pill-dark" style={{ position: 'absolute', top: '12px', left: '12px' }}>
@@ -890,21 +890,21 @@ export default function HomeScreen() {
               date: 'OCTOBER 14, 2025 • DEV LOG #42',
               title: 'Engineering Real-time 3D Experiences in the Browser',
               author: 'ALEXEI VOLKOV',
-              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAIoVZWj2_OmRz9RCNAQM5oE5FxYkpJ4bUm5QCUH2rnNwa1VeNUKwZsH1Odnm5-XvFkJ1x-O4GbffqfIRAOHvZv1Q9D6zjaP6JMtcUGaGkRChkGzOep_-Coqn8bmxuRPZ4FovRwnjmxlRR3AR3jF0eV16ian1PoATi8ArCbRpaRivoyRlC-p1HJgWZC2jYmB9blxcEuYshGZTSGT-D7blxjkk9k5f0_qqBfUxPLkz_L'
+              img: '/images/services-dev.jpg'
             },
             {
               cat: 'Design // 4 min read',
               date: 'OCTOBER 02, 2025 • CRITIQUE',
               title: 'The Death of Generic Flat Design: The Age of Tactile Hardware Interfaces',
               author: 'MIRA CHEN',
-              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBFr9GvrFlPWkGItysNdBEcIcsf8J6kULqGj5vcUFZrqSK2d1HRgGM2Hu0dS7cwsUSHOp9QeXcyWpvOTYS53BbvqJA3hdvMPdZTF3t9NkvUB0peUxOxvYqHZQTLIVa5hy1iu_IHBmNKoVBCBzBYGCVqYz8m46WxZJSNv1_TT5tBbA62z9e5zJueCp_m4IG-pDMAiCJaO0J1MaQu1in7SWdQduHA-Iv-wCz0JLiXLv2M'
+              img: '/images/neokinetic-audio.jpg'
             },
             {
               cat: 'Impact // 5 min read',
               date: 'SEPTEMBER 21, 2025 • INITIATIVE',
               title: 'How Mind Empowered is Reshaping Tech Philanthropy',
               author: 'KAVIN REDDY',
-              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBB6xzlvgFUoBl11JupyYIM-QoQwaFah-Ur1sJtotuhPKJKsn3KCLvLtzcsFh0z8bzfYYWlWShb1opIgl_1NQaQoUlodk-mgFWiO4Gdm6R9yl07jklBMb05VQGiSvZgPetbPyx85k6tRuIblZkBnyoPv3tiqglohAN2xdVop5cCrcPsVD9ci8O7TWok4v0k8SPoid5oZS6HEGisgljrWguLBlYS1q7BNNYtbV_dwPpn'
+              img: '/images/mind-empowered.jpg'
             }
           ].map((post, i) => (
             <div key={i} className="col-span-12" style={{ gridColumn: 'span 4' }}>

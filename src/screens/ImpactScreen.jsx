@@ -174,7 +174,7 @@ export default function ImpactScreen() {
               <div style={{ aspectRatio: '4/3', borderRadius: 'var(--rounded-lg)', overflow: 'hidden', border: '1px solid var(--border-glass)' }}>
                 <img
                   alt="Mind Empowered Youth Learning Workshop"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAITkuQiVQWeZrAs7pR6TVqI3kpwsC0-hEHJoXSb7uNGUwQUH_WUJf273f3PWrHxSSZBYPoItWqgAE6N1iu5hLSeMLjjhR_7ClbVpeF39SPU7xkOK-3gElGZsLWUdXW0udBr0E-aVDfbJTLxXJxJidyCfN0eyxNkqJ_6Inn7ni31lY3zbH9ltiAvqzIWqoAZK4kTJvarVmxXeMP6_6Dhf3EqNbzqe22x2mkkFW5XhQQ"
+                  src="/images/mind-empowered.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>

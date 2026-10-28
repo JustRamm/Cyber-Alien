@@ -147,7 +147,7 @@ export default function CaseStudyScreen() {
         <div style={{ borderRadius: 'var(--rounded-xl)', overflow: 'hidden', marginBottom: 'var(--space-3xl)', boxShadow: 'var(--shadow-monolith)', border: '1px solid var(--border-subtle)' }}>
           <img
             alt="Obsidian Telemetry Hardware & Display"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvfnBrPJQHTuzy83gmhTfcYlQlYnj0-BJMaP3mh5FFcE495AJMGvA04Rld_XkYhD8pgv4_oZjnGzIpwRiL3PKUJTK9DcuPDVwqFWpnEeXeZDkFk3XjDetTgFBjHXi4eoTQnSPPn9IPaCrDlZJ_4k84Lqh9VkpXrFw5c89Kn6wqVg8i1P3mTjr8AHZBGm2dnPm1_npMpvq7gua_eK2WTjDVxDJA7OiL2-5O2aHsMbdX"
+            src="/images/obsidian-topology.jpg"
             style={{ width: '100%', height: 'auto', display: 'block' }}
           />
         </div>
@@ -190,7 +190,7 @@ export default function CaseStudyScreen() {
                 <div style={{ aspectRatio: '16/9', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', marginBottom: 'var(--space-md)' }}>
                   <img
                     alt="Dynamic Node Fluid Balancing visual"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb1-rmIu1TWa9ZYZen4xWDh5eEnVmjNR2K0NQhvIDGkcOsT8-XZ4g81FJMPm78DJFsO6psrFsXdee7_TVANm2dbBvv8H21anMbOa4RUVwI-i4XX9X3Q3jk6_0uG7PRrz0jGsOeOfku2NP-EVin59LyPZRa1sxTyK32OaL2EBDsIdSO0_pjq7Ok824noXxyom09SAd3rHlo2toy6tnAucRJaAXNpC_n7SRNsz-kRl2W"
+                    src="/images/bento-fluid-balancing.jpg"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </div>
@@ -210,7 +210,7 @@ export default function CaseStudyScreen() {
                 <div style={{ aspectRatio: '4/3', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', marginBottom: 'var(--space-md)' }}>
                   <img
                     alt="Multi-Monitor Command Workstation"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI1ZssrpnnHUs3u90lSbqaC-3noLyElTmc0tNKi1BFqYmt9gLnDa2ow8kIVrveQvlaUG48sD8tMIDdNtZ4CPMfxwdmxY5pzKNieriLt5NM1eez8B7Wwtx1b0uye4KlyLaZwB_i9XLAtyA25tzbTtId5fO3VmJIjIlVGNpu6HCEEkuKz1lT9qJ0AoDiMf0SywR6_sshuWEPcfJ5IItYd3wxPkBv4cXV6Wh9zycOO6eQ"
+                    src="/images/bento-workstation.jpg"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </div>
@@ -230,7 +230,7 @@ export default function CaseStudyScreen() {
                 <div style={{ aspectRatio: '4/3', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', marginBottom: 'var(--space-md)' }}>
                   <img
                     alt="Cross-Platform Responsive Telemetry"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX-LWZSblngk_dwuHmgwBxLyiXnBiVyJoQR9drC19KCqnpuqWwY7C76UxPKBqYEFF9-J-d_evDlBTlZCd5XwDt9fX4PsrCL0n2dWYJ6AtM82lT8s2i4AAUBFF6PupEnlM5EkZ8xkccHDdWWZCYRwidRednZLBo7oIPiPoBucQsp4M2pYnlXlUQYIMkfzzMC-3_NieWNDwxaiBWcPiyF83OvkC61JZ_OifF_nOA7ZIz"
+                    src="/images/dhriti-mobile.jpg"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </div>
@@ -250,7 +250,7 @@ export default function CaseStudyScreen() {
                 <div style={{ aspectRatio: '16/9', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', marginBottom: 'var(--space-md)' }}>
                   <img
                     alt="Dark Void HUD Shaders"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmsnEGp8zgQL0pToVRJxnCruS-_OKgPR4FSYSeNlVRkAFHrvs_gNmq-dCvupCE4ooF7F5Xn_qp0LQmO1j4gHX5KTw29q-JDKTtdWkD_RoH4495P1kj0NpGiGEtLc_N7FgSbeL9q9urrUUitFmgajPZE-VRWuXLH6QuwG699t0UmBmOmSvCORNMeCzaUYL-SHI-5NgvyrZG_GFocLIdXoWqO0GLhJwsH-Bje3-gYRW3"
+                    src="/images/hero-monolith.jpg"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </div>
