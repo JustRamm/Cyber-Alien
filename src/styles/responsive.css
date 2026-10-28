@@ -115,5 +115,20 @@
     padding-top: var(--space-2xl);
     padding-bottom: var(--space-2xl);
   }
+
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .show-mobile {
+    display: block !important;
+  }
 }
+
+@media (min-width: 768px) {
+  .show-mobile {
+    display: none !important;
+  }
+}
+
 
