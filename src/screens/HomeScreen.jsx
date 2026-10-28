@@ -4,6 +4,9 @@ import { useRouter } from '../router/RouterContext';
 export default function HomeScreen() {
   const { navigate } = useRouter();
 
+  // Floating Hero Showcase State (Video Inspired)
+  const [autoSync, setAutoSync] = useState(true);
+
   // Frame 4 Interactive Terminal State
   const [activeStep, setActiveStep] = useState(0);
   const timelineSteps = [
@@ -117,7 +120,9 @@ export default function HomeScreen() {
             borderRadius: 'var(--rounded-xl)',
             padding: 0,
             aspectRatio: '21/9',
-            minHeight: '380px'
+            minHeight: '400px',
+            position: 'relative',
+            overflow: 'hidden'
           }}
         >
           <img
@@ -136,12 +141,138 @@ export default function HomeScreen() {
           {/* Top Left Telemetry Tag */}
           <div
             className="badge-pill-dark"
-            style={{ position: 'absolute', top: '1.5rem', left: '1.5rem' }}
+            style={{ position: 'absolute', top: '1.5rem', left: '1.5rem', zIndex: 2 }}
           >
             <span className="beacon-dot animate-pulse-soft"></span>
             <span className="font-label-caps" style={{ color: 'var(--text-inverse)' }}>
               CA-STUDIO // PROTOCOL 4.2
             </span>
+          </div>
+
+          {/* Floating Widget 1: Auto-Sync Toggle Card (Top Right) */}
+          <div
+            className="animate-float-slow hide-mobile"
+            style={{
+              position: 'absolute',
+              top: '1.5rem',
+              right: '1.5rem',
+              backgroundColor: 'rgba(10, 10, 10, 0.75)',
+              WebkitBackdropFilter: 'blur(16px)',
+              backdropFilter: 'blur(16px)',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
+              borderRadius: 'var(--rounded-lg)',
+              padding: '10px 16px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+              zIndex: 3
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span className={`beacon-dot ${autoSync ? 'animate-ping-radar' : ''}`} style={{ backgroundColor: autoSync ? 'var(--accent-coral)' : 'var(--outline)' }}></span>
+              <div style={{ textAlign: 'left' }}>
+                <p className="font-label-caps" style={{ color: '#fff', fontSize: '11px', margin: 0, letterSpacing: '0.1em' }}>AUTO-SYNC</p>
+                <p style={{ fontSize: '10px', color: 'rgba(255,255,255,0.6)', margin: 0 }}>{autoSync ? 'Live Canvas Engine' : 'Sync Paused'}</p>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => setAutoSync(!autoSync)}
+              style={{
+                width: '38px',
+                height: '20px',
+                borderRadius: '9999px',
+                backgroundColor: autoSync ? 'var(--accent-coral)' : 'rgba(255,255,255,0.2)',
+                border: 'none',
+                padding: '2px',
+                cursor: 'pointer',
+                position: 'relative',
+                transition: 'background-color 0.2s ease'
+              }}
+              aria-label="Toggle Auto-Sync"
+            >
+              <div
+                style={{
+                  width: '16px',
+                  height: '16px',
+                  borderRadius: '50%',
+                  backgroundColor: '#fff',
+                  transform: autoSync ? 'translateX(18px)' : 'translateX(0)',
+                  transition: 'transform 0.2s ease'
+                }}
+              />
+            </button>
+          </div>
+
+          {/* Floating Widget 2: Spatial Audio DSP Equalizer (Center Left) */}
+          <div
+            className="animate-float-slow hide-mobile"
+            style={{
+              position: 'absolute',
+              top: '36%',
+              left: '2rem',
+              backgroundColor: 'var(--accent-coral)',
+              borderRadius: 'var(--rounded-lg)',
+              padding: '12px 18px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '14px',
+              boxShadow: '0 12px 32px rgba(244, 63, 94, 0.35)',
+              zIndex: 3
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '3px', height: '24px' }}>
+              <span className="audio-bar"></span>
+              <span className="audio-bar"></span>
+              <span className="audio-bar"></span>
+              <span className="audio-bar"></span>
+              <span className="audio-bar"></span>
+            </div>
+            <div style={{ textAlign: 'left' }}>
+              <p className="font-label-caps" style={{ color: '#fff', fontSize: '11px', margin: 0, letterSpacing: '0.12em' }}>
+                SPATIAL AUDIO DSP
+              </p>
+              <p style={{ fontSize: '10px', color: 'rgba(255,255,255,0.9)', margin: 0, fontWeight: 500 }}>
+                48kHz // 32-Bit Float
+              </p>
+            </div>
+            <span className="badge-pill-dark" style={{ backgroundColor: 'rgba(0,0,0,0.3)', padding: '2px 8px', fontSize: '10px' }}>
+              03:42
+            </span>
+          </div>
+
+          {/* Floating Widget 3: Realtime Collaborator Feedback (Center Right) */}
+          <div
+            className="animate-float-medium hide-mobile"
+            style={{
+              position: 'absolute',
+              top: '44%',
+              right: '2rem',
+              backgroundColor: 'rgba(10, 10, 10, 0.85)',
+              WebkitBackdropFilter: 'blur(16px)',
+              backdropFilter: 'blur(16px)',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
+              borderRadius: 'var(--rounded-full)',
+              padding: '8px 18px 8px 10px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              boxShadow: '0 12px 30px rgba(0,0,0,0.5)',
+              zIndex: 3
+            }}
+          >
+            <div style={{ width: '28px', height: '28px', borderRadius: '50%', backgroundColor: 'var(--accent-coral)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: 'bold' }}>
+              AM
+            </div>
+            <div style={{ textAlign: 'left' }}>
+              <p className="font-label-caps" style={{ color: '#fff', fontSize: '11px', margin: 0 }}>
+                Alex Morgan <span style={{ color: 'var(--accent-coral)' }}>• 2m ago</span>
+              </p>
+              <p style={{ fontSize: '11px', color: 'rgba(255,255,255,0.85)', margin: 0 }}>
+                "The 60FPS shader choreography is unreal! 🔥"
+              </p>
+            </div>
           </div>
 
           {/* Bottom Banner */}
@@ -154,7 +285,8 @@ export default function HomeScreen() {
               display: 'flex',
               alignItems: 'flex-end',
               justifyContent: 'space-between',
-              textAlign: 'left'
+              textAlign: 'left',
+              zIndex: 2
             }}
           >
             <div>
