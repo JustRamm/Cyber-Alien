@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useRouter } from '../router/RouterContext';
 
@@ -119,10 +120,10 @@ export default function HomeScreen() {
       >
         <div className="marquee-container">
           <div className="marquee-track">
-            {['Feline Insights', 'Athreya Ayurveda', 'EduSphereNZ', 'Raj Remanan', 'STARLET 5.0', 'Dhriti', 'Feline Insights', 'Athreya Ayurveda', 'EduSphereNZ', 'Raj Remanan', 'STARLET 5.0', 'Dhriti'].map((client, idx) => (
+            {Array.from({ length: 16 }).map((_, idx) => (
               <React.Fragment key={idx}>
-                <span className="font-label-caps" style={{ fontSize: '12px', letterSpacing: '0.22em', color: 'var(--outline)', fontWeight: 'bold' }}>
-                  {client}
+                <span className="font-label-caps" style={{ fontSize: '12px', letterSpacing: '0.24em', color: 'var(--outline)', fontWeight: 'bold' }}>
+                  CYBER ALIEN
                 </span>
                 <span style={{ color: 'var(--accent-coral)', opacity: 0.6, fontWeight: '900' }}>/</span>
               </React.Fragment>
