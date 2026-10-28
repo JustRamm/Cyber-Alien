@@ -31,13 +31,12 @@ export default function Navbar() {
         }}
       >
         {/* Brand / Logo */}
-        <div className="nav-brand" onClick={() => navigate('/')}>
+        <div className="nav-brand" onClick={() => navigate('/')} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
           <img
-            alt="Cyber Aliens Logo"
-            src="https://lh3.googleusercontent.com/aida/AEtjO1Uzc_PuUuHRL0E06yPz28AN_2499UyahXr3euOafzaZ4b-YbTuC_c1ZO1hXEi__tCgpVqt5AWylYqw6Lwks8hnhOiVqSlc4GjRl_dc8tNDtggA-u8AQ5rBhychwzJPn2vWXQjwLi2DZ5uR0gv1a9iRS1Jj4Z_OVid3m3rDoEJDajy7bmUqA3yTBTONdDhT5tfrzay_fh8lCydYDjt1vFFOMjO7abhpTQgeGu_ZwFYsx"
-            style={{ height: '30px', width: 'auto', objectFit: 'contain' }}
+            alt="Cyber Aliens"
+            src="/brand/logo.png"
+            style={{ height: '17px', width: 'auto', objectFit: 'contain', display: 'block' }}
           />
-          <span className="nav-logo-text">Cyber Aliens</span>
         </div>
 
         {/* Desktop Links */}

@@ -39,12 +39,9 @@ export default function Footer() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)', marginBottom: 'var(--space-md)' }}>
               <img
                 alt="Cyber Aliens Logo"
-                src="https://lh3.googleusercontent.com/aida/AEtjO1Uzc_PuUuHRL0E06yPz28AN_2499UyahXr3euOafzaZ4b-YbTuC_c1ZO1hXEi__tCgpVqt5AWylYqw6Lwks8hnhOiVqSlc4GjRl_dc8tNDtggA-u8AQ5rBhychwzJPn2vWXQjwLi2DZ5uR0gv1a9iRS1Jj4Z_OVid3m3rDoEJDajy7bmUqA3yTBTONdDhT5tfrzay_fh8lCydYDjt1vFFOMjO7abhpTQgeGu_ZwFYsx"
-                style={{ height: '32px', width: 'auto', objectFit: 'contain' }}
+                src="/brand/logo.png"
+                style={{ height: '22px', width: 'auto', objectFit: 'contain' }}
               />
-              <span className="font-headline-sm" style={{ color: 'var(--on-primary)', letterSpacing: '-0.02em', fontWeight: 'bold' }}>
-                CYBER ALIENS
-              </span>
             </div>
             <p className="font-body-md" style={{ color: 'var(--on-primary-container)', maxWidth: '380px', marginBottom: 'var(--space-lg)' }}>
               High-performance design and technology studio constructing transformative digital systems, experimental brand worlds, and cinematic interfaces.
