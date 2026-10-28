@@ -203,6 +203,75 @@ export default function WorkScreen() {
             </div>
           ))}
         </div>
+
+        {/* Bottom Conversion Monolith matching image copy 4.png & image copy 11.png */}
+        <div
+          className="card-monolith"
+          style={{
+            marginTop: 'var(--space-3xl)',
+            padding: 'var(--space-3xl) var(--space-xl)',
+            borderRadius: 'var(--rounded-xl)',
+            textAlign: 'center',
+            position: 'relative',
+            overflow: 'hidden'
+          }}
+        >
+          {/* Subtle Radial Glow */}
+          <div
+            style={{
+              position: 'absolute',
+              top: '-40%',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: '600px',
+              height: '300px',
+              background: 'radial-gradient(circle, rgba(244, 63, 94, 0.15) 0%, transparent 70%)',
+              pointerEvents: 'none'
+            }}
+          ></div>
+
+          <div style={{ position: 'relative', zIndex: 1, maxWidth: '720px', margin: '0 auto' }}>
+            <div className="badge-pill-dark" style={{ display: 'inline-flex', marginBottom: 'var(--space-md)' }}>
+              <span className="beacon-dot animate-ping-radar"></span>
+              <span className="font-label-caps" style={{ color: '#fff' }}>HAVE A PROJECT IN MIND?</span>
+            </div>
+
+            <h2 className="font-headline-lg" style={{ color: '#fff', marginBottom: 'var(--space-md)', fontSize: 'clamp(32px, 5vw, 56px)' }}>
+              Let's build something unreal.
+            </h2>
+
+            <p className="font-body-lg" style={{ color: 'var(--tertiary-fixed)', marginBottom: 'var(--space-2xl)' }}>
+              We partner with ambitious founders, engineering teams, and institutions to engineer category-defining digital artifacts.
+            </p>
+
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 'var(--space-md)' }}>
+              <button
+                className="btn btn-secondary"
+                onClick={() => navigate('/proposal')}
+                style={{ height: '52px', padding: '0 32px' }}
+              >
+                <span>GET A PROPOSAL</span>
+                <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
+              </button>
+
+              <a
+                href="mailto:hello@cyberaliens.in?subject=Discovery%20Call%20Request"
+                className="btn btn-surface"
+                style={{
+                  height: '52px',
+                  padding: '0 28px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                  color: '#fff',
+                  borderColor: 'rgba(255, 255, 255, 0.15)',
+                  textDecoration: 'none'
+                }}
+              >
+                <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>calendar_today</span>
+                <span>SCHEDULE DISCOVERY CALL</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
