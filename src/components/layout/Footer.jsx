@@ -1,0 +1,174 @@
+import React, { useState } from 'react';
+import { useRouter } from '../../router/RouterContext';
+
+export default function Footer() {
+  const { navigate } = useRouter();
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+
+  function handleSubscribe(e) {
+    e.preventDefault();
+    if (email.trim()) {
+      setSubscribed(true);
+      setEmail('');
+    }
+  }
+
+  return (
+    <footer
+      style={{
+        backgroundColor: 'var(--primary)',
+        color: 'var(--on-primary)',
+        paddingTop: 'var(--space-3xl)',
+        paddingBottom: 'var(--space-2xl)',
+        paddingLeft: 'var(--margin)',
+        paddingRight: 'var(--margin)',
+        marginTop: 'var(--space-3xl)'
+      }}
+    >
+      <div className="container-max">
+        <div
+          className="grid-12"
+          style={{
+            paddingBottom: 'var(--space-2xl)',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.12)'
+          }}
+        >
+          {/* Brand & Availability Status */}
+          <div className="col-span-12" style={{ gridColumn: 'span 5' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)', marginBottom: 'var(--space-md)' }}>
+              <img
+                alt="Cyber Aliens Logo"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1Uzc_PuUuHRL0E06yPz28AN_2499UyahXr3euOafzaZ4b-YbTuC_c1ZO1hXEi__tCgpVqt5AWylYqw6Lwks8hnhOiVqSlc4GjRl_dc8tNDtggA-u8AQ5rBhychwzJPn2vWXQjwLi2DZ5uR0gv1a9iRS1Jj4Z_OVid3m3rDoEJDajy7bmUqA3yTBTONdDhT5tfrzay_fh8lCydYDjt1vFFOMjO7abhpTQgeGu_ZwFYsx"
+                style={{ height: '32px', width: 'auto', objectFit: 'contain' }}
+              />
+              <span className="font-headline-sm" style={{ color: 'var(--on-primary)', letterSpacing: '-0.02em', fontWeight: 'bold' }}>
+                CYBER ALIENS
+              </span>
+            </div>
+            <p className="font-body-md" style={{ color: 'var(--on-primary-container)', maxWidth: '380px', marginBottom: 'var(--space-lg)' }}>
+              High-performance design and technology studio constructing transformative digital systems, experimental brand worlds, and cinematic interfaces.
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)' }}>
+              <span className="beacon-dot animate-ping-radar" style={{ width: '8px', height: '8px' }}></span>
+              <span className="font-label-caps" style={{ color: 'var(--on-primary-container)', letterSpacing: '0.08em' }}>
+                Available for Q3/Q4 Studio Partnerships
+              </span>
+            </div>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="col-span-12" style={{ gridColumn: 'span 3' }}>
+            <span className="font-label-caps" style={{ color: 'rgba(255,255,255,0.5)', display: 'block', marginBottom: 'var(--space-md)' }}>
+              Navigation
+            </span>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)' }}>
+              <li>
+                <span className="font-body-sm" style={{ color: 'var(--on-primary-container)', cursor: 'pointer' }} onClick={() => navigate('/', 'services')}>
+                  Services & Architecture
+                </span>
+              </li>
+              <li>
+                <span className="font-body-sm" style={{ color: 'var(--on-primary-container)', cursor: 'pointer' }} onClick={() => navigate('/work')}>
+                  Selected Works
+                </span>
+              </li>
+              <li>
+                <span className="font-body-sm" style={{ color: 'var(--on-primary-container)', cursor: 'pointer' }} onClick={() => navigate('/case-study')}>
+                  Case Study: Obsidian
+                </span>
+              </li>
+              <li>
+                <span className="font-body-sm" style={{ color: 'var(--on-primary-container)', cursor: 'pointer' }} onClick={() => navigate('/impact')}>
+                  Impact & Mind Empowered
+                </span>
+              </li>
+              <li>
+                <span className="font-body-sm" style={{ color: 'var(--on-primary-container)', cursor: 'pointer' }} onClick={() => navigate('/', 'process')}>
+                  Methodology & Process
+                </span>
+              </li>
+              <li>
+                <span className="font-body-sm" style={{ color: 'var(--on-primary-container)', cursor: 'pointer' }} onClick={() => navigate('/', 'insights')}>
+                  Studio Insights
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Transmission Dispatch Newsletter */}
+          <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
+            <span className="font-label-caps" style={{ color: 'rgba(255,255,255,0.5)', display: 'block', marginBottom: 'var(--space-md)' }}>
+              Transmission Dispatch
+            </span>
+            <p className="font-body-sm" style={{ color: 'var(--on-primary-container)', marginBottom: 'var(--space-md)' }}>
+              Bi-weekly telemetry on creative precision, software craftsmanship, and spatial interaction design.
+            </p>
+            {subscribed ? (
+              <div style={{ padding: '0.75rem 1rem', background: 'rgba(255,255,255,0.08)', borderRadius: 'var(--rounded-md)', color: 'var(--accent-coral)' }}>
+                ✓ Terminal transmission registered.
+              </div>
+            ) : (
+              <form
+                onSubmit={handleSubscribe}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  background: 'var(--primary-container)',
+                  borderRadius: 'var(--rounded-full)',
+                  padding: '6px',
+                  border: '1px solid rgba(255,255,255,0.1)'
+                }}
+              >
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter your terminal address..."
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  style={{
+                    background: 'transparent',
+                    padding: '8px 16px',
+                    fontSize: '14px',
+                    color: 'var(--on-primary)',
+                    width: '100%'
+                  }}
+                />
+                <button
+                  type="submit"
+                  className="btn btn-secondary btn-sm"
+                  style={{ borderRadius: 'var(--rounded-full)', height: '36px', padding: '0 18px', shrink: 0 }}
+                >
+                  Subscribe
+                </button>
+              </form>
+            )}
+          </div>
+        </div>
+
+        {/* Bottom Coordinates & Legal */}
+        <div
+          style={{
+            paddingTop: 'var(--space-lg)',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: 'var(--space-md)'
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-lg)' }}>
+            <a href="#twitter" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>Twitter / X</a>
+            <a href="#github" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>GitHub</a>
+            <a href="#dribbble" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>Dribbble</a>
+            <a href="#linkedin" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>LinkedIn</a>
+          </div>
+          <div className="font-label-caps" style={{ color: 'var(--on-primary-container)', letterSpacing: '0.08em' }}>
+            © 2026 Cyber Aliens Studio Ltd. All rights reserved. Precision Engineering.
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
