@@ -83,21 +83,6 @@ export default function HomeScreen() {
           <button className="btn btn-primary" onClick={() => navigate('/proposal')}>
             <span>Get A Proposal</span>
           </button>
-          <button
-            className="btn btn-surface"
-            onClick={() => {
-              const el = document.getElementById('reviews');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            <span
-              className="material-symbols-outlined"
-              style={{ color: 'var(--accent-coral)', fontSize: '20px', fontVariationSettings: "'FILL' 1" }}
-            >
-              star
-            </span>
-            <span>Our Reviews (4.9/5)</span>
-          </button>
         </div>
 
         {/* Cinematic Hero Monolith Showcase */}
