@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import MobileDrawer from './components/layout/MobileDrawer';
 import CustomCursor from './components/common/CustomCursor';
+import useScrollReveal from './hooks/useScrollReveal';
 
 import HomeScreen from './screens/HomeScreen';
 import WorkScreen from './screens/WorkScreen';
@@ -39,6 +40,9 @@ function MainLayout() {
   const { currentPath } = useRouter();
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Scroll-Triggered Reveal Orchestration across all routes
+  useScrollReveal(currentPath);
 
   useEffect(() => {
     function handleScroll() {

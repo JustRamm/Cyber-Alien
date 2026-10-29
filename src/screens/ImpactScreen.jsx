@@ -41,17 +41,17 @@ export default function ImpactScreen() {
             <span className="font-label-caps" style={{ color: '#fff' }}>SOCIAL IMPACT // MIND EMPOWERED ALLIANCE</span>
             <span className="beacon-dot animate-ping-radar" style={{ width: '6px', height: '6px' }}></span>
           </div>
-          <h1 className="font-headline-lg" style={{ fontSize: 'clamp(36px, 5.5vw, 64px)', maxWidth: '900px', margin: '0 auto var(--space-md)' }}>
+          <h1 className="font-headline-lg reveal-headline" style={{ fontSize: 'clamp(36px, 5.5vw, 64px)', maxWidth: '900px', margin: '0 auto var(--space-md)' }}>
             Engineering digital futures.<br />Anchoring human equity.
           </h1>
-          <p className="font-body-lg" style={{ maxWidth: '680px', margin: '0 auto', color: 'var(--text-secondary)' }}>
+          <p className="font-body-lg reveal-fade" style={{ maxWidth: '680px', margin: '0 auto', color: 'var(--text-secondary)' }}>
             Cyber Aliens dedicates structural resources and studio revenue toward grassroots technological literacy, youth mental health resilience, and generational digital empowerment.
           </p>
         </div>
 
         {/* Manifesto Callout Monolith matching image copy 9.png */}
         <div
-          className="card-monolith"
+          className="card-monolith reveal-card"
           style={{
             padding: 'var(--space-2xl) var(--space-xl)',
             borderRadius: 'var(--rounded-xl)',

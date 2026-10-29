@@ -143,19 +143,19 @@ export default function HomeScreen() {
       {/* FRAME 3: SERVICES MOSAIC */}
       <section id="services" className="section-padding container-max">
         <div style={{ textAlign: 'center', marginBottom: 'var(--space-2xl)' }}>
-          <span className="font-label-caps" style={{ color: 'var(--accent-coral)', display: 'block', marginBottom: 'var(--space-xs)' }}>
+          <span className="font-label-caps reveal-fade" style={{ color: 'var(--accent-coral)', display: 'block', marginBottom: 'var(--space-xs)' }}>
             WHAT WE OFFER AT CYBER ALIENS
           </span>
-          <h2 className="font-headline-lg">Our solutions that elevate your brand</h2>
-          <p className="font-body-md" style={{ maxWidth: '640px', margin: 'var(--space-sm) auto 0' }}>
+          <h2 className="font-headline-lg reveal-headline">Our solutions that elevate your brand</h2>
+          <p className="font-body-md reveal-fade" style={{ maxWidth: '640px', margin: 'var(--space-sm) auto 0' }}>
             We offer high quality design and development services tailored to your needs.
           </p>
         </div>
 
         {/* 6-Card Mosaic Grid */}
-        <div className="grid-12">
+        <div className="grid-12 reveal-stagger">
           {/* 1. Web Design Card (7 cols) */}
-          <div className="col-span-12" style={{ gridColumn: 'span 7' }}>
+          <div className="col-span-12 reveal-card" style={{ gridColumn: 'span 7' }}>
             <TiltCard
               className="card-cream"
               maxTilt={4.5}
@@ -212,7 +212,7 @@ export default function HomeScreen() {
           </div>
 
           {/* 2 & 3. Column (5 cols) */}
-          <div className="col-span-12" style={{ gridColumn: 'span 5', display: 'flex', flexDirection: 'column', gap: 'var(--space-lg)' }}>
+          <div className="col-span-12 reveal-card" style={{ gridColumn: 'span 5', display: 'flex', flexDirection: 'column', gap: 'var(--space-lg)' }}>
             {/* WordPress CMS */}
             <TiltCard
               className="card-cream"
@@ -266,7 +266,7 @@ export default function HomeScreen() {
           </div>
 
           {/* 4. Graphic Design (4 cols) */}
-          <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
+          <div className="col-span-12 reveal-card" style={{ gridColumn: 'span 4' }}>
             <TiltCard
               className="card-cream"
               maxTilt={5.5}
@@ -288,7 +288,7 @@ export default function HomeScreen() {
           </div>
 
           {/* 5. Anchor Video Production (4 cols) */}
-          <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
+          <div className="col-span-12 reveal-card" style={{ gridColumn: 'span 4' }}>
             <TiltCard
               className="card-cream"
               maxTilt={5.5}
@@ -314,7 +314,7 @@ export default function HomeScreen() {
           </div>
 
           {/* 6. Social Media & Interactive (4 cols) */}
-          <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
+          <div className="col-span-12 reveal-card" style={{ gridColumn: 'span 4' }}>
             <TiltCard
               className="card-cream"
               maxTilt={5.5}
@@ -370,10 +370,10 @@ export default function HomeScreen() {
         <div className="container-max grid-12" style={{ alignItems: 'center' }}>
           {/* Left Column: Interactive Timeline */}
           <div className="col-span-12" style={{ gridColumn: 'span 6' }}>
-            <span className="font-label-caps" style={{ color: 'var(--accent-coral)', fontWeight: 'bold' }}>
+            <span className="font-label-caps reveal-fade" style={{ color: 'var(--accent-coral)', fontWeight: 'bold' }}>
               System Methodology
             </span>
-            <h2 className="font-headline-lg" style={{ marginTop: '8px', marginBottom: 'var(--space-xl)' }}>
+            <h2 className="font-headline-lg reveal-headline" style={{ marginTop: '8px', marginBottom: 'var(--space-xl)' }}>
               Design that converts.<br />Code that scales.
             </h2>
 
@@ -622,10 +622,10 @@ export default function HomeScreen() {
       <section className="section-padding container-max">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 'var(--space-2xl)' }}>
           <div>
-            <span className="font-label-caps" style={{ color: 'var(--accent-coral)', display: 'block', marginBottom: 'var(--space-xs)' }}>
+            <span className="font-label-caps reveal-fade" style={{ color: 'var(--accent-coral)', display: 'block', marginBottom: 'var(--space-xs)' }}>
               Portfolio Archive
             </span>
-            <h2 className="font-headline-lg">Selected work</h2>
+            <h2 className="font-headline-lg reveal-headline">Selected work</h2>
           </div>
           <button className="btn btn-surface btn-sm" onClick={() => navigate('/work')}>
             <span>View All Work</span>
@@ -633,9 +633,9 @@ export default function HomeScreen() {
           </button>
         </div>
 
-        <div className="grid-12">
+        <div className="grid-12 reveal-stagger">
           {/* 1. Dhriti (7 cols) */}
-          <div className="col-span-12" style={{ gridColumn: 'span 7' }}>
+          <div className="col-span-12 reveal-card" style={{ gridColumn: 'span 7' }}>
             <div className="card-cream" data-cursor="explore" style={{ height: '100%', cursor: 'pointer' }} onClick={() => navigate('/work')}>
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
@@ -658,7 +658,7 @@ export default function HomeScreen() {
           </div>
 
           {/* 2. Roseann Atelier (5 cols) */}
-          <div className="col-span-12" style={{ gridColumn: 'span 5' }}>
+          <div className="col-span-12 reveal-card" style={{ gridColumn: 'span 5' }}>
             <div className="card-cream" data-cursor="explore" style={{ height: '100%', cursor: 'pointer' }} onClick={() => navigate('/work')}>
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
@@ -686,16 +686,16 @@ export default function HomeScreen() {
       <section id="process" className="section-padding" style={{ backgroundColor: 'var(--surface-container-low)' }}>
         <div className="container-max">
           <div style={{ marginBottom: 'var(--space-2xl)' }}>
-            <span className="font-label-caps" style={{ color: 'var(--accent-coral)', display: 'block', marginBottom: 'var(--space-xs)' }}>
+            <span className="font-label-caps reveal-fade" style={{ color: 'var(--accent-coral)', display: 'block', marginBottom: 'var(--space-xs)' }}>
               // HOW CYBER ALIENS WORK
             </span>
-            <h2 className="font-headline-lg">What happens when you come onboard</h2>
-            <p className="font-body-md" style={{ color: 'var(--text-secondary)', marginTop: '6px' }}>
+            <h2 className="font-headline-lg reveal-headline">What happens when you come onboard</h2>
+            <p className="font-body-md reveal-fade" style={{ color: 'var(--text-secondary)', marginTop: '6px' }}>
               Our clear and efficient process for every project.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--space-md)' }}>
+          <div className="reveal-stagger" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--space-md)' }}>
             {[
               { num: '01', title: 'Kickoff Meeting', desc: 'We initiate the process with a call to understand your business goals, target audience, and outcomes. You join our WhatsApp group, fill out a quick onboarding form and we are ready to start.' },
               { num: '02', title: 'Discovery Phase & Wireframing', desc: 'We research your brand, competitors, and market. Based on this, we prepare the right strategy — whether it’s for a website, graphics, videos, or marketing.' },
@@ -705,6 +705,7 @@ export default function HomeScreen() {
             ].map((step) => (
               <div
                 key={step.num}
+                className="reveal-card"
                 style={{
                   background: 'var(--surface)',
                   padding: 'var(--space-lg)',

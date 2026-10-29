@@ -1,12 +1,16 @@
 import React, { useState, useRef } from 'react';
 import { useRouter } from '../router/RouterContext';
 import { projects } from '../data/projects';
+import useScrollReveal from '../hooks/useScrollReveal';
 
 export default function WorkScreen() {
   const { navigate } = useRouter();
   const [filter, setFilter] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
   const gridTopRef = useRef(null);
+
+  // Trigger scroll-reveal orchestration on filter and pagination changes
+  useScrollReveal(`${filter}-${currentPage}`);
 
   const ITEMS_PER_PAGE = 6;
 
@@ -58,13 +62,13 @@ export default function WorkScreen() {
 
         {/* Title */}
         <div style={{ marginBottom: 'var(--space-2xl)' }}>
-          <span className="font-label-caps" style={{ color: 'var(--accent-coral)', fontWeight: 'bold' }}>
+          <span className="font-label-caps reveal-fade" style={{ color: 'var(--accent-coral)', fontWeight: 'bold' }}>
             // PRODUCTION PORTFOLIO & LABS
           </span>
-          <h1 className="font-headline-lg" style={{ marginTop: '6px', fontSize: 'clamp(36px, 5vw, 60px)' }}>
+          <h1 className="font-headline-lg reveal-headline" style={{ marginTop: '6px', fontSize: 'clamp(36px, 5vw, 60px)' }}>
             Selected work & verified deployments.
           </h1>
-          <p className="font-body-lg" style={{ maxWidth: '680px', marginTop: 'var(--space-sm)', color: 'var(--text-secondary)' }}>
+          <p className="font-body-lg reveal-fade" style={{ maxWidth: '680px', marginTop: 'var(--space-sm)', color: 'var(--text-secondary)' }}>
             Explore live production web architectures, community mental health ecosystems, serious QPR educational simulators, and bespoke luxury digital flagships crafted by Cyber Aliens.
           </p>
         </div>
@@ -114,11 +118,11 @@ export default function WorkScreen() {
         </div>
 
         {/* Paginated Bento Grid */}
-        <div className="grid-12">
+        <div className="grid-12 reveal-stagger">
           {paginatedProjects.map((p) => (
             <div
               key={p.id}
-              className="col-span-12"
+              className="col-span-12 reveal-card"
               style={{ gridColumn: p.cols }}
             >
               <article
