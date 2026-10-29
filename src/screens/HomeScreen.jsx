@@ -584,48 +584,48 @@ export default function HomeScreen() {
         </div>
 
         <div className="grid-12">
-          {/* 1. Feline Insights (7 cols) */}
+          {/* 1. Dhriti (7 cols) */}
           <div className="col-span-12" style={{ gridColumn: 'span 7' }}>
             <div className="card-cream" style={{ height: '100%', cursor: 'pointer' }} onClick={() => navigate('/work')}>
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
-                  alt="Feline Insights"
-                  src="/images/bento-fluid-balancing.jpg"
+                  alt="Dhriti"
+                  src="/projects/dhriti/cover.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-pill-dark" style={{ position: 'absolute', top: '12px', left: '12px' }}>
-                  <span className="font-label-caps">Web Architecture // Market Intelligence</span>
+                  <span className="font-label-caps">Youth Mental Health // Resilience</span>
                 </div>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <div>
-                  <h3 className="font-headline-sm">Feline Insights</h3>
-                  <p className="font-body-sm" style={{ marginTop: '4px' }}>Global market research, enterprise data analytics, and high-conversion digital presence architecture.</p>
+                  <h3 className="font-headline-sm">Dhriti</h3>
+                  <p className="font-body-sm" style={{ marginTop: '4px' }}>Kerala's first community-led youth mental health festival & empowerment platform, dismantling stigma through art, workshops, and human connection.</p>
                 </div>
                 <span className="font-label-caps" style={{ color: 'var(--outline)' }}>2025</span>
               </div>
             </div>
           </div>
 
-          {/* 2. Athreya Ayurveda Center (5 cols) */}
+          {/* 2. Roseann Atelier (5 cols) */}
           <div className="col-span-12" style={{ gridColumn: 'span 5' }}>
             <div className="card-cream" style={{ height: '100%', cursor: 'pointer' }} onClick={() => navigate('/work')}>
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
-                  alt="Athreya Ayurveda Center"
-                  src="/images/bento-workstation.jpg"
+                  alt="Roseann Atelier"
+                  src="/projects/roseann/cover.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-pill-dark" style={{ position: 'absolute', top: '12px', left: '12px' }}>
-                  <span className="font-label-caps">Digital Flagship // Healthcare</span>
+                  <span className="font-label-caps">Haute Joaillerie // Atelier</span>
                 </div>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <div>
-                  <h3 className="font-headline-sm">Athreya Ayurveda Center</h3>
-                  <p className="font-body-sm" style={{ marginTop: '4px' }}>Award-winning authentic heritage hospital & wellness retreat with international patient booking flows.</p>
+                  <h3 className="font-headline-sm">Roseann Atelier</h3>
+                  <p className="font-body-sm" style={{ marginTop: '4px' }}>Bespoke structural design sanctuary and digital flagship celebrating gothic geometry and architectural jewelry.</p>
                 </div>
-                <span className="font-label-caps" style={{ color: 'var(--outline)' }}>2024</span>
+                <span className="font-label-caps" style={{ color: 'var(--outline)' }}>2025</span>
               </div>
             </div>
           </div>

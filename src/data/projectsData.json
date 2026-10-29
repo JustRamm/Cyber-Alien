@@ -1,0 +1,200 @@
+[
+  {
+    "id": "dhriti",
+    "name": "Dhriti",
+    "url": "https://dhriti.mind-empowered.org/",
+    "repo": null,
+    "category": [
+      "impact",
+      "web"
+    ],
+    "catLabel": "YOUTH MENTAL HEALTH // RESILIENCE",
+    "partner": "Mind Empowered",
+    "pageTitle": "Dhriti",
+    "description": "Dhriti: Kerala's first community-led mental health festival. Join us in February 2026 to break stigma through celebration, art, and connection.",
+    "h1": "DHRITI",
+    "screenshotPng": "/projects/dhriti/cover.png",
+    "screenshotJpg": "/projects/dhriti/cover.jpg",
+    "capturedAt": "2026-10-29T06:44:06.395Z"
+  },
+  {
+    "id": "words-of-wisdom",
+    "name": "Words of Wisdom",
+    "url": "https://words-of-wisdom-eight.vercel.app/",
+    "repo": null,
+    "category": [
+      "impact",
+      "web"
+    ],
+    "catLabel": "CULTURAL ARCHIVE // ORAL HISTORIES",
+    "partner": "Mind Empowered",
+    "pageTitle": "Words of Wisdome",
+    "description": "A standalone module to learn empowering terminology and end stigma through an interactive journey.",
+    "h1": "",
+    "screenshotPng": "/projects/words-of-wisdom/cover.png",
+    "screenshotJpg": "/projects/words-of-wisdom/cover.jpg",
+    "capturedAt": "2026-10-29T06:44:34.344Z"
+  },
+  {
+    "id": "mind-empowered",
+    "name": "Mind Empowered Official Portal",
+    "url": "https://mind-empowered.org/",
+    "repo": "https://github.com/Mind-Empowered/me-main-website",
+    "category": [
+      "impact",
+      "web"
+    ],
+    "catLabel": "NON-PROFIT // PHILANTHROPY PLATFORM",
+    "partner": "Mind Empowered",
+    "pageTitle": "Mind Empowered | Youth Empowerment & Mental Health Non-Profit",
+    "description": "Mind Empowered (ME) is a non-profit dedicated to youth empowerment & mental health awareness in India. Access free webinars, workshops & support for Gen-Z.",
+    "h1": "Mind Empowered",
+    "screenshotPng": "/projects/mind-empowered/cover.png",
+    "screenshotJpg": "/projects/mind-empowered/cover.jpg",
+    "capturedAt": "2026-10-29T06:44:38.653Z"
+  },
+  {
+    "id": "starlet",
+    "name": "Starlet 5.0",
+    "url": "https://starlet-phi.vercel.app/",
+    "repo": null,
+    "category": [
+      "impact",
+      "web"
+    ],
+    "catLabel": "STUDENT LEADERSHIP // STEM ACCELERATION",
+    "partner": "Mind Empowered",
+    "pageTitle": "Starlet 5.0",
+    "description": "Join Starlet 5.0, a high-impact innovation hackathon dedicated to empowering students through technology and collaborative problem-solving. A Mind Empowered initiative.",
+    "h1": "STARLET 5.0",
+    "screenshotPng": "/projects/starlet/cover.png",
+    "screenshotJpg": "/projects/starlet/cover.jpg",
+    "capturedAt": "2026-10-29T06:45:06.819Z"
+  },
+  {
+    "id": "myth-or-fact",
+    "name": "Myth or Fact? | QPR Mini Game",
+    "url": "https://myth-vs-fact.vercel.app/",
+    "repo": null,
+    "category": [
+      "games",
+      "impact"
+    ],
+    "catLabel": "INTERACTIVE QPR // SUICIDE PREVENTION",
+    "partner": "Mind Empowered",
+    "pageTitle": "Myth or Fact? | QPR Mini Game",
+    "description": "Sort mental health statements into Myths or Facts in this educational card-sorting game.",
+    "h1": "MYTH OR FACT?",
+    "screenshotPng": "/projects/myth-or-fact/cover.png",
+    "screenshotJpg": "/projects/myth-or-fact/cover.jpg",
+    "capturedAt": "2026-10-29T06:45:19.744Z"
+  },
+  {
+    "id": "little-big-feelings",
+    "name": "Little Big Feelings",
+    "url": "https://little-big-feelings.vercel.app/",
+    "repo": null,
+    "category": [
+      "impact",
+      "web"
+    ],
+    "catLabel": "CHILD PSYCHOLOGY // EMOTIONAL TOOLKIT",
+    "partner": "Mind Empowered",
+    "pageTitle": "Little Big Feelings",
+    "description": "A fun educational memory card game helping children understand emotions, triggers, and healthy coping actions.",
+    "h1": "Little Big Feelings",
+    "screenshotPng": "/projects/little-big-feelings/cover.png",
+    "screenshotJpg": "/projects/little-big-feelings/cover.jpg",
+    "capturedAt": "2026-10-29T06:45:23.986Z"
+  },
+  {
+    "id": "signal-scout",
+    "name": "Signal Scout | Urban Compassion System",
+    "url": "https://signal-scout-b9v280pke-justramms-projects.vercel.app/",
+    "repo": null,
+    "category": [
+      "web",
+      "impact"
+    ],
+    "catLabel": "URBAN INTERVENTION // RADAR TELEMETRY",
+    "partner": "Cyber Aliens",
+    "pageTitle": "Login – Vercel",
+    "description": "Sign Up",
+    "h1": "Log in to Vercel",
+    "screenshotPng": "/projects/signal-scout/cover.png",
+    "screenshotJpg": "/projects/signal-scout/cover.jpg",
+    "capturedAt": "2026-10-29T06:45:29.039Z"
+  },
+  {
+    "id": "stickman-rescue",
+    "name": "Stickman to the Rescue",
+    "url": "https://stickman-to-the-rescue.vercel.app/",
+    "repo": null,
+    "category": [
+      "games",
+      "impact"
+    ],
+    "catLabel": "SERIOUS GAME // CRISIS INTERVENTION",
+    "partner": "Mind Empowered",
+    "pageTitle": "Stickman to the Rescue | Suicide Prevention Training",
+    "description": "A serious game simulator teaching the QPR (Question, Persuade, Refer) method for suicide prevention. High-stakes educational experience.",
+    "h1": "STICKMAN",
+    "screenshotPng": "/projects/stickman-rescue/cover.png",
+    "screenshotJpg": "/projects/stickman-rescue/cover.jpg",
+    "capturedAt": "2026-10-29T06:45:35.462Z"
+  },
+  {
+    "id": "feeling-fusion",
+    "name": "Feeling Fusion",
+    "url": "https://feeling-fusion.vercel.app/",
+    "repo": null,
+    "category": [
+      "impact",
+      "web"
+    ],
+    "catLabel": "EMOTIONAL INTELLIGENCE // AUDIO-VISUAL",
+    "partner": "Mind Empowered",
+    "pageTitle": "Feeling Fusion",
+    "description": "THE EMOTION LABORATORY",
+    "h1": "FEELING FUSION",
+    "screenshotPng": "/projects/feeling-fusion/cover.png",
+    "screenshotJpg": "/projects/feeling-fusion/cover.jpg",
+    "capturedAt": "2026-10-29T06:45:39.717Z"
+  },
+  {
+    "id": "roseann",
+    "name": "Roseann | Fine Architectural Jewelry",
+    "url": "https://rose-ann.vercel.app/",
+    "repo": null,
+    "category": [
+      "branding",
+      "web"
+    ],
+    "catLabel": "LUXURY ATELIER // GOTHIC ARCHITECTURAL JEWELRY",
+    "partner": "Cyber Aliens",
+    "pageTitle": "Roseann | Fine Architectural & Gothic Jewelry Atelier",
+    "description": "Explore our structural design sanctuary. Discover premium architectural gold and platinum pieces hand-crafted to celebrate geometry.",
+    "h1": "The Architecture of Adornment.",
+    "screenshotPng": "/projects/roseann/cover.png",
+    "screenshotJpg": "/projects/roseann/cover.jpg",
+    "capturedAt": "2026-10-29T06:45:43.802Z"
+  },
+  {
+    "id": "leela-driving-school",
+    "name": "LEELA Driving School",
+    "url": "https://leela-red.vercel.app/",
+    "repo": null,
+    "category": [
+      "web",
+      "branding"
+    ],
+    "catLabel": "MVD APPROVED // DRIVING ACADEMY ECOSYSTEM",
+    "partner": "Cyber Aliens",
+    "pageTitle": "LEELA Driving School — Kerala MVD Approved | Drive with Confidence",
+    "description": "Kerala's premier driving academy with certified patient instructors, dual-control fleet, and official Kerala RTO Learner's Licence mock test simulation in Malayalam & English.",
+    "h1": "Driving with LEELA is easy",
+    "screenshotPng": "/projects/leela-driving-school/cover.png",
+    "screenshotJpg": "/projects/leela-driving-school/cover.jpg",
+    "capturedAt": "2026-10-29T06:45:48.038Z"
+  }
+]
