@@ -176,3 +176,4 @@ export const projects = [
     hasCaseStudy: false
   }
 ];
+

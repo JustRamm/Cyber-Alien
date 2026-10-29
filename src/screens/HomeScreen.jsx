@@ -11,26 +11,26 @@ export default function HomeScreen() {
     {
       num: '01',
       title: 'Brand Identity',
-      desc: 'Memorable identities that set the tone for your online presence. From generative typography systems to bespoke hardware packaging.',
-      prompt: 'Confirm sprint parameters // Brand token generation...'
+      desc: 'Memorable brand identities that set the tone for your online presence, build trust, and tell your unique story.',
+      prompt: 'Drafting brand guidelines, typography system, and vector logo assets...'
     },
     {
       num: '02',
       title: 'Web Design',
-      desc: 'Modern, conversion-focused websites that guide visitors into action with cinematic motion choreography and frictionless navigation.',
-      prompt: 'Render spatial web layout with 60FPS WebGL shaders...'
+      desc: 'Modern, conversion-focused websites that turn your traffic into customers and become your primary sales tool.',
+      prompt: 'Assembling responsive page layouts, mobile navigation, and user journeys...'
     },
     {
       num: '03',
-      title: 'Custom Development',
-      desc: 'Platforms, robust APIs, and web applications engineered from scratch for your bespoke business logic and security specifications.',
-      prompt: 'Deploy containerized edge cluster with zero runtime hitch...'
+      title: 'Custom & WordPress Development',
+      desc: 'Fast, secure, SEO-friendly WordPress builds and custom platforms engineered to meet your exact business needs.',
+      prompt: 'Developing approved designs into clean, fast, and SEO-optimized code...'
     },
     {
       num: '04',
-      title: 'Marketing and Video',
-      desc: 'Social media architecture, targeted campaign visuals, and cinematic anchor films that scale your brand authority on global feeds.',
-      prompt: 'Initiate 4K Unreal Engine render pipeline for broadcast...'
+      title: 'Marketing, Games & Video',
+      desc: 'High-engagement social media creatives, on-camera anchor videos, and interactive educational mini-games.',
+      prompt: 'Finalizing social media campaign creatives, video masters, and interactive game modules...'
     }
   ];
 
@@ -132,193 +132,245 @@ export default function HomeScreen() {
         </div>
       </section>
 
-      {/* FRAME 3: SERVICES MOSAIC */}
+      {/* FRAME 3: WHAT WE OFFER AT CYBER ALIENS */}
       <section id="services" className="section-padding container-max">
         <div style={{ textAlign: 'center', marginBottom: 'var(--space-2xl)' }}>
-          <span className="font-label-caps" style={{ color: 'var(--accent-coral)', display: 'block', marginBottom: 'var(--space-xs)' }}>
-            Domain Specialization
-          </span>
-          <h2 className="font-headline-lg">Everything your brand needs</h2>
-          <p className="font-body-md" style={{ maxWidth: '600px', margin: 'var(--space-sm) auto 0' }}>
-            Multidisciplinary design intelligence seamlessly deployed through code and cinematic aesthetics.
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '6px 16px',
+              borderRadius: '9999px',
+              background: '#FFFFFF',
+              border: '1px solid var(--border-subtle)',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.02)',
+              marginBottom: '1rem'
+            }}
+          >
+            <span
+              style={{
+                width: '6px',
+                height: '6px',
+                borderRadius: '50%',
+                backgroundColor: 'var(--accent-coral)',
+                display: 'inline-block'
+              }}
+            />
+            <span
+              className="font-label-caps"
+              style={{
+                fontSize: '11px',
+                fontWeight: 700,
+                letterSpacing: '0.12em',
+                color: 'var(--text-secondary)'
+              }}
+            >
+              WHAT WE OFFER AT CYBER ALIENS
+            </span>
+          </div>
+
+          <h2
+            className="font-display-xl"
+            style={{
+              fontSize: 'clamp(32px, 4vw, 52px)',
+              fontWeight: 800,
+              lineHeight: 1.1,
+              letterSpacing: '-0.03em',
+              color: 'var(--text-primary)',
+              margin: '0 0 0.75rem 0'
+            }}
+          >
+            Our solutions that elevate your brand
+          </h2>
+
+          <p
+            className="font-body-md"
+            style={{
+              maxWidth: '640px',
+              margin: '0 auto',
+              color: 'var(--text-secondary)',
+              fontSize: '16px',
+              lineHeight: 1.6
+            }}
+          >
+            We offer high quality design and development services tailored to your needs — from identity and websites to custom code and interactive games.
           </p>
         </div>
 
-        {/* 6-Card Mosaic Grid */}
-        <div className="grid-12">
-          {/* 1. Web Design Card (7 cols) */}
-          <div className="col-span-12" style={{ gridColumn: 'span 7' }}>
-            <div className="card-cream" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
-                <img
-                  alt="Web Design Card"
-                  src="/images/services-web.jpg"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-                <div className="badge-pill-dark" style={{ position: 'absolute', top: '1rem', left: '1rem' }}>
-                  <span className="beacon-dot animate-pulse-soft"></span>
-                  <span className="font-label-caps">Web Design & Architecture</span>
+        {/* 8 Real Studio Services Grid */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '24px'
+          }}
+        >
+          {[
+            {
+              cat: 'BRANDING',
+              icon: 'palette',
+              title: 'Bring your brand story to life in your website',
+              desc: 'We create brand identities that make your business memorable and set the tone for your online presence.'
+            },
+            {
+              cat: 'WEB DESIGN',
+              icon: 'language',
+              title: 'Your website will become your best sales tool',
+              desc: 'We design modern, conversion-focused websites that guide visitors into taking action.'
+            },
+            {
+              cat: 'GRAPHIC DESIGN',
+              icon: 'draw',
+              title: 'Your dedicated graphic design support team',
+              desc: 'Posters, flyers, banners, social media graphics — we create everything you need, whenever you need it.'
+            },
+            {
+              cat: 'SOCIAL MEDIA MARKETING',
+              icon: 'campaign',
+              title: 'Social media marketing that grows your business',
+              desc: 'We manage your social media content and ads to help you reach more people and drive business growth.'
+            },
+            {
+              cat: 'WORDPRESS DEVELOPMENT',
+              icon: 'layers',
+              title: 'A modern & professional website built in WordPress',
+              desc: 'We turn your approved designs into a fast, secure, SEO-friendly WordPress website.'
+            },
+            {
+              cat: 'CUSTOM DEVELOPMENT',
+              icon: 'code',
+              title: 'Custom solutions built from scratch to meet your unique requirements',
+              desc: 'We design and develop custom platforms and applications tailored to your unique business requirements.'
+            },
+            {
+              cat: 'GAME DEVELOPMENT',
+              icon: 'sports_esports',
+              title: 'Custom Interactive Game Development',
+              desc: 'We create engaging, interactive games tailored to your objectives—whether for education, marketing, events, training, or entertainment.'
+            },
+            {
+              cat: 'ANCHOR VIDEO PRODUCTION',
+              icon: 'videocam',
+              title: 'Create powerful, on-camera anchor videos',
+              desc: 'From scripting to editing, we handle everything to deliver clean, engaging videos optimized for social media and ads.'
+            }
+          ].map((svc, i) => (
+            <div
+              key={i}
+              className="card-cream"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                padding: '28px',
+                borderRadius: '20px',
+                border: '1px solid var(--border-subtle)',
+                background: '#FFFFFF',
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.02)',
+                transition: 'transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-3px)';
+                e.currentTarget.style.borderColor = 'rgba(17, 17, 17, 0.2)';
+                e.currentTarget.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.06)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = 'var(--border-subtle)';
+                e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.02)';
+              }}
+            >
+              <div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+                  <div
+                    style={{
+                      width: '44px',
+                      height: '44px',
+                      borderRadius: '12px',
+                      background: 'var(--surface-container-low)',
+                      border: '1px solid var(--border-subtle)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'var(--accent-coral)'
+                    }}
+                  >
+                    <span className="material-symbols-outlined" style={{ fontSize: '22px' }}>{svc.icon}</span>
+                  </div>
+                  <span
+                    className="font-label-caps"
+                    style={{
+                      fontSize: '10.5px',
+                      fontWeight: 700,
+                      color: 'var(--text-secondary)',
+                      letterSpacing: '0.08em',
+                      background: 'var(--surface-container-low)',
+                      padding: '4px 10px',
+                      borderRadius: '9999px',
+                      border: '1px solid var(--border-subtle)'
+                    }}
+                  >
+                    {svc.cat}
+                  </span>
                 </div>
-                {/* 78% Processing Pill */}
-                <div
+
+                <h3
+                  className="font-headline-sm"
                   style={{
-                    position: 'absolute',
-                    bottom: '1rem',
-                    left: '1rem',
-                    right: '1rem',
-                    background: 'rgba(255, 255, 255, 0.92)',
-                    backdropFilter: 'blur(16px)',
-                    WebkitBackdropFilter: 'blur(16px)',
-                    padding: '0.75rem 1.25rem',
-                    borderRadius: 'var(--rounded-full)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    boxShadow: 'var(--shadow-card)'
+                    fontSize: '19px',
+                    fontWeight: 700,
+                    lineHeight: 1.3,
+                    color: 'var(--text-primary)',
+                    marginBottom: '10px'
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span className="material-symbols-outlined" style={{ color: 'var(--accent-coral)', fontSize: '20px' }}>layers</span>
-                    <span className="font-label-caps" style={{ color: 'var(--primary)', fontWeight: 'bold' }}>PROCESSING SYSTEM MIGRATION</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <div style={{ width: '90px', height: '8px', background: 'var(--surface-container-high)', borderRadius: '9999px', overflow: 'hidden' }}>
-                      <div style={{ width: '78%', height: '100%', background: 'var(--accent-coral)', borderRadius: '9999px' }}></div>
-                    </div>
-                    <span className="font-label-caps" style={{ fontWeight: 'bold' }}>78%</span>
-                  </div>
-                </div>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div>
-                  <h3 className="font-headline-sm">Spatial Interfaces & High-Load Web Apps</h3>
-                  <p className="font-body-sm" style={{ marginTop: '4px' }}>Built with Next.js, WebGL shaders, and ultra-responsive micro-animations.</p>
-                </div>
-                <span className="material-symbols-outlined" style={{ color: 'var(--accent-coral)' }}>arrow_forward</span>
-              </div>
-            </div>
-          </div>
+                  {svc.title}
+                </h3>
 
-          {/* 2 & 3. Column (5 cols) */}
-          <div className="col-span-12" style={{ gridColumn: 'span 5', display: 'flex', flexDirection: 'column', gap: 'var(--space-lg)' }}>
-            {/* WordPress CMS */}
-            <div className="card-cream">
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-md)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--accent-coral-dim)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-coral)' }}>
-                    <span className="material-symbols-outlined">sync</span>
-                  </div>
-                  <div>
-                    <h4 className="font-headline-sm" style={{ fontSize: '18px' }}>Auto-Sync / Connected</h4>
-                    <p className="font-label-caps">Enterprise CMS Infrastructure</p>
-                  </div>
-                </div>
-                <span className="beacon-dot animate-ping-radar"></span>
-              </div>
-              <div style={{ background: 'var(--surface)', padding: '12px 16px', borderRadius: 'var(--rounded-DEFAULT)', marginBottom: 'var(--space-sm)' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-                  <span className="font-label-caps">Database Integrity</span>
-                  <span className="font-label-caps" style={{ fontWeight: 'bold' }}>99.98%</span>
-                </div>
-                <div style={{ width: '100%', height: '6px', background: 'var(--surface-container-high)', borderRadius: '9999px', overflow: 'hidden' }}>
-                  <div style={{ width: '99.98%', height: '100%', background: 'var(--accent-coral)' }}></div>
-                </div>
-              </div>
-              <p className="font-body-sm">Custom headless WordPress backends engineered with enterprise speed, automated edge caching, and rock-solid publishing ergonomics.</p>
-            </div>
-
-            {/* Brand Monolith Card */}
-            <div className="card-monolith">
-              <div style={{ aspectRatio: '16/9', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
-                <img
-                  alt="Brand Architecture"
-                  src="/images/services-brand.jpg"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-                <div className="badge-pill-dark" style={{ position: 'absolute', top: '10px', left: '10px' }}>
-                  <span className="font-label-caps">Brand Identity</span>
-                </div>
-              </div>
-              <h3 className="font-headline-sm" style={{ color: 'var(--text-inverse)' }}>Radical Brand Architecture</h3>
-              <p className="font-body-sm" style={{ color: 'var(--on-primary-container)', marginTop: '4px' }}>
-                Design languages built to assert presence and withstand market commoditization.
-              </p>
-            </div>
-          </div>
-
-          {/* 4. Graphic & Packaging (4 cols) */}
-          <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
-            <div className="card-cream" style={{ height: '100%' }}>
-              <div style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
-                <img
-                  alt="Packaging"
-                  src="/images/services-packaging.jpg"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-                <div className="badge-dispatch" style={{ position: 'absolute', top: '10px', left: '10px', background: 'rgba(250,249,245,0.9)' }}>
-                  <span className="font-label-caps">Graphic & Packaging</span>
-                </div>
-              </div>
-              <h3 className="font-headline-sm">Packaging & Tactile Collateral</h3>
-              <p className="font-body-sm" style={{ marginTop: '4px' }}>Material selection, unboxing experiences, and sculptural design.</p>
-            </div>
-          </div>
-
-          {/* 5. Video Production (4 cols) */}
-          <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
-            <div className="card-cream" style={{ height: '100%' }}>
-              <div style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
-                <img
-                  alt="Video Suite"
-                  src="/images/services-video.jpg"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-                <div className="badge-pill-dark" style={{ position: 'absolute', top: '10px', left: '10px' }}>
-                  <span className="beacon-dot"></span>
-                  <span className="font-label-caps">Video Production</span>
-                </div>
-                <div className="badge-pill-dark" style={{ position: 'absolute', bottom: '10px', right: '10px' }}>
-                  <span className="font-label-caps">REC // 00:04:28:12</span>
-                </div>
-              </div>
-              <h3 className="font-headline-sm">Cinematic 3D & Brand Films</h3>
-              <p className="font-body-sm" style={{ marginTop: '4px' }}>Immersive product unveilings, hyper-real CGI animations, and launch reels.</p>
-            </div>
-          </div>
-
-          {/* 6. Social Media & Growth (4 cols) */}
-          <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
-            <div className="card-cream" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: 'var(--surface-container-high)' }}>
-              <div>
-                <div className="badge-dispatch" style={{ background: 'var(--surface)', marginBottom: 'var(--space-md)' }}>
-                  <span className="material-symbols-outlined" style={{ color: 'var(--accent-coral)', fontSize: '18px' }}>campaign</span>
-                  <span className="font-label-caps">Social Growth Engine</span>
-                </div>
-                <h3 className="font-headline-sm">Data-Backed Organic Reach</h3>
-                <p className="font-body-sm" style={{ marginTop: '4px' }}>High-velocity social creative suites that convert casual scrollers into loyal customers.</p>
-              </div>
-
-              {/* Chat Bubble Snippet */}
-              <div style={{ background: 'var(--surface)', padding: 'var(--space-md)', borderRadius: 'var(--rounded-DEFAULT)', marginTop: 'var(--space-md)', boxShadow: 'var(--shadow-subtle)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-                  <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'var(--primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: 'bold' }}>
-                    CA
-                  </div>
-                  <div>
-                    <p className="font-label-caps" style={{ fontWeight: 'bold' }}>Apex Labs Partner</p>
-                    <p className="font-body-sm" style={{ fontSize: '11px', color: 'var(--outline)' }}>Live Transmit</p>
-                  </div>
-                </div>
-                <p className="font-body-sm" style={{ fontStyle: 'italic' }}>
-                  "This looks amazing! The engagement velocity spiked 340% within 48 hours of rollout."
+                <p
+                  className="font-body-sm"
+                  style={{
+                    color: 'var(--text-secondary)',
+                    lineHeight: 1.6,
+                    fontSize: '14px',
+                    marginBottom: '20px'
+                  }}
+                >
+                  {svc.desc}
                 </p>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--accent-coral)', marginTop: '8px' }}>
-                  <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>check_circle</span>
-                  <span className="font-label-caps">Verified Engagement</span>
-                </div>
+              </div>
+
+              <div
+                style={{
+                  paddingTop: '16px',
+                  borderTop: '1px solid var(--border-subtle)',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center'
+                }}
+              >
+                <button
+                  onClick={() => navigate('/proposal')}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    padding: 0,
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    color: 'var(--text-primary)',
+                    fontSize: '12.5px',
+                    fontWeight: 600
+                  }}
+                >
+                  <span>Get a proposal</span>
+                  <span className="material-symbols-outlined" style={{ fontSize: '15px', color: 'var(--accent-coral)' }}>arrow_forward</span>
+                </button>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -520,13 +572,13 @@ export default function HomeScreen() {
             <div className="col-span-12" style={{ gridColumn: 'span 7' }}>
               <div className="badge-pill-dark" style={{ marginBottom: 'var(--space-md)' }}>
                 <span className="beacon-dot"></span>
-                <span className="font-label-caps" style={{ color: 'var(--secondary-fixed)' }}>Design With Purpose</span>
+                <span className="font-label-caps" style={{ color: 'var(--secondary-fixed)' }}>Our Development Partnership</span>
               </div>
               <h2 className="font-headline-lg" style={{ color: 'var(--text-inverse)', marginBottom: 'var(--space-md)' }}>
-                Every project supports a mission.
+                Cyber Aliens × Mind Empowered
               </h2>
-              <p className="font-body-lg" style={{ color: 'var(--tertiary-fixed)', maxWidth: '580px', marginBottom: 'var(--space-xl)' }}>
-                Cyber Aliens partners with <strong style={{ color: '#fff' }}>Mind Empowered</strong>, an international youth wellness non-profit. A designated portion of all studio revenue directly funds digital literacy, mental health initiatives, and community mentorship programs worldwide.
+              <p className="font-body-lg" style={{ color: 'var(--tertiary-fixed)', maxWidth: '580px', marginBottom: 'var(--space-xl)', lineHeight: 1.6 }}>
+                Cyber Aliens works in partnership with <strong style={{ color: '#fff' }}>Mind Empowered</strong>, a non-profit organization. Through this collaboration, we deliver high-quality digital solutions while generating sustainable revenue to support the NGO’s mission. The projects include work completed by both Cyber Aliens and Mind Empowered.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-md)' }}>
                 <button className="btn btn-ghost-dark" onClick={() => navigate('/impact')}>
@@ -632,23 +684,26 @@ export default function HomeScreen() {
         </div>
       </section>
 
-      {/* FRAME 7: PROCESS (5-STEP WORKFLOW) */}
+      {/* FRAME 7: PROCESS (HOW CYBER ALIENS WORK) */}
       <section id="process" style={{ backgroundColor: 'var(--surface-container-low)', padding: 'var(--space-3xl) var(--margin)' }}>
         <div className="container-max">
           <div style={{ marginBottom: 'var(--space-2xl)' }}>
             <span className="font-label-caps" style={{ color: 'var(--accent-coral)', display: 'block', marginBottom: 'var(--space-xs)' }}>
-              Studio Workflow
+              // HOW CYBER ALIENS WORK
             </span>
-            <h2 className="font-headline-lg">How we work</h2>
+            <h2 className="font-headline-lg">What happens when you come onboard</h2>
+            <p className="font-body-md" style={{ color: 'var(--text-secondary)', marginTop: '6px' }}>
+              Our clear and efficient process for every project.
+            </p>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--space-md)' }}>
             {[
-              { num: '01', title: 'Kickoff Meeting', desc: 'Aligning strategic objectives, technological requirements, and commercial goals.' },
-              { num: '02', title: 'Discovery & Wireframes', desc: 'Information architecture mapping, high-fidelity UX flows, and interactive mockups.' },
-              { num: '03', title: 'Design', desc: 'Precision visual craft, art direction, 3D typography, and custom design systems.', active: true },
-              { num: '04', title: 'Build', desc: 'Production code engineering, animation pipelines, API integration, and CMS wiring.' },
-              { num: '05', title: 'Delivery & Support', desc: 'Performance hardening, global CDN deployment, documentation handoff, and iteration.' }
+              { num: '01', title: 'Kickoff Meeting', desc: 'We initiate the process with a call to understand your business goals, target audience, and outcomes. You join our WhatsApp group, fill out a quick onboarding form and we are ready to start.' },
+              { num: '02', title: 'Discovery Phase & Wireframing', desc: 'We research your brand, competitors, and market. Based on this, we prepare the right strategy — whether it’s for a website, graphics, videos, or marketing.' },
+              { num: '03', title: 'Design', desc: 'Our team creates the initial designs, concepts, wireframes, or scripts depending on the service. You review everything and share your feedback.', active: true },
+              { num: '04', title: 'Build, Produce, or Execute', desc: 'We bring your project to life — developing your website, delivering final designs, producing videos, and managing your social media and ads.' },
+              { num: '05', title: 'Delivery, Launch & Support', desc: 'Once approved, we deliver the final output, launch your website, or activate your campaigns. We provide ongoing support and assistance as needed.' }
             ].map((step) => (
               <div
                 key={step.num}
