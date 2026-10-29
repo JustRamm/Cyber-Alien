@@ -404,7 +404,7 @@ export default function ConfirmationScreen() {
         {/* =========================================================
             SECTION 2: WHAT HAPPENS NEXT // EXECUTION CADENCE
             ========================================================= */}
-        <section style={{ maxWidth: '1080px', margin: '0 auto 6rem auto' }}>
+        <section className="container-max" style={{ margin: '0 auto 6rem auto' }}>
           
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <span
@@ -706,7 +706,7 @@ export default function ConfirmationScreen() {
         {/* =========================================================
             SECTION 3: EXPLORE IN THE MEANTIME // STUDIO TELEMETRY
             ========================================================= */}
-        <section style={{ maxWidth: '1080px', margin: '0 auto 4.5rem auto' }}>
+        <section className="container-max" style={{ margin: '0 auto 4.5rem auto' }}>
           
           {/* Header Row */}
           <div

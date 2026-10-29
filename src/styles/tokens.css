@@ -79,11 +79,12 @@
   --space-3xl: 6rem;     /* 96px */
 
   /* Grid Margins & Gutters */
-  --margin: 1.5rem;      /* 24px (Mobile) */
-  --margin-md: 3rem;     /* 48px (Tablet) */
-  --margin-lg: 5rem;     /* 80px (Desktop) */
-  --gutter: 1.5rem;      /* 24px */
-  --gutter-lg: 2.5rem;   /* 40px */
+  --margin: 1.25rem;      /* 20px (Mobile) */
+  --margin-md: 2rem;      /* 32px (Tablet) */
+  --margin-lg: 3rem;      /* 48px (Desktop) */
+  --container-max-w: 96rem; /* 1536px (Expansive Canvas) */
+  --gutter: 1.5rem;       /* 24px */
+  --gutter-lg: 2.25rem;   /* 36px */
 
   /* Border Radii */
   --rounded-sm: 0.5rem;  /* 8px */

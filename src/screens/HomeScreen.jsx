@@ -38,9 +38,11 @@ export default function HomeScreen() {
     <main style={{ width: '100%', paddingTop: '7rem', backgroundColor: 'var(--surface)' }}>
       {/* FRAME 1: HERO MONOLITH */}
       <section
+        className="section-padding container-max"
         style={{
           position: 'relative',
-          padding: 'var(--space-xl) var(--margin) var(--space-2xl)',
+          paddingTop: 'var(--space-xl)',
+          paddingBottom: 'var(--space-2xl)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -51,7 +53,7 @@ export default function HomeScreen() {
         <h1
           className="font-display-xl"
           style={{
-            maxWidth: '1000px',
+            maxWidth: '1240px',
             marginBottom: 'var(--space-md)',
             color: 'var(--primary)'
           }}
@@ -62,7 +64,7 @@ export default function HomeScreen() {
         <p
           className="font-body-lg"
           style={{
-            maxWidth: '680px',
+            maxWidth: '720px',
             marginBottom: 'var(--space-xl)',
             color: 'var(--outline)'
           }}
@@ -86,12 +88,12 @@ export default function HomeScreen() {
           </button>
         </div>
 
-        {/* Cinematic Hero Monolith Showcase */}
+        {/* Cinematic Hero Monolith Showcase (Expands Wide across 1536px canvas) */}
         <div
           className="card-monolith"
           style={{
             width: '100%',
-            maxWidth: '1150px',
+            maxWidth: '100%',
             borderRadius: 'var(--rounded-xl)',
             padding: 0,
             aspectRatio: '21/9',
@@ -323,7 +325,7 @@ export default function HomeScreen() {
       </section>
 
       {/* FRAME 4: SYSTEM METHODOLOGY TIMELINE */}
-      <section style={{ backgroundColor: 'var(--surface-container-low)', padding: 'var(--space-3xl) var(--margin)' }}>
+      <section className="section-padding" style={{ backgroundColor: 'var(--surface-container-low)' }}>
         <div className="container-max grid-12" style={{ alignItems: 'center' }}>
           {/* Left Column: Interactive Timeline */}
           <div className="col-span-12" style={{ gridColumn: 'span 6' }}>
@@ -633,7 +635,7 @@ export default function HomeScreen() {
       </section>
 
       {/* FRAME 7: PROCESS (HOW CYBER ALIENS WORK) */}
-      <section id="process" style={{ backgroundColor: 'var(--surface-container-low)', padding: 'var(--space-3xl) var(--margin)' }}>
+      <section id="process" className="section-padding" style={{ backgroundColor: 'var(--surface-container-low)' }}>
         <div className="container-max">
           <div style={{ marginBottom: 'var(--space-2xl)' }}>
             <span className="font-label-caps" style={{ color: 'var(--accent-coral)', display: 'block', marginBottom: 'var(--space-xs)' }}>
@@ -1598,10 +1600,11 @@ export default function HomeScreen() {
       </section>
 
       {/* FRAME 10: TRANSMISSION MONOLITH CTA */}
-      <section className="container-max" style={{ padding: '0 var(--margin) var(--space-3xl)' }}>
+      <section className="section-padding container-max" style={{ paddingTop: 0 }}>
         <div
           className="card-monolith"
           style={{
+            width: '100%',
             padding: 'var(--space-3xl) var(--space-xl)',
             borderRadius: 'var(--rounded-xl)',
             textAlign: 'center',

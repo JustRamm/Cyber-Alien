@@ -21,8 +21,8 @@ export default function Footer() {
         color: 'var(--on-primary)',
         paddingTop: 'var(--space-3xl)',
         paddingBottom: 'var(--space-2xl)',
-        paddingLeft: 'var(--margin)',
-        paddingRight: 'var(--margin)',
+        paddingLeft: 'clamp(1.25rem, 3.5vw, 3rem)',
+        paddingRight: 'clamp(1.25rem, 3.5vw, 3rem)',
         marginTop: 'var(--space-3xl)'
       }}
     >

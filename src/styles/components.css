@@ -4,29 +4,29 @@
 
 .container-max {
   width: 100%;
-  max-width: 80rem; /* 1280px */
+  max-width: var(--container-max-w, 96rem); /* 1536px expansive canvas */
   margin-left: auto;
   margin-right: auto;
 }
 
 .section-padding {
-  padding-left: var(--margin);
-  padding-right: var(--margin);
+  padding-left: clamp(1.25rem, 3.5vw, 3rem);
+  padding-right: clamp(1.25rem, 3.5vw, 3rem);
   padding-top: var(--space-3xl);
   padding-bottom: var(--space-3xl);
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding-left: var(--margin-md);
-    padding-right: var(--margin-md);
+    padding-left: clamp(1.5rem, 3.5vw, 3rem);
+    padding-right: clamp(1.5rem, 3.5vw, 3rem);
   }
 }
 
 @media (min-width: 1200px) {
   .section-padding {
-    padding-left: var(--margin-lg);
-    padding-right: var(--margin-lg);
+    padding-left: clamp(2rem, 3.5vw, 3.5rem);
+    padding-right: clamp(2rem, 3.5vw, 3.5rem);
   }
 }
 
