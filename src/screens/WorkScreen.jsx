@@ -163,13 +163,19 @@ export default function WorkScreen() {
                   >
                     <img
                       src={p.img}
-                      alt={p.title}
+                      alt={`${p.title} — ${p.catLabel}. ${p.desc}`}
                       loading="lazy"
                       style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
                         transition: 'transform var(--transition-medium)'
+                      }}
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        if (e.currentTarget.nextElementSibling) {
+                          e.currentTarget.nextElementSibling.style.display = 'flex';
+                        }
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.transform = 'scale(1.03)';
@@ -178,6 +184,35 @@ export default function WorkScreen() {
                         e.currentTarget.style.transform = 'scale(1)';
                       }}
                     />
+                    {/* Fallback card with styled alt text representation if image is missing */}
+                    <div
+                      style={{
+                        display: 'none',
+                        width: '100%',
+                        height: '100%',
+                        minHeight: '220px',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        padding: 'var(--space-lg)',
+                        textAlign: 'center',
+                        background: 'linear-gradient(135deg, #101015 0%, #1a1b24 100%)',
+                        color: '#fff'
+                      }}
+                    >
+                      <span className="material-symbols-outlined" style={{ fontSize: '36px', color: 'var(--accent-coral)', marginBottom: '8px' }}>
+                        language
+                      </span>
+                      <span className="font-label-caps" style={{ color: 'var(--accent-coral)', letterSpacing: '0.12em', marginBottom: '6px' }}>
+                        {p.catLabel}
+                      </span>
+                      <h4 className="font-headline-sm" style={{ color: '#ffffff', fontSize: '18px', marginBottom: '4px' }}>
+                        {p.title}
+                      </h4>
+                      <p className="font-body-sm" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '12px', maxWidth: '320px' }}>
+                        {p.desc}
+                      </p>
+                    </div>
                     <div
                       style={{
                         position: 'absolute',
