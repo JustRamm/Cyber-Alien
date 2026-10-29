@@ -139,7 +139,23 @@ export default function WorkScreen() {
                     <div className="badge-pill-dark" style={{ background: p.dark ? 'rgba(255,255,255,0.1)' : 'var(--primary)' }}>
                       <span className="font-label-caps" style={{ color: '#FFFFFF' }}>{p.catLabel}</span>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      {p.partner && p.partner.includes('Mind Empowered') && (
+                        <img
+                          alt="Mind Empowered Logo"
+                          src="/brand/mind-empowered.png"
+                          style={{
+                            width: '18px',
+                            height: '18px',
+                            borderRadius: '50%',
+                            objectFit: 'contain',
+                            background: '#FFFFFF',
+                            padding: '1px',
+                            border: '1px solid rgba(0,0,0,0.08)',
+                            flexShrink: 0
+                          }}
+                        />
+                      )}
                       <span className="font-label-caps" style={{ color: p.dark ? 'var(--on-primary-container)' : 'var(--outline)', fontSize: '11px' }}>
                         {p.partner}
                       </span>

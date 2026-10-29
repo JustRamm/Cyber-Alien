@@ -52,6 +52,16 @@ export default function Footer() {
                 Available for Q3/Q4 Studio Partnerships
               </span>
             </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '14px' }}>
+              <img
+                alt="Mind Empowered Logo"
+                src="/brand/mind-empowered.png"
+                style={{ width: '18px', height: '18px', borderRadius: '50%', objectFit: 'contain', background: '#FFFFFF', padding: '1px' }}
+              />
+              <span className="font-label-caps" style={{ color: 'var(--on-primary-container)', fontSize: '11px' }}>
+                In Partnership with <a href="https://mind-empowered.org" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'underline', textUnderlineOffset: '2px' }}>Mind Empowered NGO</a>
+              </span>
+            </div>
           </div>
 
           {/* Navigation Links */}

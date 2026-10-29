@@ -32,9 +32,14 @@ export default function ImpactScreen() {
         
         {/* Top Header */}
         <div style={{ textAlign: 'center', marginBottom: 'var(--space-2xl)' }}>
-          <div className="badge-pill-dark" style={{ display: 'inline-flex', marginBottom: 'var(--space-md)' }}>
-            <span className="beacon-dot animate-ping-radar"></span>
+          <div className="badge-pill-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: 'var(--space-md)', padding: '6px 18px', background: '#0A0A0A', border: '1px solid var(--border-glass)' }}>
+            <img
+              alt="Mind Empowered Logo"
+              src="/brand/mind-empowered.png"
+              style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'contain', background: '#FFFFFF', padding: '1px' }}
+            />
             <span className="font-label-caps" style={{ color: '#fff' }}>SOCIAL IMPACT // MIND EMPOWERED ALLIANCE</span>
+            <span className="beacon-dot animate-ping-radar" style={{ width: '6px', height: '6px' }}></span>
           </div>
           <h1 className="font-headline-lg" style={{ fontSize: 'clamp(36px, 5.5vw, 64px)', maxWidth: '900px', margin: '0 auto var(--space-md)' }}>
             Engineering digital futures.<br />Anchoring human equity.

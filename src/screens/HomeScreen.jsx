@@ -303,9 +303,21 @@ export default function HomeScreen() {
               {/* Verified Partnership Callout */}
               <div style={{ background: 'var(--surface)', padding: 'var(--space-md)', borderRadius: 'var(--rounded-DEFAULT)', marginTop: 'var(--space-md)', boxShadow: 'var(--shadow-subtle)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-                  <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'var(--primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: 'bold' }}>
-                    ME
-                  </div>
+                  <img
+                    alt="Mind Empowered Logo"
+                    src="/brand/mind-empowered.png"
+                    style={{
+                      width: '36px',
+                      height: '36px',
+                      borderRadius: '50%',
+                      objectFit: 'contain',
+                      background: '#FFFFFF',
+                      padding: '2px',
+                      border: '1px solid var(--border-subtle)',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+                      flexShrink: 0
+                    }}
+                  />
                   <div>
                     <p className="font-label-caps" style={{ fontWeight: 'bold' }}>Mind Empowered Partner</p>
                     <p className="font-body-sm" style={{ fontSize: '11px', color: 'var(--outline)' }}>Verified Collaboration</p>
@@ -520,9 +532,16 @@ export default function HomeScreen() {
 
           <div className="grid-12" style={{ alignItems: 'center', position: 'relative', zIndex: 2 }}>
             <div className="col-span-12" style={{ gridColumn: 'span 7' }}>
-              <div className="badge-pill-dark" style={{ marginBottom: 'var(--space-md)' }}>
-                <span className="beacon-dot"></span>
-                <span className="font-label-caps" style={{ color: 'var(--secondary-fixed)' }}>Our Development Partnership</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: 'var(--space-md)', flexWrap: 'wrap' }}>
+                <div className="badge-pill-dark" style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid var(--border-glass)', padding: '6px 14px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                  <img
+                    alt="Mind Empowered"
+                    src="/brand/mind-empowered.png"
+                    style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'contain', background: '#FFFFFF', padding: '1px' }}
+                  />
+                  <span className="font-label-caps" style={{ color: '#FFFFFF' }}>Our Development Partnership</span>
+                  <span className="beacon-dot animate-ping-radar" style={{ width: '6px', height: '6px', marginLeft: '4px' }}></span>
+                </div>
               </div>
               <h2 className="font-headline-lg" style={{ color: 'var(--text-inverse)', marginBottom: 'var(--space-md)' }}>
                 Cyber Aliens × Mind Empowered
