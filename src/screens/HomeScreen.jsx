@@ -91,7 +91,7 @@ export default function HomeScreen() {
 
         {/* Cinematic Hero Monolith Showcase (Expands Wide across 1536px canvas) */}
         <TiltCard
-          className="card-monolith zoomable-image"
+          className="card-monolith hero-monolith-card zoomable-image"
           data-cursor="zoom"
           maxTilt={3.5}
           scale={1.008}
@@ -193,7 +193,7 @@ export default function HomeScreen() {
                     <span className="material-symbols-outlined" style={{ color: 'var(--accent-coral)', fontSize: '20px' }}>language</span>
                     <span className="font-label-caps" style={{ color: 'var(--primary)', fontWeight: 'bold' }}>CONVERSION-FOCUSED WEB ARCHITECTURE</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div className="performance-pill-bar" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                     <div style={{ width: '90px', height: '8px', background: 'var(--surface-container-high)', borderRadius: '9999px', overflow: 'hidden' }}>
                       <div style={{ width: '100%', height: '100%', background: 'var(--accent-coral)', borderRadius: '9999px' }}></div>
                     </div>
@@ -449,6 +449,7 @@ export default function HomeScreen() {
           {/* Right Column: Studio Terminal Direct Input Simulation */}
           <div className="col-span-12" style={{ gridColumn: 'span 6' }}>
             <div
+              className="studio-terminal-frame"
               style={{
                 backgroundColor: 'rgba(226, 227, 223, 0.5)',
                 borderRadius: 'var(--rounded-xl)',
@@ -802,7 +803,7 @@ export default function HomeScreen() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(310px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
             gap: '24px',
             marginBottom: 'var(--space-2xl)'
           }}

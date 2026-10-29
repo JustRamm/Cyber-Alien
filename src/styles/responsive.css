@@ -94,26 +94,48 @@
 
 @media (max-width: 767px) {
   .font-display-xl {
-    font-size: 56px !important;
-    line-height: 58px !important;
+    font-size: clamp(32px, 8.5vw, 48px) !important;
+    line-height: 1.1 !important;
     letter-spacing: -0.03em !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .font-headline-lg {
-    font-size: 40px !important;
-    line-height: 44px !important;
+    font-size: clamp(26px, 7vw, 36px) !important;
+    line-height: 1.15 !important;
     letter-spacing: -0.025em !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .font-headline-md {
-    font-size: 30px !important;
-    line-height: 34px !important;
+    font-size: clamp(20px, 5.5vw, 26px) !important;
+    line-height: 1.2 !important;
     letter-spacing: -0.02em !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .section-padding {
-    padding-top: var(--space-2xl);
-    padding-bottom: var(--space-2xl);
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    padding-left: clamp(1rem, 4vw, 1.5rem);
+    padding-right: clamp(1rem, 4vw, 1.5rem);
+  }
+
+  .hero-monolith-card {
+    min-height: 220px !important;
+    aspect-ratio: 16/10 !important;
+  }
+
+  .performance-pill-bar {
+    display: none !important;
+  }
+
+  .studio-terminal-frame {
+    aspect-ratio: auto !important;
+    min-height: 360px !important;
   }
 
   .hide-mobile {
