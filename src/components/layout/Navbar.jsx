@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from '../../router/RouterContext';
 
 export default function Navbar() {
-  const { currentPath, currentAnchor, navigate, setMobileDrawerOpen } = useRouter();
+  const { currentPath, currentAnchor, navigate, mobileDrawerOpen, setMobileDrawerOpen } = useRouter();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -69,11 +69,25 @@ export default function Navbar() {
           </button>
 
           <button
-            className="mobile-nav-toggle"
-            aria-label="Toggle mobile navigation"
+            className={`mobile-nav-toggle ${mobileDrawerOpen ? 'is-active' : ''}`}
+            aria-label={mobileDrawerOpen ? 'Close navigation' : 'Open navigation'}
             onClick={() => setMobileDrawerOpen((prev) => !prev)}
+            style={{
+              transition: 'background 0.2s ease, border-color 0.2s ease',
+              background: mobileDrawerOpen ? 'rgba(244, 63, 94, 0.16)' : 'rgba(255, 255, 255, 0.1)',
+              border: mobileDrawerOpen ? '1px solid var(--accent-coral)' : '1px solid transparent'
+            }}
           >
-            <span className="material-symbols-outlined text-[20px]">menu</span>
+            <span
+              className="material-symbols-outlined text-[20px]"
+              style={{
+                transition: 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease',
+                transform: mobileDrawerOpen ? 'rotate(90deg)' : 'rotate(0deg)',
+                color: mobileDrawerOpen ? 'var(--accent-coral)' : 'var(--text-inverse)'
+              }}
+            >
+              {mobileDrawerOpen ? 'close' : 'menu'}
+            </span>
           </button>
         </div>
       </div>
