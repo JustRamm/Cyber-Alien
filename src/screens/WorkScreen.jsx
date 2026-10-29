@@ -262,25 +262,6 @@ export default function WorkScreen() {
                   </div>
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-                    {p.repo && (
-                      <a
-                        href={p.repo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`btn ${p.dark ? 'btn-surface' : 'btn-secondary'} btn-sm`}
-                        style={{
-                          textDecoration: 'none',
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '6px',
-                          fontSize: '12px'
-                        }}
-                      >
-                        <span>GitHub Code</span>
-                        <span className="material-symbols-outlined" style={{ fontSize: '15px' }}>code</span>
-                      </a>
-                    )}
-
                     <a
                       href={p.url}
                       target="_blank"
