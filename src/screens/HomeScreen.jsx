@@ -90,7 +90,8 @@ export default function HomeScreen() {
 
         {/* Cinematic Hero Monolith Showcase (Expands Wide across 1536px canvas) */}
         <div
-          className="card-monolith"
+          className="card-monolith zoomable-image"
+          data-cursor="zoom"
           style={{
             width: '100%',
             maxWidth: '100%',
@@ -105,6 +106,7 @@ export default function HomeScreen() {
           <img
             alt="Hero Monolith Setup"
             src="/images/hero-monolith.jpg"
+            data-cursor="zoom"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
         </div>
@@ -607,7 +609,7 @@ export default function HomeScreen() {
         <div className="grid-12">
           {/* 1. Dhriti (7 cols) */}
           <div className="col-span-12" style={{ gridColumn: 'span 7' }}>
-            <div className="card-cream" style={{ height: '100%', cursor: 'pointer' }} onClick={() => navigate('/work')}>
+            <div className="card-cream" data-cursor="explore" style={{ height: '100%', cursor: 'pointer' }} onClick={() => navigate('/work')}>
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Dhriti"
@@ -630,7 +632,7 @@ export default function HomeScreen() {
 
           {/* 2. Roseann Atelier (5 cols) */}
           <div className="col-span-12" style={{ gridColumn: 'span 5' }}>
-            <div className="card-cream" style={{ height: '100%', cursor: 'pointer' }} onClick={() => navigate('/work')}>
+            <div className="card-cream" data-cursor="explore" style={{ height: '100%', cursor: 'pointer' }} onClick={() => navigate('/work')}>
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Roseann Atelier"

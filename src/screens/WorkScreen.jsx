@@ -122,6 +122,7 @@ export default function WorkScreen() {
               style={{ gridColumn: p.cols }}
             >
               <article
+                data-cursor="explore"
                 className={p.dark ? 'card-monolith' : 'card-cream'}
                 style={{
                   height: '100%',

@@ -3,6 +3,7 @@ import { RouterProvider, useRouter } from './router/RouterContext';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import MobileDrawer from './components/layout/MobileDrawer';
+import CustomCursor from './components/common/CustomCursor';
 
 import HomeScreen from './screens/HomeScreen';
 import WorkScreen from './screens/WorkScreen';
@@ -60,6 +61,9 @@ function MainLayout() {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--surface)' }}>
+      {/* Precision Kinetic Laser Cursor & Magnetic Telemetry */}
+      <CustomCursor />
+
       {/* Laser-Thin Scroll Progress Scroller */}
       <div
         style={{

@@ -373,3 +373,131 @@
   box-shadow: 0 0 0 3px var(--accent-coral-dim);
 }
 
+/* =========================================================
+   Kinetic Laser Cursor & Magnetic Telemetry Styles
+   ========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+  body, a, button, [role="button"], input, select, textarea {
+    cursor: none !important;
+  }
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: var(--accent-coral);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  box-shadow: 0 0 10px rgba(244, 63, 94, 0.9), 0 0 4px rgba(244, 63, 94, 0.6);
+  transform: translate3d(-100px, -100px, 0);
+  transition: opacity 0.2s ease, transform 0.04s ease-out;
+  will-change: transform;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(244, 63, 94, 0.4);
+  background: rgba(244, 63, 94, 0.04);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate3d(-100px, -100px, 0);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              opacity 0.2s ease;
+  will-change: transform, width, height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Morphing: Explore Project Badge */
+.cursor-ring.cursor-explore {
+  width: 84px;
+  height: 84px;
+  background: rgba(10, 10, 12, 0.94);
+  border: 1.5px solid var(--accent-coral);
+  box-shadow: 0 12px 36px rgba(244, 63, 94, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.cursor-explore-text {
+  font-family: var(--font-headline);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.cursor-ring.cursor-explore .cursor-explore-text {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Morphing: Interactive Element Hover */
+.cursor-ring.cursor-hover {
+  width: 52px;
+  height: 52px;
+  background: rgba(244, 63, 94, 0.12);
+  border-color: var(--accent-coral);
+  box-shadow: 0 0 24px rgba(244, 63, 94, 0.25);
+}
+
+/* Morphing: Image Zoom */
+.cursor-ring.cursor-zoom {
+  width: 56px;
+  height: 56px;
+  border-color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.cursor-zoom-icon {
+  color: var(--accent-coral);
+  font-size: 20px;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.cursor-ring.cursor-zoom .cursor-zoom-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Click Animation (Spring Bounce) */
+.cursor-ring.cursor-down {
+  scale: 0.85;
+}
+
+.cursor-dot.cursor-hidden,
+.cursor-ring.cursor-hidden {
+  opacity: 0 !important;
+}
+
