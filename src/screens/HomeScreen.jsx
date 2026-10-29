@@ -1519,31 +1519,6 @@ export default function HomeScreen() {
         </div>
       </section>
 
-      {/* FRAME 9: AIRY LUXURY TESTIMONIAL */}
-      <section id="reviews" className="section-padding container-max" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'var(--accent-coral-dim)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-coral)', marginBottom: 'var(--space-xl)' }}>
-          <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>format_quote</span>
-        </div>
-        <blockquote className="font-headline-md" style={{ maxWidth: '850px', marginBottom: 'var(--space-2xl)', fontWeight: 400, lineHeight: 1.25 }}>
-          “Cyber Aliens took our complex technical architecture and turned it into an unforgettable digital experience. The precision in both design and code is unmatched.”
-        </blockquote>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px' }}>
-          <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'var(--primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px', fontWeight: 'bold', marginBottom: '6px' }}>
-            SJ
-          </div>
-          <h3 className="font-headline-sm" style={{ fontSize: '20px' }}>Sarah Jenkins</h3>
-          <p className="font-body-sm">Head of Brand & Product, Monad Systems</p>
-          <div className="badge-dispatch" style={{ marginTop: '8px' }}>
-            {[1, 2, 3, 4, 5].map((s) => (
-              <span key={s} className="material-symbols-outlined" style={{ color: 'var(--accent-coral)', fontSize: '16px', fontVariationSettings: "'FILL' 1" }}>
-                star
-              </span>
-            ))}
-            <span className="font-label-caps" style={{ fontWeight: 'bold', marginLeft: '4px' }}>5.0 RATING</span>
-          </div>
-        </div>
-      </section>
-
       {/* FRAME 9: STUDIO INSIGHTS */}
       <section id="insights" className="section-padding container-max">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 'var(--space-2xl)' }}>
