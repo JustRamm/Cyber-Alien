@@ -61,7 +61,7 @@ export default function Navbar() {
         {/* Action Button & Mobile Menu Toggle */}
         <div className="nav-actions">
           <button
-            className="btn btn-primary btn-sm"
+            className="btn btn-primary btn-sm nav-desktop-cta"
             onClick={() => navigate('/proposal')}
             style={{ borderRadius: 'var(--rounded-full)', height: '36px', padding: '0 1rem' }}
           >
@@ -71,7 +71,7 @@ export default function Navbar() {
           <button
             className="mobile-nav-toggle"
             aria-label="Toggle mobile navigation"
-            onClick={() => setMobileDrawerOpen(true)}
+            onClick={() => setMobileDrawerOpen((prev) => !prev)}
           >
             <span className="material-symbols-outlined text-[20px]">menu</span>
           </button>

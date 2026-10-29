@@ -5,18 +5,19 @@
 .mobile-drawer {
   position: fixed;
   inset: 0;
-  z-index: 99;
-  background: rgba(10, 10, 10, 0.95);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
+  z-index: 99999;
+  background: rgba(8, 8, 10, 0.97);
+  backdrop-filter: blur(36px);
+  -webkit-backdrop-filter: blur(36px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: var(--space-xl);
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--transition-normal);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
 }
 
 .mobile-drawer.open {
@@ -24,42 +25,75 @@
   pointer-events: auto;
 }
 
+.mobile-drawer-header {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-drawer-close {
+  position: static;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--rounded-full);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mobile-drawer-close:hover,
+.mobile-drawer-close:active {
+  background: rgba(244, 63, 94, 0.25);
+  border-color: var(--accent-coral);
+  transform: scale(0.95);
+}
+
 .mobile-drawer-links {
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-lg);
+  gap: 1.5rem;
+  padding: 1rem 0;
 }
 
 .mobile-drawer-link {
   font-family: var(--font-display);
-  font-size: 32px;
+  font-size: clamp(26px, 6vw, 34px);
   font-weight: 700;
   color: var(--text-inverse-muted);
   text-decoration: none;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast), transform var(--transition-fast);
   cursor: pointer;
+  display: block;
 }
 
 .mobile-drawer-link:hover,
 .mobile-drawer-link.active {
   color: var(--text-inverse);
+  transform: scale(1.04);
 }
 
-.mobile-drawer-close {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  width: 44px;
-  height: 44px;
-  border-radius: var(--rounded-full);
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-inverse);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.mobile-drawer-cta {
+  width: 100%;
+  max-width: 320px;
+  margin-top: 1rem;
+}
+
+/* Hide top navbar desktop CTA on mobile viewports */
+@media (max-width: 767px) {
+  .nav-desktop-cta {
+    display: none !important;
+  }
 }
 
 /* Grid System */
