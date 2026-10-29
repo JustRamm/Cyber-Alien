@@ -132,245 +132,193 @@ export default function HomeScreen() {
         </div>
       </section>
 
-      {/* FRAME 3: WHAT WE OFFER AT CYBER ALIENS */}
+      {/* FRAME 3: SERVICES MOSAIC */}
       <section id="services" className="section-padding container-max">
         <div style={{ textAlign: 'center', marginBottom: 'var(--space-2xl)' }}>
-          <div
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              padding: '6px 16px',
-              borderRadius: '9999px',
-              background: '#FFFFFF',
-              border: '1px solid var(--border-subtle)',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.02)',
-              marginBottom: '1rem'
-            }}
-          >
-            <span
-              style={{
-                width: '6px',
-                height: '6px',
-                borderRadius: '50%',
-                backgroundColor: 'var(--accent-coral)',
-                display: 'inline-block'
-              }}
-            />
-            <span
-              className="font-label-caps"
-              style={{
-                fontSize: '11px',
-                fontWeight: 700,
-                letterSpacing: '0.12em',
-                color: 'var(--text-secondary)'
-              }}
-            >
-              WHAT WE OFFER AT CYBER ALIENS
-            </span>
-          </div>
-
-          <h2
-            className="font-display-xl"
-            style={{
-              fontSize: 'clamp(32px, 4vw, 52px)',
-              fontWeight: 800,
-              lineHeight: 1.1,
-              letterSpacing: '-0.03em',
-              color: 'var(--text-primary)',
-              margin: '0 0 0.75rem 0'
-            }}
-          >
-            Our solutions that elevate your brand
-          </h2>
-
-          <p
-            className="font-body-md"
-            style={{
-              maxWidth: '640px',
-              margin: '0 auto',
-              color: 'var(--text-secondary)',
-              fontSize: '16px',
-              lineHeight: 1.6
-            }}
-          >
-            We offer high quality design and development services tailored to your needs — from identity and websites to custom code and interactive games.
+          <span className="font-label-caps" style={{ color: 'var(--accent-coral)', display: 'block', marginBottom: 'var(--space-xs)' }}>
+            WHAT WE OFFER AT CYBER ALIENS
+          </span>
+          <h2 className="font-headline-lg">Our solutions that elevate your brand</h2>
+          <p className="font-body-md" style={{ maxWidth: '640px', margin: 'var(--space-sm) auto 0' }}>
+            We offer high quality design and development services tailored to your needs.
           </p>
         </div>
 
-        {/* 8 Real Studio Services Grid */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '24px'
-          }}
-        >
-          {[
-            {
-              cat: 'BRANDING',
-              icon: 'palette',
-              title: 'Bring your brand story to life in your website',
-              desc: 'We create brand identities that make your business memorable and set the tone for your online presence.'
-            },
-            {
-              cat: 'WEB DESIGN',
-              icon: 'language',
-              title: 'Your website will become your best sales tool',
-              desc: 'We design modern, conversion-focused websites that guide visitors into taking action.'
-            },
-            {
-              cat: 'GRAPHIC DESIGN',
-              icon: 'draw',
-              title: 'Your dedicated graphic design support team',
-              desc: 'Posters, flyers, banners, social media graphics — we create everything you need, whenever you need it.'
-            },
-            {
-              cat: 'SOCIAL MEDIA MARKETING',
-              icon: 'campaign',
-              title: 'Social media marketing that grows your business',
-              desc: 'We manage your social media content and ads to help you reach more people and drive business growth.'
-            },
-            {
-              cat: 'WORDPRESS DEVELOPMENT',
-              icon: 'layers',
-              title: 'A modern & professional website built in WordPress',
-              desc: 'We turn your approved designs into a fast, secure, SEO-friendly WordPress website.'
-            },
-            {
-              cat: 'CUSTOM DEVELOPMENT',
-              icon: 'code',
-              title: 'Custom solutions built from scratch to meet your unique requirements',
-              desc: 'We design and develop custom platforms and applications tailored to your unique business requirements.'
-            },
-            {
-              cat: 'GAME DEVELOPMENT',
-              icon: 'sports_esports',
-              title: 'Custom Interactive Game Development',
-              desc: 'We create engaging, interactive games tailored to your objectives—whether for education, marketing, events, training, or entertainment.'
-            },
-            {
-              cat: 'ANCHOR VIDEO PRODUCTION',
-              icon: 'videocam',
-              title: 'Create powerful, on-camera anchor videos',
-              desc: 'From scripting to editing, we handle everything to deliver clean, engaging videos optimized for social media and ads.'
-            }
-          ].map((svc, i) => (
-            <div
-              key={i}
-              className="card-cream"
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                padding: '28px',
-                borderRadius: '20px',
-                border: '1px solid var(--border-subtle)',
-                background: '#FFFFFF',
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.02)',
-                transition: 'transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast)'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-3px)';
-                e.currentTarget.style.borderColor = 'rgba(17, 17, 17, 0.2)';
-                e.currentTarget.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.06)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'var(--border-subtle)';
-                e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.02)';
-              }}
-            >
-              <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                  <div
-                    style={{
-                      width: '44px',
-                      height: '44px',
-                      borderRadius: '12px',
-                      background: 'var(--surface-container-low)',
-                      border: '1px solid var(--border-subtle)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: 'var(--accent-coral)'
-                    }}
-                  >
-                    <span className="material-symbols-outlined" style={{ fontSize: '22px' }}>{svc.icon}</span>
-                  </div>
-                  <span
-                    className="font-label-caps"
-                    style={{
-                      fontSize: '10.5px',
-                      fontWeight: 700,
-                      color: 'var(--text-secondary)',
-                      letterSpacing: '0.08em',
-                      background: 'var(--surface-container-low)',
-                      padding: '4px 10px',
-                      borderRadius: '9999px',
-                      border: '1px solid var(--border-subtle)'
-                    }}
-                  >
-                    {svc.cat}
-                  </span>
+        {/* 6-Card Mosaic Grid */}
+        <div className="grid-12">
+          {/* 1. Web Design Card (7 cols) */}
+          <div className="col-span-12" style={{ gridColumn: 'span 7' }}>
+            <div className="card-cream" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
+                <img
+                  alt="Web Design"
+                  src="/images/services-web.jpg"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+                <div className="badge-pill-dark" style={{ position: 'absolute', top: '1rem', left: '1rem' }}>
+                  <span className="beacon-dot animate-pulse-soft"></span>
+                  <span className="font-label-caps">Web Design</span>
                 </div>
-
-                <h3
-                  className="font-headline-sm"
+                {/* 100% Performance Pill */}
+                <div
                   style={{
-                    fontSize: '19px',
-                    fontWeight: 700,
-                    lineHeight: 1.3,
-                    color: 'var(--text-primary)',
-                    marginBottom: '10px'
-                  }}
-                >
-                  {svc.title}
-                </h3>
-
-                <p
-                  className="font-body-sm"
-                  style={{
-                    color: 'var(--text-secondary)',
-                    lineHeight: 1.6,
-                    fontSize: '14px',
-                    marginBottom: '20px'
-                  }}
-                >
-                  {svc.desc}
-                </p>
-              </div>
-
-              <div
-                style={{
-                  paddingTop: '16px',
-                  borderTop: '1px solid var(--border-subtle)',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center'
-                }}
-              >
-                <button
-                  onClick={() => navigate('/proposal')}
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    padding: 0,
-                    cursor: 'pointer',
+                    position: 'absolute',
+                    bottom: '1rem',
+                    left: '1rem',
+                    right: '1rem',
+                    background: 'rgba(255, 255, 255, 0.94)',
+                    backdropFilter: 'blur(16px)',
+                    WebkitBackdropFilter: 'blur(16px)',
+                    padding: '0.75rem 1.25rem',
+                    borderRadius: 'var(--rounded-full)',
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '6px',
-                    color: 'var(--text-primary)',
-                    fontSize: '12.5px',
-                    fontWeight: 600
+                    justifyContent: 'space-between',
+                    boxShadow: 'var(--shadow-card)'
                   }}
                 >
-                  <span>Get a proposal</span>
-                  <span className="material-symbols-outlined" style={{ fontSize: '15px', color: 'var(--accent-coral)' }}>arrow_forward</span>
-                </button>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <span className="material-symbols-outlined" style={{ color: 'var(--accent-coral)', fontSize: '20px' }}>language</span>
+                    <span className="font-label-caps" style={{ color: 'var(--primary)', fontWeight: 'bold' }}>CONVERSION-FOCUSED WEB ARCHITECTURE</span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <div style={{ width: '90px', height: '8px', background: 'var(--surface-container-high)', borderRadius: '9999px', overflow: 'hidden' }}>
+                      <div style={{ width: '100%', height: '100%', background: 'var(--accent-coral)', borderRadius: '9999px' }}></div>
+                    </div>
+                    <span className="font-label-caps" style={{ fontWeight: 'bold' }}>100%</span>
+                  </div>
+                </div>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div>
+                  <h3 className="font-headline-sm">Your website will become your best sales tool</h3>
+                  <p className="font-body-sm" style={{ marginTop: '4px' }}>We design modern, conversion-focused websites that guide visitors into taking action.</p>
+                </div>
+                <span className="material-symbols-outlined" style={{ color: 'var(--accent-coral)' }}>arrow_forward</span>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* 2 & 3. Column (5 cols) */}
+          <div className="col-span-12" style={{ gridColumn: 'span 5', display: 'flex', flexDirection: 'column', gap: 'var(--space-lg)' }}>
+            {/* WordPress CMS */}
+            <div className="card-cream">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-md)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--accent-coral-dim)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-coral)' }}>
+                    <span className="material-symbols-outlined">sync</span>
+                  </div>
+                  <div>
+                    <h4 className="font-headline-sm" style={{ fontSize: '18px' }}>WordPress Development</h4>
+                    <p className="font-label-caps">Modern & Professional Website</p>
+                  </div>
+                </div>
+                <span className="beacon-dot animate-ping-radar"></span>
+              </div>
+              <div style={{ background: 'var(--surface)', padding: '12px 16px', borderRadius: 'var(--rounded-DEFAULT)', marginBottom: 'var(--space-sm)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
+                  <span className="font-label-caps">Fast, Secure & SEO-Optimized</span>
+                  <span className="font-label-caps" style={{ fontWeight: 'bold' }}>100% Ready</span>
+                </div>
+                <div style={{ width: '100%', height: '6px', background: 'var(--surface-container-high)', borderRadius: '9999px', overflow: 'hidden' }}>
+                  <div style={{ width: '100%', height: '100%', background: 'var(--accent-coral)' }}></div>
+                </div>
+              </div>
+              <p className="font-body-sm">We turn your approved designs into a fast, secure, SEO-friendly WordPress website that is effortless to update.</p>
+            </div>
+
+            {/* Brand Monolith Card */}
+            <div className="card-monolith">
+              <div style={{ aspectRatio: '16/9', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
+                <img
+                  alt="Branding and Identity"
+                  src="/images/services-brand.jpg"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+                <div className="badge-pill-dark" style={{ position: 'absolute', top: '10px', left: '10px' }}>
+                  <span className="font-label-caps">Branding</span>
+                </div>
+              </div>
+              <h3 className="font-headline-sm" style={{ color: 'var(--text-inverse)' }}>Bring your brand story to life in your website</h3>
+              <p className="font-body-sm" style={{ color: 'var(--on-primary-container)', marginTop: '4px' }}>
+                We create brand identities that make your business memorable and set the tone for your online presence.
+              </p>
+            </div>
+          </div>
+
+          {/* 4. Graphic Design (4 cols) */}
+          <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
+            <div className="card-cream" style={{ height: '100%' }}>
+              <div style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
+                <img
+                  alt="Graphic Design"
+                  src="/images/services-packaging.jpg"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+                <div className="badge-dispatch" style={{ position: 'absolute', top: '10px', left: '10px', background: 'rgba(250,249,245,0.9)' }}>
+                  <span className="font-label-caps">Graphic Design</span>
+                </div>
+              </div>
+              <h3 className="font-headline-sm">Your dedicated graphic design support team</h3>
+              <p className="font-body-sm" style={{ marginTop: '4px' }}>Posters, flyers, banners, social media graphics — we create everything you need, whenever you need it.</p>
+            </div>
+          </div>
+
+          {/* 5. Anchor Video Production (4 cols) */}
+          <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
+            <div className="card-cream" style={{ height: '100%' }}>
+              <div style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
+                <img
+                  alt="Anchor Video Production"
+                  src="/images/services-video.jpg"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+                <div className="badge-pill-dark" style={{ position: 'absolute', top: '10px', left: '10px' }}>
+                  <span className="beacon-dot"></span>
+                  <span className="font-label-caps">Anchor Video Production</span>
+                </div>
+                <div className="badge-pill-dark" style={{ position: 'absolute', bottom: '10px', right: '10px' }}>
+                  <span className="font-label-caps">STUDIO HD // ON-CAMERA</span>
+                </div>
+              </div>
+              <h3 className="font-headline-sm">Create powerful, on-camera anchor videos</h3>
+              <p className="font-body-sm" style={{ marginTop: '4px' }}>From scripting to editing, we handle everything to deliver clean, engaging videos optimized for social media and ads.</p>
+            </div>
+          </div>
+
+          {/* 6. Social Media & Interactive (4 cols) */}
+          <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
+            <div className="card-cream" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: 'var(--surface-container-high)' }}>
+              <div>
+                <div className="badge-dispatch" style={{ background: 'var(--surface)', marginBottom: 'var(--space-md)' }}>
+                  <span className="material-symbols-outlined" style={{ color: 'var(--accent-coral)', fontSize: '18px' }}>campaign</span>
+                  <span className="font-label-caps">Social Media & Interactive</span>
+                </div>
+                <h3 className="font-headline-sm">Social media marketing that grows your business</h3>
+                <p className="font-body-sm" style={{ marginTop: '4px' }}>We manage your social media content and ads to help you reach more people and drive business growth, plus custom web applications and interactive games.</p>
+              </div>
+
+              {/* Verified Partnership Callout */}
+              <div style={{ background: 'var(--surface)', padding: 'var(--space-md)', borderRadius: 'var(--rounded-DEFAULT)', marginTop: 'var(--space-md)', boxShadow: 'var(--shadow-subtle)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+                  <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'var(--primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: 'bold' }}>
+                    ME
+                  </div>
+                  <div>
+                    <p className="font-label-caps" style={{ fontWeight: 'bold' }}>Mind Empowered Partner</p>
+                    <p className="font-body-sm" style={{ fontSize: '11px', color: 'var(--outline)' }}>Verified Collaboration</p>
+                  </div>
+                </div>
+                <p className="font-body-sm" style={{ fontStyle: 'italic' }}>
+                  "Through this collaboration, we deliver high-quality digital solutions and interactive web platforms that drive real impact."
+                </p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--accent-coral)', marginTop: '8px' }}>
+                  <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>check_circle</span>
+                  <span className="font-label-caps">Verified Development Partnership</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
