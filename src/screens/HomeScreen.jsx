@@ -677,7 +677,844 @@ export default function HomeScreen() {
         </div>
       </section>
 
-      {/* FRAME 8: AIRY LUXURY TESTIMONIAL */}
+      {/* FRAME 8: ABOUT STUDIO & LEADERSHIP TRIAD */}
+      <section id="about" className="section-padding container-max">
+        {/* Section Header */}
+        <div style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '6px 16px',
+              borderRadius: '9999px',
+              background: '#FFFFFF',
+              border: '1px solid var(--border-subtle)',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.02)',
+              marginBottom: '1.25rem'
+            }}
+          >
+            <span
+              style={{
+                width: '6px',
+                height: '6px',
+                borderRadius: '50%',
+                backgroundColor: 'var(--accent-coral)',
+                display: 'inline-block'
+              }}
+            />
+            <span
+              className="font-label-caps"
+              style={{
+                fontSize: '11px',
+                fontWeight: 700,
+                letterSpacing: '0.12em',
+                color: 'var(--text-secondary)'
+              }}
+            >
+              // CORE STUDIO COLLECTIVE
+            </span>
+          </div>
+
+          <h2
+            className="font-display-xl"
+            style={{
+              fontSize: 'clamp(34px, 4.5vw, 56px)',
+              fontWeight: 800,
+              lineHeight: 1.08,
+              letterSpacing: '-0.035em',
+              color: 'var(--text-primary)',
+              margin: '0 0 1rem 0'
+            }}
+          >
+            Three partners.<br />Zero agency bloat.
+          </h2>
+
+          <p
+            className="font-body-md"
+            style={{
+              color: 'var(--text-secondary)',
+              fontSize: '16px',
+              maxWidth: '640px',
+              lineHeight: 1.6,
+              margin: '0 auto'
+            }}
+          >
+            Cyber Aliens is deliberately engineered as a lean, senior-only collective. Every architecture decision, brand archetype, and WebGL shader pipeline is authored and executed directly by our three principal partners.
+          </p>
+        </div>
+
+        {/* 3 Team Member Cards Grid */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(310px, 1fr))',
+            gap: '24px',
+            marginBottom: 'var(--space-2xl)'
+          }}
+        >
+          {/* MEMBER 1: ALEX RIVERA */}
+          <div
+            style={{
+              background: '#FFFFFF',
+              border: '1px solid var(--border-subtle)',
+              borderRadius: '24px',
+              padding: '28px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.02)',
+              transition: 'transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-3px)';
+              e.currentTarget.style.borderColor = 'rgba(17, 17, 17, 0.2)';
+              e.currentTarget.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.borderColor = 'var(--border-subtle)';
+              e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.02)';
+            }}
+          >
+            <div>
+              {/* Architectural Avatar Frame */}
+              <div
+                style={{
+                  height: '220px',
+                  borderRadius: '16px',
+                  background: 'radial-gradient(circle at 70% 30%, #1c1d24 0%, #0c0d12 100%)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '20px',
+                  border: '1px solid rgba(255, 255, 255, 0.08)'
+                }}
+              >
+                {/* Background Crosshairs & Grid Lines */}
+                <div style={{ position: 'absolute', top: '12px', left: '12px', color: 'rgba(255,255,255,0.2)', fontSize: '12px', fontFamily: 'monospace' }}>+</div>
+                <div style={{ position: 'absolute', top: '12px', right: '12px', color: 'rgba(255,255,255,0.2)', fontSize: '12px', fontFamily: 'monospace' }}>+</div>
+                <div style={{ position: 'absolute', bottom: '12px', left: '12px', color: 'rgba(255,255,255,0.2)', fontSize: '12px', fontFamily: 'monospace' }}>+</div>
+                <div style={{ position: 'absolute', bottom: '12px', right: '12px', color: 'rgba(255,255,255,0.2)', fontSize: '12px', fontFamily: 'monospace' }}>+</div>
+
+                {/* Concentric Vector Geometry */}
+                <svg
+                  width="180"
+                  height="180"
+                  viewBox="0 0 100 100"
+                  style={{ position: 'absolute', opacity: 0.12 }}
+                >
+                  <circle cx="50" cy="50" r="45" fill="none" stroke="#FFFFFF" strokeWidth="0.8" strokeDasharray="3 3"/>
+                  <circle cx="50" cy="50" r="30" fill="none" stroke="#FFFFFF" strokeWidth="0.6"/>
+                  <line x1="50" y1="0" x2="50" y2="100" stroke="#FFFFFF" strokeWidth="0.5"/>
+                  <line x1="0" y1="50" x2="100" y2="50" stroke="#FFFFFF" strokeWidth="0.5"/>
+                </svg>
+
+                {/* Stylized Monogram */}
+                <span
+                  style={{
+                    fontFamily: 'var(--font-headline)',
+                    fontSize: '64px',
+                    fontWeight: 800,
+                    letterSpacing: '-0.04em',
+                    color: '#FFFFFF',
+                    position: 'relative',
+                    zIndex: 2,
+                    textShadow: '0 4px 20px rgba(0,0,0,0.5)'
+                  }}
+                >
+                  AR
+                </span>
+
+                {/* Top Corner Badges */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '12px',
+                    left: '14px',
+                    background: 'rgba(0,0,0,0.6)',
+                    backdropFilter: 'blur(8px)',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: '9999px',
+                    padding: '3px 10px',
+                    fontSize: '10px',
+                    fontFamily: 'monospace',
+                    color: 'var(--accent-coral)',
+                    fontWeight: 700
+                  }}
+                >
+                  01 // DIR
+                </div>
+
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '12px',
+                    right: '14px',
+                    background: 'rgba(0,0,0,0.6)',
+                    backdropFilter: 'blur(8px)',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: '9999px',
+                    padding: '3px 10px',
+                    fontSize: '10px',
+                    fontFamily: 'monospace',
+                    color: 'rgba(255,255,255,0.7)'
+                  }}
+                >
+                  BERLIN • UTC+1
+                </div>
+
+                {/* Bottom Status Pill */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: '12px',
+                    left: '14px',
+                    background: 'rgba(0,0,0,0.7)',
+                    backdropFilter: 'blur(8px)',
+                    border: '1px solid rgba(255,255,255,0.12)',
+                    borderRadius: '9999px',
+                    padding: '3px 10px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px'
+                  }}
+                >
+                  <span style={{ width: '5px', height: '5px', borderRadius: '50%', backgroundColor: 'var(--accent-coral)' }}></span>
+                  <span style={{ fontSize: '10px', color: '#FFFFFF', fontWeight: 600, letterSpacing: '0.06em' }}>
+                    CREATIVE DIRECTION & BRAND
+                  </span>
+                </div>
+              </div>
+
+              {/* Name & Title */}
+              <h3
+                className="font-headline-sm"
+                style={{
+                  fontSize: '22px',
+                  fontWeight: 700,
+                  color: 'var(--text-primary)',
+                  margin: '0 0 4px 0'
+                }}
+              >
+                Alex Rivera
+              </h3>
+              <p
+                className="font-label-caps"
+                style={{
+                  color: 'var(--accent-coral)',
+                  fontSize: '11px',
+                  fontWeight: 700,
+                  letterSpacing: '0.08em',
+                  marginBottom: '12px'
+                }}
+              >
+                FOUNDING PARTNER // SPATIAL ARCHITECTURE
+              </p>
+
+              {/* Bio */}
+              <p
+                style={{
+                  fontSize: '13.5px',
+                  color: 'var(--text-secondary)',
+                  lineHeight: 1.6,
+                  marginBottom: '18px'
+                }}
+              >
+                Directs spatial user experience, generative 3D visual environments, and transmedia brand systems. Over a decade authoring category-defining interfaces for frontier technology labs and culture disruptors.
+              </p>
+
+              {/* Stack Chips */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
+                {['Spatial Systems', 'Three.js / WebGL', 'Brand Identity', 'Art Direction'].map((s, idx) => (
+                  <span
+                    key={idx}
+                    style={{
+                      fontSize: '11px',
+                      background: 'var(--surface-container-low)',
+                      border: '1px solid var(--border-subtle)',
+                      borderRadius: '9999px',
+                      padding: '4px 10px',
+                      color: 'var(--text-primary)',
+                      fontWeight: 500
+                    }}
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Social / Direct Link */}
+            <div
+              style={{
+                paddingTop: '16px',
+                borderTop: '1px solid var(--border-subtle)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                fontSize: '12px'
+              }}
+            >
+              <span style={{ color: 'var(--text-secondary)', fontFamily: 'monospace' }}>LEAD SPRINT: ACTIVE</span>
+              <a
+                href="#proposal"
+                style={{
+                  color: 'var(--text-primary)',
+                  textDecoration: 'none',
+                  fontWeight: 600,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px'
+                }}
+              >
+                <span>Direct Dispatch</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          {/* MEMBER 2: KAI TAKAHASHI */}
+          <div
+            style={{
+              background: '#FFFFFF',
+              border: '1px solid var(--border-subtle)',
+              borderRadius: '24px',
+              padding: '28px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.02)',
+              transition: 'transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-3px)';
+              e.currentTarget.style.borderColor = 'rgba(17, 17, 17, 0.2)';
+              e.currentTarget.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.borderColor = 'var(--border-subtle)';
+              e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.02)';
+            }}
+          >
+            <div>
+              {/* Architectural Avatar Frame */}
+              <div
+                style={{
+                  height: '220px',
+                  borderRadius: '16px',
+                  background: 'radial-gradient(circle at 30% 70%, #1f1b24 0%, #0c0d12 100%)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '20px',
+                  border: '1px solid rgba(255, 255, 255, 0.08)'
+                }}
+              >
+                {/* Background Crosshairs & Grid Lines */}
+                <div style={{ position: 'absolute', top: '12px', left: '12px', color: 'rgba(255,255,255,0.2)', fontSize: '12px', fontFamily: 'monospace' }}>+</div>
+                <div style={{ position: 'absolute', top: '12px', right: '12px', color: 'rgba(255,255,255,0.2)', fontSize: '12px', fontFamily: 'monospace' }}>+</div>
+                <div style={{ position: 'absolute', bottom: '12px', left: '12px', color: 'rgba(255,255,255,0.2)', fontSize: '12px', fontFamily: 'monospace' }}>+</div>
+                <div style={{ position: 'absolute', bottom: '12px', right: '12px', color: 'rgba(255,255,255,0.2)', fontSize: '12px', fontFamily: 'monospace' }}>+</div>
+
+                {/* Concentric Vector Geometry */}
+                <svg
+                  width="180"
+                  height="180"
+                  viewBox="0 0 100 100"
+                  style={{ position: 'absolute', opacity: 0.12 }}
+                >
+                  <polygon points="50,5 95,90 5,90" fill="none" stroke="#FFFFFF" strokeWidth="0.8"/>
+                  <circle cx="50" cy="60" r="25" fill="none" stroke="#FFFFFF" strokeWidth="0.6"/>
+                  <line x1="0" y1="60" x2="100" y2="60" stroke="#FFFFFF" strokeWidth="0.5"/>
+                </svg>
+
+                {/* Stylized Monogram */}
+                <span
+                  style={{
+                    fontFamily: 'var(--font-headline)',
+                    fontSize: '64px',
+                    fontWeight: 800,
+                    letterSpacing: '-0.04em',
+                    color: '#FFFFFF',
+                    position: 'relative',
+                    zIndex: 2,
+                    textShadow: '0 4px 20px rgba(0,0,0,0.5)'
+                  }}
+                >
+                  KT
+                </span>
+
+                {/* Top Corner Badges */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '12px',
+                    left: '14px',
+                    background: 'rgba(0,0,0,0.6)',
+                    backdropFilter: 'blur(8px)',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: '9999px',
+                    padding: '3px 10px',
+                    fontSize: '10px',
+                    fontFamily: 'monospace',
+                    color: 'var(--accent-coral)',
+                    fontWeight: 700
+                  }}
+                >
+                  02 // ENG
+                </div>
+
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '12px',
+                    right: '14px',
+                    background: 'rgba(0,0,0,0.6)',
+                    backdropFilter: 'blur(8px)',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: '9999px',
+                    padding: '3px 10px',
+                    fontSize: '10px',
+                    fontFamily: 'monospace',
+                    color: 'rgba(255,255,255,0.7)'
+                  }}
+                >
+                  TOKYO • UTC+9
+                </div>
+
+                {/* Bottom Status Pill */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: '12px',
+                    left: '14px',
+                    background: 'rgba(0,0,0,0.7)',
+                    backdropFilter: 'blur(8px)',
+                    border: '1px solid rgba(255,255,255,0.12)',
+                    borderRadius: '9999px',
+                    padding: '3px 10px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px'
+                  }}
+                >
+                  <span style={{ width: '5px', height: '5px', borderRadius: '50%', backgroundColor: '#10B981' }}></span>
+                  <span style={{ fontSize: '10px', color: '#FFFFFF', fontWeight: 600, letterSpacing: '0.06em' }}>
+                    SYSTEMS ARCHITECTURE & WASM
+                  </span>
+                </div>
+              </div>
+
+              {/* Name & Title */}
+              <h3
+                className="font-headline-sm"
+                style={{
+                  fontSize: '22px',
+                  fontWeight: 700,
+                  color: 'var(--text-primary)',
+                  margin: '0 0 4px 0'
+                }}
+              >
+                Kai Takahashi
+              </h3>
+              <p
+                className="font-label-caps"
+                style={{
+                  color: 'var(--accent-coral)',
+                  fontSize: '11px',
+                  fontWeight: 700,
+                  letterSpacing: '0.08em',
+                  marginBottom: '12px'
+                }}
+              >
+                FOUNDING PARTNER // TECHNICAL PRINCIPAL
+              </p>
+
+              {/* Bio */}
+              <p
+                style={{
+                  fontSize: '13.5px',
+                  color: 'var(--text-secondary)',
+                  lineHeight: 1.6,
+                  marginBottom: '18px'
+                }}
+              >
+                Specializes in low-latency WebAssembly audio DSP kernels, custom GLSL shader choreography, and high-concurrency headless Next.js platforms built for resilient micro-second responsiveness.
+              </p>
+
+              {/* Stack Chips */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
+                {['Rust / WASM', 'GLSL Shaders', 'Next.js 15', 'Web Audio API'].map((s, idx) => (
+                  <span
+                    key={idx}
+                    style={{
+                      fontSize: '11px',
+                      background: 'var(--surface-container-low)',
+                      border: '1px solid var(--border-subtle)',
+                      borderRadius: '9999px',
+                      padding: '4px 10px',
+                      color: 'var(--text-primary)',
+                      fontWeight: 500
+                    }}
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Social / Direct Link */}
+            <div
+              style={{
+                paddingTop: '16px',
+                borderTop: '1px solid var(--border-subtle)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                fontSize: '12px'
+              }}
+            >
+              <span style={{ color: 'var(--text-secondary)', fontFamily: 'monospace' }}>ENGINEERING LEAD</span>
+              <a
+                href="#proposal"
+                style={{
+                  color: 'var(--text-primary)',
+                  textDecoration: 'none',
+                  fontWeight: 600,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px'
+                }}
+              >
+                <span>Direct Dispatch</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          {/* MEMBER 3: ELENA ROSTOVA */}
+          <div
+            style={{
+              background: '#FFFFFF',
+              border: '1px solid var(--border-subtle)',
+              borderRadius: '24px',
+              padding: '28px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.02)',
+              transition: 'transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-3px)';
+              e.currentTarget.style.borderColor = 'rgba(17, 17, 17, 0.2)';
+              e.currentTarget.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.borderColor = 'var(--border-subtle)';
+              e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.02)';
+            }}
+          >
+            <div>
+              {/* Architectural Avatar Frame */}
+              <div
+                style={{
+                  height: '220px',
+                  borderRadius: '16px',
+                  background: 'radial-gradient(circle at 60% 70%, #241c1f 0%, #0c0d12 100%)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '20px',
+                  border: '1px solid rgba(255, 255, 255, 0.08)'
+                }}
+              >
+                {/* Background Crosshairs & Grid Lines */}
+                <div style={{ position: 'absolute', top: '12px', left: '12px', color: 'rgba(255,255,255,0.2)', fontSize: '12px', fontFamily: 'monospace' }}>+</div>
+                <div style={{ position: 'absolute', top: '12px', right: '12px', color: 'rgba(255,255,255,0.2)', fontSize: '12px', fontFamily: 'monospace' }}>+</div>
+                <div style={{ position: 'absolute', bottom: '12px', left: '12px', color: 'rgba(255,255,255,0.2)', fontSize: '12px', fontFamily: 'monospace' }}>+</div>
+                <div style={{ position: 'absolute', bottom: '12px', right: '12px', color: 'rgba(255,255,255,0.2)', fontSize: '12px', fontFamily: 'monospace' }}>+</div>
+
+                {/* Concentric Vector Geometry */}
+                <svg
+                  width="180"
+                  height="180"
+                  viewBox="0 0 100 100"
+                  style={{ position: 'absolute', opacity: 0.12 }}
+                >
+                  <rect x="15" y="15" width="70" height="70" rx="10" fill="none" stroke="#FFFFFF" strokeWidth="0.8"/>
+                  <circle cx="50" cy="50" r="22" fill="none" stroke="#FFFFFF" strokeWidth="0.6"/>
+                  <line x1="15" y1="15" x2="85" y2="85" stroke="#FFFFFF" strokeWidth="0.5"/>
+                </svg>
+
+                {/* Stylized Monogram */}
+                <span
+                  style={{
+                    fontFamily: 'var(--font-headline)',
+                    fontSize: '64px',
+                    fontWeight: 800,
+                    letterSpacing: '-0.04em',
+                    color: '#FFFFFF',
+                    position: 'relative',
+                    zIndex: 2,
+                    textShadow: '0 4px 20px rgba(0,0,0,0.5)'
+                  }}
+                >
+                  ER
+                </span>
+
+                {/* Top Corner Badges */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '12px',
+                    left: '14px',
+                    background: 'rgba(0,0,0,0.6)',
+                    backdropFilter: 'blur(8px)',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: '9999px',
+                    padding: '3px 10px',
+                    fontSize: '10px',
+                    fontFamily: 'monospace',
+                    color: 'var(--accent-coral)',
+                    fontWeight: 700
+                  }}
+                >
+                  03 // STRAT
+                </div>
+
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '12px',
+                    right: '14px',
+                    background: 'rgba(0,0,0,0.6)',
+                    backdropFilter: 'blur(8px)',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: '9999px',
+                    padding: '3px 10px',
+                    fontSize: '10px',
+                    fontFamily: 'monospace',
+                    color: 'rgba(255,255,255,0.7)'
+                  }}
+                >
+                  SF • UTC-8
+                </div>
+
+                {/* Bottom Status Pill */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: '12px',
+                    left: '14px',
+                    background: 'rgba(0,0,0,0.7)',
+                    backdropFilter: 'blur(8px)',
+                    border: '1px solid rgba(255,255,255,0.12)',
+                    borderRadius: '9999px',
+                    padding: '3px 10px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px'
+                  }}
+                >
+                  <span style={{ width: '5px', height: '5px', borderRadius: '50%', backgroundColor: 'var(--accent-coral)' }}></span>
+                  <span style={{ fontSize: '10px', color: '#FFFFFF', fontWeight: 600, letterSpacing: '0.06em' }}>
+                    PRODUCT STRATEGY & IMPACT
+                  </span>
+                </div>
+              </div>
+
+              {/* Name & Title */}
+              <h3
+                className="font-headline-sm"
+                style={{
+                  fontSize: '22px',
+                  fontWeight: 700,
+                  color: 'var(--text-primary)',
+                  margin: '0 0 4px 0'
+                }}
+              >
+                Elena Rostova
+              </h3>
+              <p
+                className="font-label-caps"
+                style={{
+                  color: 'var(--accent-coral)',
+                  fontSize: '11px',
+                  fontWeight: 700,
+                  letterSpacing: '0.08em',
+                  marginBottom: '12px'
+                }}
+              >
+                PARTNER // DIGITAL PRODUCT STRATEGY
+              </p>
+
+              {/* Bio */}
+              <p
+                style={{
+                  fontSize: '13.5px',
+                  color: 'var(--text-secondary)',
+                  lineHeight: 1.6,
+                  marginBottom: '18px'
+                }}
+              >
+                Bridges speculative human-computer interaction research with commercial roadmap execution. Spearheads institutional partnerships and youth equity initiatives with Mind Empowered.
+              </p>
+
+              {/* Stack Chips */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
+                {['HCI Research', 'Product Roadmaps', 'Impact Governance', 'Behavioral Systems'].map((s, idx) => (
+                  <span
+                    key={idx}
+                    style={{
+                      fontSize: '11px',
+                      background: 'var(--surface-container-low)',
+                      border: '1px solid var(--border-subtle)',
+                      borderRadius: '9999px',
+                      padding: '4px 10px',
+                      color: 'var(--text-primary)',
+                      fontWeight: 500
+                    }}
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Social / Direct Link */}
+            <div
+              style={{
+                paddingTop: '16px',
+                borderTop: '1px solid var(--border-subtle)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                fontSize: '12px'
+              }}
+            >
+              <span style={{ color: 'var(--text-secondary)', fontFamily: 'monospace' }}>STRATEGY LEAD</span>
+              <a
+                href="#proposal"
+                style={{
+                  color: 'var(--text-primary)',
+                  textDecoration: 'none',
+                  fontWeight: 600,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px'
+                }}
+              >
+                <span>Direct Dispatch</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Operating Model Telemetry Strip */}
+        <div
+          style={{
+            background: 'var(--surface-container-low)',
+            border: '1px solid var(--border-subtle)',
+            borderRadius: '20px',
+            padding: '24px 32px',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+            gap: '24px',
+            alignItems: 'center'
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+            <div
+              style={{
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                background: '#FFFFFF',
+                border: '1px solid var(--border-subtle)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'var(--accent-coral)'
+              }}
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>handshake</span>
+            </div>
+            <div>
+              <div style={{ fontSize: '13.5px', fontWeight: 700, color: 'var(--text-primary)' }}>
+                100% Direct Partner Execution
+              </div>
+              <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                Zero junior handoffs or outsourced offshore layers.
+              </div>
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+            <div
+              style={{
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                background: '#FFFFFF',
+                border: '1px solid var(--border-subtle)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'var(--accent-coral)'
+              }}
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>speed</span>
+            </div>
+            <div>
+              <div style={{ fontSize: '13.5px', fontWeight: 700, color: 'var(--text-primary)' }}>
+                Max 4 Active Deployments
+              </div>
+              <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                Strict quarter caps to ensure relentless craft and velocity.
+              </div>
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+            <div
+              style={{
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                background: '#FFFFFF',
+                border: '1px solid var(--border-subtle)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'var(--accent-coral)'
+              }}
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>bolt</span>
+            </div>
+            <div>
+              <div style={{ fontSize: '13.5px', fontWeight: 700, color: 'var(--text-primary)' }}>
+                Direct Slack / Signal Comms
+              </div>
+              <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                Sub-2 hour partner response during production cycles.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FRAME 9: AIRY LUXURY TESTIMONIAL */}
       <section id="reviews" className="section-padding container-max" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'var(--accent-coral-dim)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-coral)', marginBottom: 'var(--space-xl)' }}>
           <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>format_quote</span>
