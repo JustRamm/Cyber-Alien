@@ -165,7 +165,7 @@ export default function Footer() {
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-lg)', flexWrap: 'wrap' }}>
-            <a href="https://in.linkedin.com/company/cyberalienss" target="_blank" rel="noopener noreferrer" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>LinkedIn</a>
+            <a href="https://www.linkedin.com/company/cyberalienss/" target="_blank" rel="noopener noreferrer" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>LinkedIn</a>
             <a href="https://www.instagram.com/cyberaliens.in/" target="_blank" rel="noopener noreferrer" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>Instagram</a>
             <a href="https://in.pinterest.com/cyberalienss/" target="_blank" rel="noopener noreferrer" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>Pinterest</a>
             <a href="https://clutch.co/profile/cyber-aliens" target="_blank" rel="noopener noreferrer" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>Clutch (Verified)</a>
