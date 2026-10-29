@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from '../router/RouterContext';
+import TiltCard from '../components/common/TiltCard';
 
 export default function HomeScreen() {
   const { navigate } = useRouter();
@@ -89,9 +90,12 @@ export default function HomeScreen() {
         </div>
 
         {/* Cinematic Hero Monolith Showcase (Expands Wide across 1536px canvas) */}
-        <div
+        <TiltCard
           className="card-monolith zoomable-image"
           data-cursor="zoom"
+          maxTilt={3.5}
+          scale={1.008}
+          isDark={true}
           style={{
             width: '100%',
             maxWidth: '100%',
@@ -109,7 +113,7 @@ export default function HomeScreen() {
             data-cursor="zoom"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
-        </div>
+        </TiltCard>
       </section>
 
       {/* FRAME 2: CLIENT MARQUEE TICKER */}
@@ -152,7 +156,11 @@ export default function HomeScreen() {
         <div className="grid-12">
           {/* 1. Web Design Card (7 cols) */}
           <div className="col-span-12" style={{ gridColumn: 'span 7' }}>
-            <div className="card-cream" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <TiltCard
+              className="card-cream"
+              maxTilt={4.5}
+              style={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+            >
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Web Design"
@@ -200,13 +208,16 @@ export default function HomeScreen() {
                 </div>
                 <span className="material-symbols-outlined" style={{ color: 'var(--accent-coral)' }}>arrow_forward</span>
               </div>
-            </div>
+            </TiltCard>
           </div>
 
           {/* 2 & 3. Column (5 cols) */}
           <div className="col-span-12" style={{ gridColumn: 'span 5', display: 'flex', flexDirection: 'column', gap: 'var(--space-lg)' }}>
             {/* WordPress CMS */}
-            <div className="card-cream">
+            <TiltCard
+              className="card-cream"
+              maxTilt={5}
+            >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-md)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--accent-coral-dim)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-coral)' }}>
@@ -229,10 +240,14 @@ export default function HomeScreen() {
                 </div>
               </div>
               <p className="font-body-sm">We turn your approved designs into a fast, secure, SEO-friendly WordPress website that is effortless to update.</p>
-            </div>
+            </TiltCard>
 
             {/* Brand Monolith Card */}
-            <div className="card-monolith">
+            <TiltCard
+              className="card-monolith"
+              maxTilt={5}
+              isDark={true}
+            >
               <div style={{ aspectRatio: '16/9', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Branding and Identity"
@@ -247,12 +262,16 @@ export default function HomeScreen() {
               <p className="font-body-sm" style={{ color: 'var(--on-primary-container)', marginTop: '4px' }}>
                 We create brand identities that make your business memorable and set the tone for your online presence.
               </p>
-            </div>
+            </TiltCard>
           </div>
 
           {/* 4. Graphic Design (4 cols) */}
           <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
-            <div className="card-cream" style={{ height: '100%' }}>
+            <TiltCard
+              className="card-cream"
+              maxTilt={5.5}
+              style={{ height: '100%' }}
+            >
               <div style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Graphic Design"
@@ -265,12 +284,16 @@ export default function HomeScreen() {
               </div>
               <h3 className="font-headline-sm">Your dedicated graphic design support team</h3>
               <p className="font-body-sm" style={{ marginTop: '4px' }}>Posters, flyers, banners, social media graphics — we create everything you need, whenever you need it.</p>
-            </div>
+            </TiltCard>
           </div>
 
           {/* 5. Anchor Video Production (4 cols) */}
           <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
-            <div className="card-cream" style={{ height: '100%' }}>
+            <TiltCard
+              className="card-cream"
+              maxTilt={5.5}
+              style={{ height: '100%' }}
+            >
               <div style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Anchor Video Production"
@@ -287,12 +310,16 @@ export default function HomeScreen() {
               </div>
               <h3 className="font-headline-sm">Create powerful, on-camera anchor videos</h3>
               <p className="font-body-sm" style={{ marginTop: '4px' }}>From scripting to editing, we handle everything to deliver clean, engaging videos optimized for social media and ads.</p>
-            </div>
+            </TiltCard>
           </div>
 
           {/* 6. Social Media & Interactive (4 cols) */}
           <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
-            <div className="card-cream" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: 'var(--surface-container-high)' }}>
+            <TiltCard
+              className="card-cream"
+              maxTilt={5.5}
+              style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: 'var(--surface-container-high)' }}
+            >
               <div>
                 <div className="badge-dispatch" style={{ background: 'var(--surface)', marginBottom: 'var(--space-md)' }}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--accent-coral)', fontSize: '18px' }}>campaign</span>
@@ -333,7 +360,7 @@ export default function HomeScreen() {
                   <span className="font-label-caps">Verified Development Partnership</span>
                 </div>
               </div>
-            </div>
+            </TiltCard>
           </div>
         </div>
       </section>
