@@ -32,6 +32,33 @@ export default function HomeScreen() {
     }
   };
 
+  // Mobile Three Partners Carousel State
+  const [activePartnerSlide, setActivePartnerSlide] = useState(0);
+  const partnersTrackRef = useRef(null);
+
+  const handlePartnersScroll = (e) => {
+    const track = e.currentTarget;
+    const scrollLeft = track.scrollLeft;
+    const items = track.querySelectorAll('.partner-card-item');
+    if (!items || items.length === 0) return;
+    const cardWidth = items[0].offsetWidth;
+    const gap = 16;
+    const step = cardWidth + gap;
+    const slideIndex = Math.min(items.length - 1, Math.max(0, Math.round(scrollLeft / step)));
+    setActivePartnerSlide(slideIndex);
+  };
+
+  const scrollToPartnerSlide = (index) => {
+    if (!partnersTrackRef.current) return;
+    const track = partnersTrackRef.current;
+    const items = track.querySelectorAll('.partner-card-item');
+    if (items[index]) {
+      items[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      setActivePartnerSlide(index);
+    }
+  };
+
+
   // Frame 4 Interactive Terminal State
   const [activeStep, setActiveStep] = useState(0);
   const timelineSteps = [
@@ -656,7 +683,7 @@ export default function HomeScreen() {
               </div>
             </div>
 
-            <div className="col-span-12" style={{ gridColumn: 'span 5', display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
+            <div className="partnership-metrics-col col-span-12" style={{ gridColumn: 'span 5', display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
               <div style={{ background: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', padding: 'var(--space-lg)', borderRadius: 'var(--rounded-lg)', border: '1px solid var(--border-glass)' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-sm)' }}>
                   <span className="font-label-caps" style={{ color: 'var(--accent-coral)' }}>Mind Empowered Initiative</span>
@@ -865,8 +892,11 @@ export default function HomeScreen() {
           </p>
         </div>
 
-        {/* 3 Team Member Cards Grid */}
+        {/* 3 Team Member Cards Grid (Horizontal Swipeable Carousel on Mobile) */}
         <div
+          ref={partnersTrackRef}
+          onScroll={handlePartnersScroll}
+          className="partners-carousel-track"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
@@ -876,6 +906,7 @@ export default function HomeScreen() {
         >
           {/* MEMBER 1: SAI SURESH */}
           <div
+            className="partner-card-item"
             style={{
               background: '#FFFFFF',
               border: '1px solid var(--border-subtle)',
@@ -1099,6 +1130,7 @@ export default function HomeScreen() {
 
           {/* MEMBER 2: KAI TAKAHASHI */}
           <div
+            className="partner-card-item"
             style={{
               background: '#FFFFFF',
               border: '1px solid var(--border-subtle)',
@@ -1321,6 +1353,7 @@ export default function HomeScreen() {
 
           {/* MEMBER 3: ELENA ROSTOVA */}
           <div
+            className="partner-card-item"
             style={{
               background: '#FFFFFF',
               border: '1px solid var(--border-subtle)',
@@ -1539,6 +1572,28 @@ export default function HomeScreen() {
                 <span>↗</span>
               </a>
             </div>
+          </div>
+        </div>
+
+        
+        {/* Mobile Partners Swipe Pagination & Dot Tracker */}
+        <div className="partners-mobile-pagination">
+          <div className="partners-mobile-swipe-hint">
+            <span className="material-symbols-outlined animate-pulse-soft" style={{ fontSize: '16px', color: 'var(--accent-coral)' }}>swipe</span>
+            <span className="font-label-caps" style={{ fontSize: '11px', letterSpacing: '0.12em', color: 'var(--text-secondary)' }}>
+              Swipe to explore partners ({activePartnerSlide + 1} of 3)
+            </span>
+          </div>
+          <div className="partners-mobile-dots">
+            {[0, 1, 2].map((idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => scrollToPartnerSlide(idx)}
+                className={`partners-dot ${activePartnerSlide === idx ? 'active' : ''}`}
+                aria-label={`Go to partner ${idx + 1}`}
+              />
+            ))}
           </div>
         </div>
 
