@@ -110,20 +110,20 @@
   {
     "id": "signal-scout",
     "name": "Signal Scout | Urban Compassion System",
-    "url": "https://signal-scout-b9v280pke-justramms-projects.vercel.app/",
-    "repo": null,
+    "url": "https://signal-scout-delta.vercel.app/",
+    "repo": "https://github.com/JustRamm/Signal-Scout",
     "category": [
       "web",
       "impact"
     ],
-    "catLabel": "URBAN INTERVENTION // RADAR TELEMETRY",
-    "partner": "Cyber Aliens",
-    "pageTitle": "Login – Vercel",
-    "description": "Sign Up",
-    "h1": "Log in to Vercel",
+    "catLabel": "URBAN COMPASSION SYSTEM // GATEKEEPER",
+    "partner": "With Mind Empowered",
+    "pageTitle": "Signal Scout | Urban Compassion System",
+    "description": "URBAN COMPASSION SYSTEM. Initializing urban scanning and gatekeeper distress detection.",
+    "h1": "SIGNALSCOUT",
     "screenshotPng": "/projects/signal-scout/cover.png",
     "screenshotJpg": "/projects/signal-scout/cover.jpg",
-    "capturedAt": "2026-10-29T06:45:29.039Z"
+    "capturedAt": "2026-10-29T07:18:32.000Z"
   },
   {
     "id": "stickman-rescue",
