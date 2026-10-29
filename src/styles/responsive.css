@@ -145,6 +145,112 @@
   .show-mobile {
     display: block !important;
   }
+
+  /* WHAT WE OFFER — MOBILE HORIZONTAL SWIPEABLE CAROUSEL */
+  .services-mosaic-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: smooth !important;
+    gap: 16px !important;
+    padding: 8px 16px 20px 16px !important;
+    margin-left: calc(-1 * clamp(1rem, 4vw, 1.5rem)) !important;
+    margin-right: calc(-1 * clamp(1rem, 4vw, 1.5rem)) !important;
+    scroll-padding: 0 16px !important;
+    scrollbar-width: none !important; /* Firefox */
+  }
+
+  .services-mosaic-grid::-webkit-scrollbar {
+    display: none !important; /* Chrome / Safari */
+  }
+
+  /* Unnest the 2-card desktop column so all 6 cards sit at root level */
+  .services-cards-subgroup {
+    display: contents !important;
+  }
+
+  /* Calibrate each card to 84vw width with peek effect */
+  .services-card-item {
+    flex: 0 0 84vw !important;
+    max-width: 330px !important;
+    min-width: 270px !important;
+    scroll-snap-align: center !important;
+    scroll-snap-stop: normal !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  .services-card-item > * {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Uniform 16/10 aspect ratio for photographic banners in cards on mobile */
+  .services-card-item .services-card-img-wrap {
+    aspect-ratio: 16/10 !important;
+    width: 100% !important;
+    border-radius: var(--rounded-DEFAULT) !important;
+    overflow: hidden !important;
+    position: relative !important;
+    margin-bottom: var(--space-md) !important;
+  }
+
+  /* Responsive performance pill on Card 1 */
+  .services-perf-pill {
+    padding: 0.5rem 0.85rem !important;
+  }
+
+  .services-perf-pill .performance-pill-bar {
+    display: none !important;
+  }
+
+  /* Mobile Pagination & Dot Trackers */
+  .services-mobile-pagination {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-top: 14px !important;
+    width: 100% !important;
+  }
+
+  .services-mobile-swipe-hint {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .services-mobile-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .services-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: var(--outline-variant);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .services-dot.active {
+    width: 26px;
+    background: var(--accent-coral);
+    box-shadow: 0 0 12px var(--accent-coral-glow);
+  }
+}
+
+.services-mobile-pagination {
+  display: none;
 }
 
 @media (min-width: 768px) {

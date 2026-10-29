@@ -1,10 +1,36 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useRouter } from '../router/RouterContext';
 import TiltCard from '../components/common/TiltCard';
 
 export default function HomeScreen() {
   const { navigate } = useRouter();
+
+  // Mobile Services Horizontal Carousel State
+  const [activeServiceSlide, setActiveServiceSlide] = useState(0);
+  const servicesTrackRef = useRef(null);
+
+  const handleServicesScroll = (e) => {
+    const track = e.currentTarget;
+    const scrollLeft = track.scrollLeft;
+    const items = track.querySelectorAll('.services-card-item');
+    if (!items || items.length === 0) return;
+    const cardWidth = items[0].offsetWidth;
+    const gap = 16;
+    const step = cardWidth + gap;
+    const slideIndex = Math.min(items.length - 1, Math.max(0, Math.round(scrollLeft / step)));
+    setActiveServiceSlide(slideIndex);
+  };
+
+  const scrollToServiceSlide = (index) => {
+    if (!servicesTrackRef.current) return;
+    const track = servicesTrackRef.current;
+    const items = track.querySelectorAll('.services-card-item');
+    if (items[index]) {
+      items[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      setActiveServiceSlide(index);
+    }
+  };
 
   // Frame 4 Interactive Terminal State
   const [activeStep, setActiveStep] = useState(0);
@@ -152,16 +178,20 @@ export default function HomeScreen() {
           </p>
         </div>
 
-        {/* 6-Card Mosaic Grid */}
-        <div className="grid-12 reveal-stagger">
-          {/* 1. Web Design Card (7 cols) */}
-          <div className="col-span-12 reveal-card" style={{ gridColumn: 'span 7' }}>
+        {/* 6-Card Mosaic Grid (Horizontal Swipeable Carousel on Mobile) */}
+        <div
+          ref={servicesTrackRef}
+          onScroll={handleServicesScroll}
+          className="services-mosaic-grid grid-12 reveal-stagger"
+        >
+          {/* 1. Web Design Card (7 cols on desktop, slide 1 on mobile) */}
+          <div className="services-card-item col-span-12 reveal-card" style={{ gridColumn: 'span 7' }}>
             <TiltCard
               className="card-cream"
               maxTilt={4.5}
               style={{ height: '100%', display: 'flex', flexDirection: 'column' }}
             >
-              <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
+              <div className="services-card-img-wrap" style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Web Design"
                   src="/images/services-web.jpg"
@@ -173,6 +203,7 @@ export default function HomeScreen() {
                 </div>
                 {/* 100% Performance Pill */}
                 <div
+                  className="services-perf-pill"
                   style={{
                     position: 'absolute',
                     bottom: '1rem',
@@ -201,7 +232,7 @@ export default function HomeScreen() {
                   </div>
                 </div>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto' }}>
                 <div>
                   <h3 className="font-headline-sm">Your website will become your best sales tool</h3>
                   <p className="font-body-sm" style={{ marginTop: '4px' }}>We design modern, conversion-focused websites that guide visitors into taking action.</p>
@@ -211,68 +242,78 @@ export default function HomeScreen() {
             </TiltCard>
           </div>
 
-          {/* 2 & 3. Column (5 cols) */}
-          <div className="col-span-12 reveal-card" style={{ gridColumn: 'span 5', display: 'flex', flexDirection: 'column', gap: 'var(--space-lg)' }}>
-            {/* WordPress CMS */}
-            <TiltCard
-              className="card-cream"
-              maxTilt={5}
-            >
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-md)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--accent-coral-dim)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-coral)' }}>
-                    <span className="material-symbols-outlined">sync</span>
+          {/* 2 & 3. Column (WordPress & Branding) */}
+          <div className="services-cards-subgroup col-span-12 reveal-card" style={{ gridColumn: 'span 5', display: 'flex', flexDirection: 'column', gap: 'var(--space-lg)' }}>
+            {/* 2. WordPress CMS */}
+            <div className="services-card-item services-subcard">
+              <TiltCard
+                className="card-cream"
+                maxTilt={5}
+                style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+              >
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-md)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--accent-coral-dim)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-coral)' }}>
+                        <span className="material-symbols-outlined">sync</span>
+                      </div>
+                      <div>
+                        <h4 className="font-headline-sm" style={{ fontSize: '18px' }}>WordPress Development</h4>
+                        <p className="font-label-caps">Modern &amp; Professional Website</p>
+                      </div>
+                    </div>
+                    <span className="beacon-dot animate-ping-radar"></span>
                   </div>
-                  <div>
-                    <h4 className="font-headline-sm" style={{ fontSize: '18px' }}>WordPress Development</h4>
-                    <p className="font-label-caps">Modern & Professional Website</p>
+                  <div style={{ background: 'var(--surface)', padding: '12px 16px', borderRadius: 'var(--rounded-DEFAULT)', marginBottom: 'var(--space-sm)' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
+                      <span className="font-label-caps">Fast, Secure &amp; SEO-Optimized</span>
+                      <span className="font-label-caps" style={{ fontWeight: 'bold' }}>100% Ready</span>
+                    </div>
+                    <div style={{ width: '100%', height: '6px', background: 'var(--surface-container-high)', borderRadius: '9999px', overflow: 'hidden' }}>
+                      <div style={{ width: '100%', height: '100%', background: 'var(--accent-coral)' }}></div>
+                    </div>
                   </div>
                 </div>
-                <span className="beacon-dot animate-ping-radar"></span>
-              </div>
-              <div style={{ background: 'var(--surface)', padding: '12px 16px', borderRadius: 'var(--rounded-DEFAULT)', marginBottom: 'var(--space-sm)' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-                  <span className="font-label-caps">Fast, Secure & SEO-Optimized</span>
-                  <span className="font-label-caps" style={{ fontWeight: 'bold' }}>100% Ready</span>
-                </div>
-                <div style={{ width: '100%', height: '6px', background: 'var(--surface-container-high)', borderRadius: '9999px', overflow: 'hidden' }}>
-                  <div style={{ width: '100%', height: '100%', background: 'var(--accent-coral)' }}></div>
-                </div>
-              </div>
-              <p className="font-body-sm">We turn your approved designs into a fast, secure, SEO-friendly WordPress website that is effortless to update.</p>
-            </TiltCard>
+                <p className="font-body-sm" style={{ marginTop: 'auto' }}>We turn your approved designs into a fast, secure, SEO-friendly WordPress website that is effortless to update.</p>
+              </TiltCard>
+            </div>
 
-            {/* Brand Monolith Card */}
-            <TiltCard
-              className="card-monolith"
-              maxTilt={5}
-              isDark={true}
-            >
-              <div style={{ aspectRatio: '16/9', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
-                <img
-                  alt="Branding and Identity"
-                  src="/images/services-brand.jpg"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-                <div className="badge-pill-dark" style={{ position: 'absolute', top: '10px', left: '10px' }}>
-                  <span className="font-label-caps">Branding</span>
+            {/* 3. Brand Monolith Card */}
+            <div className="services-card-item services-subcard">
+              <TiltCard
+                className="card-monolith"
+                maxTilt={5}
+                isDark={true}
+                style={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+              >
+                <div className="services-card-img-wrap" style={{ aspectRatio: '16/9', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
+                  <img
+                    alt="Branding and Identity"
+                    src="/images/services-brand.jpg"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                  <div className="badge-pill-dark" style={{ position: 'absolute', top: '10px', left: '10px' }}>
+                    <span className="font-label-caps">Branding</span>
+                  </div>
                 </div>
-              </div>
-              <h3 className="font-headline-sm" style={{ color: 'var(--text-inverse)' }}>Bring your brand story to life in your website</h3>
-              <p className="font-body-sm" style={{ color: 'var(--on-primary-container)', marginTop: '4px' }}>
-                We create brand identities that make your business memorable and set the tone for your online presence.
-              </p>
-            </TiltCard>
+                <div style={{ marginTop: 'auto' }}>
+                  <h3 className="font-headline-sm" style={{ color: 'var(--text-inverse)' }}>Bring your brand story to life in your website</h3>
+                  <p className="font-body-sm" style={{ color: 'var(--on-primary-container)', marginTop: '4px' }}>
+                    We create brand identities that make your business memorable and set the tone for your online presence.
+                  </p>
+                </div>
+              </TiltCard>
+            </div>
           </div>
 
-          {/* 4. Graphic Design (4 cols) */}
-          <div className="col-span-12 reveal-card" style={{ gridColumn: 'span 4' }}>
+          {/* 4. Graphic Design Card */}
+          <div className="services-card-item col-span-12 reveal-card" style={{ gridColumn: 'span 4' }}>
             <TiltCard
               className="card-cream"
               maxTilt={5.5}
-              style={{ height: '100%' }}
+              style={{ height: '100%', display: 'flex', flexDirection: 'column' }}
             >
-              <div style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
+              <div className="services-card-img-wrap" style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Graphic Design"
                   src="/images/services-packaging.jpg"
@@ -282,19 +323,21 @@ export default function HomeScreen() {
                   <span className="font-label-caps">Graphic Design</span>
                 </div>
               </div>
-              <h3 className="font-headline-sm">Your dedicated graphic design support team</h3>
-              <p className="font-body-sm" style={{ marginTop: '4px' }}>Posters, flyers, banners, social media graphics — we create everything you need, whenever you need it.</p>
+              <div style={{ marginTop: 'auto' }}>
+                <h3 className="font-headline-sm">Your dedicated graphic design support team</h3>
+                <p className="font-body-sm" style={{ marginTop: '4px' }}>Posters, flyers, banners, social media graphics — we create everything you need, whenever you need it.</p>
+              </div>
             </TiltCard>
           </div>
 
-          {/* 5. Anchor Video Production (4 cols) */}
-          <div className="col-span-12 reveal-card" style={{ gridColumn: 'span 4' }}>
+          {/* 5. Anchor Video Production Card */}
+          <div className="services-card-item col-span-12 reveal-card" style={{ gridColumn: 'span 4' }}>
             <TiltCard
               className="card-cream"
               maxTilt={5.5}
-              style={{ height: '100%' }}
+              style={{ height: '100%', display: 'flex', flexDirection: 'column' }}
             >
-              <div style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
+              <div className="services-card-img-wrap" style={{ aspectRatio: '1/1', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
                   alt="Anchor Video Production"
                   src="/images/services-video.jpg"
@@ -308,13 +351,15 @@ export default function HomeScreen() {
                   <span className="font-label-caps">STUDIO HD // ON-CAMERA</span>
                 </div>
               </div>
-              <h3 className="font-headline-sm">Create powerful, on-camera anchor videos</h3>
-              <p className="font-body-sm" style={{ marginTop: '4px' }}>From scripting to editing, we handle everything to deliver clean, engaging videos optimized for social media and ads.</p>
+              <div style={{ marginTop: 'auto' }}>
+                <h3 className="font-headline-sm">Create powerful, on-camera anchor videos</h3>
+                <p className="font-body-sm" style={{ marginTop: '4px' }}>From scripting to editing, we handle everything to deliver clean, engaging videos optimized for social media and ads.</p>
+              </div>
             </TiltCard>
           </div>
 
-          {/* 6. Social Media & Interactive (4 cols) */}
-          <div className="col-span-12 reveal-card" style={{ gridColumn: 'span 4' }}>
+          {/* 6. Social Media & Interactive Card */}
+          <div className="services-card-item col-span-12 reveal-card" style={{ gridColumn: 'span 4' }}>
             <TiltCard
               className="card-cream"
               maxTilt={5.5}
@@ -323,7 +368,7 @@ export default function HomeScreen() {
               <div>
                 <div className="badge-dispatch" style={{ background: 'var(--surface)', marginBottom: 'var(--space-md)' }}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--accent-coral)', fontSize: '18px' }}>campaign</span>
-                  <span className="font-label-caps">Social Media & Interactive</span>
+                  <span className="font-label-caps">Social Media &amp; Interactive</span>
                 </div>
                 <h3 className="font-headline-sm">Social media marketing that grows your business</h3>
                 <p className="font-body-sm" style={{ marginTop: '4px' }}>We manage your social media content and ads to help you reach more people and drive business growth, plus custom web applications and interactive games.</p>
@@ -353,7 +398,7 @@ export default function HomeScreen() {
                   </div>
                 </div>
                 <p className="font-body-sm" style={{ fontStyle: 'italic' }}>
-                  "Through this collaboration, we deliver high-quality digital solutions and interactive web platforms that drive real impact."
+                  &ldquo;Through this collaboration, we deliver high-quality digital solutions and interactive web platforms that drive real impact.&rdquo;
                 </p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--accent-coral)', marginTop: '8px' }}>
                   <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>check_circle</span>
@@ -361,6 +406,27 @@ export default function HomeScreen() {
                 </div>
               </div>
             </TiltCard>
+          </div>
+        </div>
+
+        {/* Mobile Swipe Pagination & Dot Tracker */}
+        <div className="services-mobile-pagination">
+          <div className="services-mobile-swipe-hint">
+            <span className="material-symbols-outlined animate-pulse-soft" style={{ fontSize: '16px', color: 'var(--accent-coral)' }}>swipe</span>
+            <span className="font-label-caps" style={{ fontSize: '11px', letterSpacing: '0.12em', color: 'var(--text-secondary)' }}>
+              Swipe to explore ({activeServiceSlide + 1} of 6)
+            </span>
+          </div>
+          <div className="services-mobile-dots">
+            {[0, 1, 2, 3, 4, 5].map((idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => scrollToServiceSlide(idx)}
+                className={`services-dot ${activeServiceSlide === idx ? 'active' : ''}`}
+                aria-label={`Go to service ${idx + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>
