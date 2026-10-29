@@ -176,12 +176,46 @@ export default function ImpactScreen() {
             </div>
 
             <div className="col-span-12" style={{ gridColumn: 'span 5' }}>
-              <div style={{ aspectRatio: '4/3', borderRadius: 'var(--rounded-lg)', overflow: 'hidden', border: '1px solid var(--border-glass)' }}>
-                <img
-                  alt="Mind Empowered Youth Learning Workshop"
-                  src="/images/mind-empowered.jpg"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
+              <div
+                style={{
+                  aspectRatio: '4/3',
+                  borderRadius: 'var(--rounded-lg)',
+                  overflow: 'hidden',
+                  border: '1px solid var(--border-glass)',
+                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: 'var(--space-xl)'
+                }}
+              >
+                <div
+                  style={{
+                    width: '200px',
+                    height: '200px',
+                    maxWidth: '80%',
+                    maxHeight: '80%',
+                    borderRadius: '24px',
+                    overflow: 'hidden',
+                    background: '#FFFFFF',
+                    padding: '16px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 20px 48px rgba(0, 0, 0, 0.5), 0 0 30px rgba(244, 63, 94, 0.15)',
+                    border: '1px solid rgba(255, 255, 255, 0.2)'
+                  }}
+                >
+                  <img
+                    alt="Mind Empowered Official Partner Logo"
+                    src="/brand/mind-empowered.png"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'contain'
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
