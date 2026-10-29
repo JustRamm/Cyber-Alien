@@ -64,6 +64,9 @@ function MainLayout() {
       {/* Precision Kinetic Laser Cursor & Magnetic Telemetry */}
       <CustomCursor />
 
+      {/* Film Grain & Editorial Texture (Tactile Luxury) */}
+      <div className="film-grain-overlay" aria-hidden="true" />
+
       {/* Laser-Thin Scroll Progress Scroller */}
       <div
         style={{
