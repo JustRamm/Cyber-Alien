@@ -146,8 +146,8 @@ export default function CaseStudyScreen() {
         {/* Hero Showcase Visual */}
         <div style={{ borderRadius: 'var(--rounded-xl)', overflow: 'hidden', marginBottom: 'var(--space-3xl)', boxShadow: 'var(--shadow-monolith)', border: '1px solid var(--border-subtle)' }}>
           <img
-            alt="Obsidian Telemetry Hardware & Display"
-            src="/images/obsidian-topology.jpg"
+            alt="Modern Creative Engineering Studio Workstation"
+            src="/images/hero-monolith.jpg"
             style={{ width: '100%', height: 'auto', display: 'block' }}
           />
         </div>
@@ -184,82 +184,82 @@ export default function CaseStudyScreen() {
           </div>
 
           <div className="grid-12">
-            {/* Bento Card 1: Dynamic Node Fluid Balancing (span 8) */}
+            {/* Bento Card 1: Development Architecture (span 8) */}
             <div className="col-span-12" style={{ gridColumn: 'span 8' }}>
               <div className="card-cream" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ aspectRatio: '16/9', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', marginBottom: 'var(--space-md)' }}>
                   <img
-                    alt="Dynamic Node Fluid Balancing visual"
-                    src="/images/bento-fluid-balancing.jpg"
+                    alt="Modern Web Development Architecture"
+                    src="/images/insight-webgl.jpg"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </div>
                 <div className="badge-pill-dark" style={{ alignSelf: 'flex-start', marginBottom: '8px' }}>
-                  <span className="font-label-caps">TOPOLOGY VISUALIZER</span>
+                  <span className="font-label-caps">DEVELOPMENT ARCHITECTURE</span>
                 </div>
-                <h3 className="font-headline-sm">Dynamic Node Fluid Balancing</h3>
+                <h3 className="font-headline-sm">Performance-Engineered Frontend</h3>
                 <p className="font-body-sm" style={{ color: 'var(--text-secondary)', marginTop: '4px' }}>
-                  Instanced vertex buffers render real-time mempool stress waves, allowing operators to visually anticipate cryptographic congestion before bottlenecks form.
+                  Custom code architecture delivering sub-second response times, modular component design, and zero bloat.
                 </p>
               </div>
             </div>
 
-            {/* Bento Card 2: Multi-Monitor Workstation (span 4) */}
+            {/* Bento Card 2: Command Studio Setup (span 4) */}
             <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
               <div className="card-cream" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ aspectRatio: '4/3', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', marginBottom: 'var(--space-md)' }}>
                   <img
-                    alt="Multi-Monitor Command Workstation"
-                    src="/images/bento-workstation.jpg"
+                    alt="Studio Hardware Setup"
+                    src="/images/insight-hardware.jpg"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </div>
                 <div className="badge-pill-dark" style={{ alignSelf: 'flex-start', marginBottom: '8px' }}>
-                  <span className="font-label-caps">HARDWARE ERGONOMICS</span>
+                  <span className="font-label-caps">STUDIO HARDWARE</span>
                 </div>
-                <h3 className="font-headline-sm">Command Workstation</h3>
+                <h3 className="font-headline-sm">Design Ergonomics</h3>
                 <p className="font-body-sm" style={{ color: 'var(--text-secondary)', marginTop: '4px' }}>
-                  Engineered for ultra-wide multi-display command centres with native hotkey telemetry navigation.
+                  Calibrated studio workstations ensuring pixel-accurate typography, color grading, and tactile feedback.
                 </p>
               </div>
             </div>
 
-            {/* Bento Card 3: Cross-Platform Responsive Telemetry (span 4) */}
+            {/* Bento Card 3: Cross-Platform Parity (span 4) */}
             <div className="col-span-12" style={{ gridColumn: 'span 4' }}>
               <div className="card-cream" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ aspectRatio: '4/3', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', marginBottom: 'var(--space-md)' }}>
                   <img
-                    alt="Cross-Platform Responsive Telemetry"
-                    src="/images/dhriti-mobile.jpg"
+                    alt="Cross-Platform Web Parity"
+                    src="/images/services-web.jpg"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </div>
                 <div className="badge-pill-dark" style={{ alignSelf: 'flex-start', marginBottom: '8px' }}>
-                  <span className="font-label-caps">MOBILE PARITY</span>
+                  <span className="font-label-caps">RESPONSIVE PERFECTION</span>
                 </div>
-                <h3 className="font-headline-sm">Field Access Terminal</h3>
+                <h3 className="font-headline-sm">Cross-Device Parity</h3>
                 <p className="font-body-sm" style={{ color: 'var(--text-secondary)', marginTop: '4px' }}>
-                  Zero-latency touch interaction with adaptive Level-of-Detail (LOD) downsampling on mobile chipsets.
+                  Edge-to-edge layouts calibrated across mobile, tablet, desktop, and ultrawide viewports.
                 </p>
               </div>
             </div>
 
-            {/* Bento Card 4: Dark Void HUD & Shaders (span 8) */}
+            {/* Bento Card 4: Engineering Collaboration (span 8) */}
             <div className="col-span-12" style={{ gridColumn: 'span 8' }}>
               <div className="card-monolith" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ aspectRatio: '16/9', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', marginBottom: 'var(--space-md)' }}>
                   <img
-                    alt="Dark Void HUD Shaders"
-                    src="/images/chronovault-cinematic.jpg"
+                    alt="Studio Engineering Collaboration"
+                    src="/images/insight-impact.jpg"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </div>
                 <div className="badge-pill-dark" style={{ alignSelf: 'flex-start', marginBottom: '8px' }}>
-                  <span className="font-label-caps">GLSL PIPELINE</span>
+                  <span className="font-label-caps">SYSTEMS ENGINEERING</span>
                 </div>
-                <h3 className="font-headline-sm" style={{ color: '#fff' }}>Dark Void HUD &amp; Shaders</h3>
+                <h3 className="font-headline-sm" style={{ color: '#fff' }}>Collaborative Systems Architecture</h3>
                 <p className="font-body-sm" style={{ color: 'var(--on-primary-container)', marginTop: '4px' }}>
-                  Bespoke post-processing bloom and chromatic aberration shaders emulate phosphor CRT scanline aesthetics while preserving accessibility standards.
+                  Close-knit pairing between lead architects and design engineers to eliminate agency bloat and deliver robust production platforms.
                 </p>
               </div>
             </div>

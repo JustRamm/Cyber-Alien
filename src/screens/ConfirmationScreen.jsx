@@ -845,8 +845,8 @@ export default function ConfirmationScreen() {
                 }}
               >
                 <img
-                  src="/images/obsidian-topology.jpg"
-                  alt="Flagship Telemetry Artifact"
+                  src="/images/services-web.jpg"
+                  alt="Flagship Web Development Portfolio"
                   style={{
                     width: '100%',
                     height: '100%',

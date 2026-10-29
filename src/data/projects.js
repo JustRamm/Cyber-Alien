@@ -90,7 +90,7 @@ export const projects = [
     year: '2024',
     meta: 'OPEN SOURCE // 18K+ YOUTH',
     desc: 'Flagship non-profit digital home for youth empowerment and mental health awareness in India, distributing free educational webinars, support toolkits, and volunteer networks.',
-    img: '/projects/mind-empowered/cover.jpg',
+    img: '/projects/mind-empowered/cover.svg',
     cols: 'span 7',
     dark: true,
     hasCaseStudy: false
