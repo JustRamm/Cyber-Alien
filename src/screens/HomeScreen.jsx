@@ -584,46 +584,46 @@ export default function HomeScreen() {
         </div>
 
         <div className="grid-12">
-          {/* 1. Project Obsidian (7 cols) */}
+          {/* 1. Feline Insights (7 cols) */}
           <div className="col-span-12" style={{ gridColumn: 'span 7' }}>
-            <div className="card-cream" style={{ height: '100%', cursor: 'pointer' }} onClick={() => navigate('/case-study')}>
+            <div className="card-cream" style={{ height: '100%', cursor: 'pointer' }} onClick={() => navigate('/work')}>
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
-                  alt="Project Obsidian"
+                  alt="Feline Insights"
                   src="/images/bento-fluid-balancing.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-pill-dark" style={{ position: 'absolute', top: '12px', left: '12px' }}>
-                  <span className="font-label-caps">Web Design // Next.js</span>
+                  <span className="font-label-caps">Web Architecture // Market Intelligence</span>
                 </div>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <div>
-                  <h3 className="font-headline-sm">Project Obsidian</h3>
-                  <p className="font-body-sm" style={{ marginTop: '4px' }}>Decentralized cloud network protocol and real-time interaction telemetry console.</p>
+                  <h3 className="font-headline-sm">Feline Insights</h3>
+                  <p className="font-body-sm" style={{ marginTop: '4px' }}>Global market research, enterprise data analytics, and high-conversion digital presence architecture.</p>
                 </div>
                 <span className="font-label-caps" style={{ color: 'var(--outline)' }}>2025</span>
               </div>
             </div>
           </div>
 
-          {/* 2. Neo-Kinetic Studio (5 cols) */}
+          {/* 2. Athreya Ayurveda Center (5 cols) */}
           <div className="col-span-12" style={{ gridColumn: 'span 5' }}>
             <div className="card-cream" style={{ height: '100%', cursor: 'pointer' }} onClick={() => navigate('/work')}>
               <div style={{ aspectRatio: '16/10', borderRadius: 'var(--rounded-DEFAULT)', overflow: 'hidden', position: 'relative', marginBottom: 'var(--space-md)' }}>
                 <img
-                  alt="Neo-Kinetic"
+                  alt="Athreya Ayurveda Center"
                   src="/images/bento-workstation.jpg"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 <div className="badge-pill-dark" style={{ position: 'absolute', top: '12px', left: '12px' }}>
-                  <span className="font-label-caps">WordPress // E-Commerce</span>
+                  <span className="font-label-caps">Digital Flagship // Healthcare</span>
                 </div>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <div>
-                  <h3 className="font-headline-sm">Neo-Kinetic Studio</h3>
-                  <p className="font-body-sm" style={{ marginTop: '4px' }}>Precision audio hardware configurator & global digital store.</p>
+                  <h3 className="font-headline-sm">Athreya Ayurveda Center</h3>
+                  <p className="font-body-sm" style={{ marginTop: '4px' }}>Award-winning authentic heritage hospital & wellness retreat with international patient booking flows.</p>
                 </div>
                 <span className="font-label-caps" style={{ color: 'var(--outline)' }}>2024</span>
               </div>
@@ -753,7 +753,7 @@ export default function HomeScreen() {
             marginBottom: 'var(--space-2xl)'
           }}
         >
-          {/* MEMBER 1: ALEX RIVERA */}
+          {/* MEMBER 1: SAI SURESH */}
           <div
             style={{
               background: '#FFFFFF',
@@ -825,7 +825,7 @@ export default function HomeScreen() {
                     textShadow: '0 4px 20px rgba(0,0,0,0.5)'
                   }}
                 >
-                  AR
+                  SS
                 </span>
 
                 {/* Top Corner Badges */}
@@ -845,7 +845,7 @@ export default function HomeScreen() {
                     fontWeight: 700
                   }}
                 >
-                  01 // DIR
+                  01 // FOUNDER
                 </div>
 
                 <div
@@ -863,7 +863,7 @@ export default function HomeScreen() {
                     color: 'rgba(255,255,255,0.7)'
                   }}
                 >
-                  BERLIN • UTC+1
+                  INDIA HQ • UTC+5:30
                 </div>
 
                 {/* Bottom Status Pill */}
@@ -884,7 +884,7 @@ export default function HomeScreen() {
                 >
                   <span style={{ width: '5px', height: '5px', borderRadius: '50%', backgroundColor: 'var(--accent-coral)' }}></span>
                   <span style={{ fontSize: '10px', color: '#FFFFFF', fontWeight: 600, letterSpacing: '0.06em' }}>
-                    CREATIVE DIRECTION & BRAND
+                    CREATIVE TECH & ARCHITECTURE
                   </span>
                 </div>
               </div>
@@ -899,7 +899,7 @@ export default function HomeScreen() {
                   margin: '0 0 4px 0'
                 }}
               >
-                Alex Rivera
+                Sai Suresh
               </h3>
               <p
                 className="font-label-caps"
@@ -911,7 +911,7 @@ export default function HomeScreen() {
                   marginBottom: '12px'
                 }}
               >
-                FOUNDING PARTNER // SPATIAL ARCHITECTURE
+                FOUNDING LEAD // SYSTEMS & CREATIVE ARCHITECT
               </p>
 
               {/* Bio */}
@@ -923,12 +923,12 @@ export default function HomeScreen() {
                   marginBottom: '18px'
                 }}
               >
-                Directs spatial user experience, generative 3D visual environments, and transmedia brand systems. Over a decade authoring category-defining interfaces for frontier technology labs and culture disruptors.
+                Founder of Cyber Aliens. Directs creative technology, full-stack systems engineering, and conversion-focused web architecture for fast-growing global brands and high-impact social initiatives.
               </p>
 
               {/* Stack Chips */}
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
-                {['Spatial Systems', 'Three.js / WebGL', 'Brand Identity', 'Art Direction'].map((s, idx) => (
+                {['Full-Stack Web', 'Next.js & WebGL', 'Brand Systems', 'Conversion Ops'].map((s, idx) => (
                   <span
                     key={idx}
                     style={{
@@ -1553,24 +1553,24 @@ export default function HomeScreen() {
         <div className="grid-12">
           {[
             {
-              cat: 'Engineering // 6 min read',
-              date: 'OCTOBER 14, 2025 • DEV LOG #42',
-              title: 'Engineering Real-time 3D Experiences in the Browser',
-              author: 'ALEXEI VOLKOV',
+              cat: 'Conversion Ops // 5 min read',
+              date: 'NOVEMBER 30, 2025 • ARCHITECTURE',
+              title: 'Why Most Business Websites Fail (And How CyberAliens Builds Sites That Convert)',
+              author: 'SAI SURESH',
               img: '/images/insight-webgl.jpg'
             },
             {
-              cat: 'Design // 4 min read',
-              date: 'OCTOBER 02, 2025 • CRITIQUE',
-              title: 'The Death of Generic Flat Design: The Age of Tactile Hardware Interfaces',
-              author: 'MIRA CHEN',
+              cat: 'Brand Systems // 4 min read',
+              date: 'MAY 13, 2025 • IDENTITY CRITIQUE',
+              title: 'What Your Website Says About You (Before You Even Say a Word)',
+              author: 'SAI SURESH',
               img: '/images/insight-hardware.jpg'
             },
             {
-              cat: 'Impact // 5 min read',
-              date: 'SEPTEMBER 21, 2025 • INITIATIVE',
-              title: 'How Mind Empowered is Reshaping Tech Philanthropy',
-              author: 'KAVIN REDDY',
+              cat: 'Engineering // 6 min read',
+              date: 'APRIL 11, 2025 • TECH PERSPECTIVE',
+              title: 'Why Custom Web Architecture Beats Generic Templates Every Time',
+              author: 'SAI SURESH',
               img: '/images/insight-impact.jpg'
             }
           ].map((post, i) => (

@@ -154,14 +154,15 @@ export default function Footer() {
             gap: 'var(--space-md)'
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-lg)' }}>
-            <a href="#twitter" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>Twitter / X</a>
-            <a href="#github" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>GitHub</a>
-            <a href="#dribbble" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>Dribbble</a>
-            <a href="#linkedin" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>LinkedIn</a>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-lg)', flexWrap: 'wrap' }}>
+            <a href="https://in.linkedin.com/company/cyberalienss" target="_blank" rel="noopener noreferrer" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>LinkedIn</a>
+            <a href="https://www.instagram.com/cyberaliens.in/" target="_blank" rel="noopener noreferrer" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>Instagram</a>
+            <a href="https://in.pinterest.com/cyberalienss/" target="_blank" rel="noopener noreferrer" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>Pinterest</a>
+            <a href="https://clutch.co/profile/cyber-aliens" target="_blank" rel="noopener noreferrer" className="font-label-caps" style={{ color: 'var(--on-primary-container)' }}>Clutch (Verified)</a>
+            <a href="mailto:hello@cyberaliens.in" className="font-label-caps" style={{ color: 'var(--accent-coral)' }}>hello@cyberaliens.in</a>
           </div>
-          <div className="font-label-caps" style={{ color: 'var(--on-primary-container)', letterSpacing: '0.08em' }}>
-            © 2026 Cyber Aliens Studio Ltd. All rights reserved. Precision Engineering.
+          <div className="font-label-caps" style={{ color: 'var(--on-primary-container)', letterSpacing: '0.06em', fontSize: '11px' }}>
+            © 2026 Cyber Aliens • Subsidiary of 42Souls Enterprises Pvt. Ltd. • Kerala, India
           </div>
         </div>
       </div>

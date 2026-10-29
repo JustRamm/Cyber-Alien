@@ -7,46 +7,50 @@ export default function WorkScreen() {
 
   const projects = [
     {
-      id: 'obsidian',
-      title: 'Project Obsidian',
+      id: 'feline',
+      title: 'Feline Insights',
       category: ['web'],
-      catLabel: 'WEB ARCHITECTURE // THREE.JS',
-      meta: '2025 // 0.18s RENDER',
-      desc: 'Decentralized cloud telemetry and high-concurrency node visualizer built with WebGL shader pipelines and real-time biometric state synchronization.',
-      img: '/images/obsidian-topology.jpg',
+      catLabel: 'MARKET RESEARCH // DATA ARCHITECTURE',
+      meta: '2025 // ENTERPRISE PLATFORM',
+      desc: 'Global market intelligence and corporate analytics portal with interactive multi-region data visualization and enterprise conversion funnels.',
+      link: 'https://felineinsights.com/',
+      img: '/images/bento-fluid-balancing.jpg',
       cols: 'span 8',
       dark: true,
-      hasCaseStudy: true
+      hasCaseStudy: false
     },
     {
       id: 'starlet',
       title: 'STARLET 5.0',
       category: ['web', 'impact'],
       catLabel: 'With Mind Empowered',
-      meta: '2025 // +340% TVL',
-      desc: 'Transmedia STEM acceleration network empowering 18,000+ adolescent girls through spatial curriculum and peer-to-peer micro-grants.',
+      meta: '2025 // +340% ENGAGEMENT',
+      desc: 'Transmedia student innovation collective and digital learning platform empowering youth leadership through interactive educational architecture.',
+      link: 'https://starlet.mind-empowered.org/',
       img: '/images/starlet-stem.jpg',
       cols: 'span 4',
       dark: false
     },
     {
-      id: 'neokinetic',
-      title: 'Neo-Kinetic Studio',
-      category: ['branding'],
-      catLabel: 'BRANDING // 3D HARDWARE',
-      meta: '2024 // SITE OF THE DAY',
-      desc: 'Comprehensive brand identity, generative packaging design, and parametric WebGL product customizer for precision electronic acoustic hardware.',
-      img: '/images/neokinetic-audio.jpg',
+      id: 'athreya',
+      title: 'Athreya Ayurveda Center',
+      category: ['web'],
+      catLabel: 'HEALTHCARE PORTAL // DIGITAL FLAGSHIP',
+      meta: '2024 // GLOBAL BOOKING TELEMETRY',
+      desc: 'International wellness retreat and heritage hospital web ecosystem featuring multi-lingual consultation flows and treatment regimen catalogs.',
+      link: 'http://theathreya.com',
+      img: '/images/bento-workstation.jpg',
       cols: 'span 5',
       dark: false
     },
     {
-      id: 'chronovault',
-      title: 'Chrono Vault',
+      id: 'rajremanan',
+      title: 'Motion Graphics Portfolio',
       category: ['video'],
-      catLabel: 'VIDEO // UNREAL ENGINE 5',
+      catLabel: 'MOTION GRAPHICS // RAJ REMANAN',
       meta: 'CGI MOTION // 60FPS',
-      desc: 'Speculative AAA transmedia world-building teaser and interactive story prologue rendered natively via ray-traced cinematic simulations.',
+      desc: 'Cinematic visual effects showcase, dynamic typography reels, and studio portfolio architecture for award-winning animator Raj Remanan.',
+      link: 'https://rajremanan.co.uk/',
       img: '/images/chronovault-cinematic.jpg',
       cols: 'span 7',
       dark: true
@@ -56,19 +60,21 @@ export default function WorkScreen() {
       title: 'Dhriti',
       category: ['web', 'impact'],
       catLabel: 'With Mind Empowered',
-      meta: '2025 // MOBILE HUB',
-      desc: 'Adolescent cognitive resilience and emotional regulation suite featuring tactile haptic feedback mechanisms and zero-knowledge privacy protocols.',
+      meta: '2025 // MENTAL HEALTH HUB',
+      desc: 'Adolescent cognitive resilience and emotional regulation suite featuring accessible guided exercises and privacy-preserving tools.',
+      link: 'https://dhriti.mind-empowered.org/',
       img: '/images/dhriti-mobile.jpg',
       cols: 'span 4',
       dark: false
     },
     {
-      id: 'aurabotanica',
-      title: 'Aura Botanica',
-      category: ['graphics', 'branding'],
-      catLabel: 'PACKAGING // IDENTITY',
-      meta: 'D&AD GRAPHITE PENCIL',
-      desc: 'Regenerative bio-cosmetics brand identity, structural biodegradable packaging architecture, and global editorial campaign guidelines.',
+      id: 'edusphere',
+      title: 'EduSphereNZ',
+      category: ['web'],
+      catLabel: 'IMMIGRATION & EDUCATION ADVISORY',
+      meta: '2024 // GLOBAL ONBOARDING',
+      desc: 'New Zealand international education consultancy portal with visa assessment calculators and student counseling booking pipelines.',
+      link: 'https://eduspherenz.com/',
       img: '/images/aura-botanica.jpg',
       cols: 'span 4',
       dark: false
@@ -78,20 +84,22 @@ export default function WorkScreen() {
       title: 'Words of Wisdom',
       category: ['web', 'impact'],
       catLabel: 'With Mind Empowered',
-      meta: '2024 // UNESCO RECOGNITION',
-      desc: 'Living generational oral storytelling repository preserving endangered regional dialect narratives with spatial interactive soundscapes.',
+      meta: '2024 // CULTURAL ARCHIVE',
+      desc: 'Living generational storytelling repository preserving regional narratives and oral histories with responsive audio-visual archives.',
+      link: 'https://words-of-wisdom-eight.vercel.app/',
       img: '/images/words-wisdom.jpg',
       cols: 'span 4',
       dark: false
     },
     {
-      id: 'hyperion',
-      title: 'Hyperion Audio',
-      category: ['web'],
-      catLabel: 'WEB AUDIO API // RUST WASM',
-      meta: '2025 // 32-BIT FLOAT',
-      desc: 'Browser-native polyphonic synthesizer running low-latency WebAssembly audio DSP kernels with real-time vector graphics visualization and MIDI over WebBluetooth.',
-      img: '/images/hyperion-audio.jpg',
+      id: 'feelingfusion',
+      title: 'Feeling Fusion & Little Big Feelings',
+      category: ['web', 'impact'],
+      catLabel: 'With Mind Empowered',
+      meta: '2025 // EMOTIONAL LITERACY',
+      desc: 'Digital wellness and emotional intelligence toolkits designed for child psychology, parent counseling, and adolescent developmental support.',
+      link: 'https://feeling-fusion.vercel.app/',
+      img: '/images/obsidian-topology.jpg',
       cols: 'span 12',
       dark: true
     }
@@ -188,7 +196,18 @@ export default function WorkScreen() {
                   <span className="font-label-caps" style={{ color: p.dark ? 'var(--on-primary-container)' : 'var(--outline)' }}>
                     PRECISION SYSTEM
                   </span>
-                  {p.hasCaseStudy ? (
+                  {p.link ? (
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`btn ${p.dark ? 'btn-secondary' : 'btn-surface'} btn-sm`}
+                      style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                    >
+                      <span>Visit Live Platform</span>
+                      <span className="material-symbols-outlined" style={{ fontSize: '15px' }}>open_in_new</span>
+                    </a>
+                  ) : p.hasCaseStudy ? (
                     <button className="btn btn-secondary btn-sm" onClick={() => navigate('/case-study')}>
                       <span>View Case Study</span>
                       <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>arrow_forward</span>
